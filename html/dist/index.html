@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Distributions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="http://socr.umich.edu/html/feed.rss">
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="http://socr.umich.edu/html/feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR
+		Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+
+	</ul>
+	</li>
+	<li><a href="http://www.socr.umich.edu/html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+		<ul id="menu3" class="dropdown-menu" role="menu"
+			aria-labelledby="drop5">
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+			Calculators</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+			Tables</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+			and Image-Processing Applets</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+			Java Applets</a></li>
+		</ul>
+	</li>
+	<li> <a href="http://nursing.umich.edu" rel="tooltip" 
+			title="University of Michigan School of Nursing">UMSN</a></li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row-fluid"><!--/span-->
+	
+	<p>This list represents the complete collection of distributions
+	provided as part of the SOCR Distributions Java applets (must be synchronized with
+	<a href="http://socr.ucla.edu/htmls/jars/implementedDistributions.txt">implementedDistributions.txt</a>).
+	</p>
+	<ul>
+		<li><a
+			href="http://wiki.stat.ucla.edu/socr/index.php/Help_pages_for_SOCR_Distributions"
+			class="external text"
+			title="http://wiki.stat.ucla.edu/socr/index.php/Help_pages_for_SOCR_Distributions"
+			rel="nofollow">Help of Distribution Applets</a> and here are some <a
+			href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_DistributionsActivities"
+			title="SOCR EduMaterials DistributionsActivities"> Distribution
+		Activities</a>.</li>
+		<li><a href="http://www.Distributome.org" class="external text"
+			title="http://socr.ucla.edu/htmls/SOCR_Distributome.html"
+			rel="nofollow">SOCR Distributome</a> applet provides an interactive
+		graphical interface for exploring the relations between different
+		distributions.</li>
+	</ul>
+	
+	<p><a class="btn" href="SOCR_Distributions.html">Start the SOCR Distributions Applet »</a></p>
+	
+	<table class="table">
+		<tbody>
+			<tr>
+				<td><b>Distribution</b></td>
+				<td><b>Graph &amp; Calculator</b></td>
+				<td><b>Java Library</b></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.jstatsoft.org/v09/i02/"
+					class="external text"
+					title="http://www.slashbin.be/math/rangen/doc/node12.html"
+					rel="nofollow">Anderson-Darling Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/AndersonDarling_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/ArcSine_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ArcSineDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ArcSineDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.slashbin.be/math/rangen/doc/node12.html"
+					class="external text"
+					title="http://www.slashbin.be/math/rangen/doc/node12.html"
+					rel="nofollow">ArcSine Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/ArcSine_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/ArcSine_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ArcSineDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ArcSineDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://en.wikipedia.org/wiki/Benford%27s_law"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Benford's_law" rel="nofollow">Benford
+				Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Benford_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Benford_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BenfordDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BenfordDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/BernoulliDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/BernoulliDistribution.html"
+					rel="nofollow">Bernoulli Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Bernoulli_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Bernoulli_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BernoulliDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BernoulliDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://mathworld.wolfram.com/BetaDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/BetaDistribution.html"
+					rel="nofollow">Beta Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Beta_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Beta_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BetaDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BetaDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://mathworld.wolfram.com/BetaDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/BetaDistribution.html"
+					rel="nofollow">Beta (Generalized) Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/BetaGeneral_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/BetaGeneral_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BetaGeneralDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BetaGeneralDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/BetaBinomialDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/BetaBinomialDistribution.html"
+					rel="nofollow">Beta-Binomial Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/BetaBinomial_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/BetaBinomial_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BetaBinomialDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BetaBinomialDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/BinomialDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/BinomialDistribution.html"
+					rel="nofollow">Binomial Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Binomial_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Binomial_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BinomialDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BinomialDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/BirthdayDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/BirthdayDistribution.html"
+					rel="nofollow">Birthday Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Birthday_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Birthday_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BirthdayDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/BirthdayDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top;"><a
+					href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_BivariateNormal_JS_Activity">(3D)
+				Bivariate Normal Distribution</a><br>
+				</td>
+				<td style="vertical-align: top;"><a
+					href="http://socr.ucla.edu/htmls/HTML5/BivariateNormal/"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Birthday_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td style="vertical-align: top;"><a
+					href="https://code.google.com/p/socr/source/browse/#svn%2Ftrunk%2FSOCR_3.0%2FSOCR_JS_Redesign%2FBivariate_Normal_Calculator">Docs</a><br>
+				</td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/CauchyDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/CauchyDistribution.html"
+					rel="nofollow">Cauchy Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Cauchy_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Cauchy_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/CauchyDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/CauchyDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://en.wikipedia.org/wiki/Chi_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Chi_distribution" rel="nofollow">Chi
+				Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Chi_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Chi_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ChiDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ChiDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/Chi-SquaredDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/Chi-SquaredDistribution.html"
+					rel="nofollow">Chi-Square Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/ChiSquare_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/ChiSquare_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ChiSquareDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ChiSquareDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Noncentral_chi-square_distribution"
+					class="external text"
+					title="http://mathworld.wolfram.com/Chi-SquaredDistribution.html"
+					rel="nofollow">(Non-Central) Chi-Square Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/NonCentralChiSquare_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/ChiSquare_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NonCentralChiSquareDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ChiSquareDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Half_circle_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Half_circle_distribution"
+					rel="nofollow">Circle Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Circle_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Circle_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/CircleDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/CircleDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/UniformDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/UniformDistribution.html"
+					rel="nofollow">Continuous Uniform Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/ContinuousUniform_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/ContinuousUniform_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ContinuousUniformDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ContinuousUniformDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.math.uah.edu/stat/urn/Coupon.xhtml"
+					class="external text"
+					title="http://www.math.uah.edu/stat/urn/Coupon.xhtml" rel="nofollow">Coupon
+				Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Coupon_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Coupon_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/CouponDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/CouponDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/ContinuousDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/ContinuousDistributions.html"
+					rel="nofollow">Die Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Die_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Die_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/DieDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/DieDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/ContinuousDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/ContinuousDistributions.html"
+					rel="nofollow">Discrete ArcSine Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/DiscreteArcSine_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/DiscreteArcSine_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/DiscreteArcsineDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/DiscreteArcsineDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/UniformDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/UniformDistribution.html"
+					rel="nofollow">Discrete Uniform Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/DiscreteUniform_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/DiscreteUniform_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/DiscreteUniformDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/DiscreteUniformDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/ErlangDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/ErlangDistribution.html"
+					rel="nofollow">Erlang Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Erlang_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Erlang_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ErlangDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ErlangDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/ErrorDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/ErrorDistribution.html"
+					rel="nofollow">Error Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Error_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Error_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ErrorDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ErrorDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/ExponentialDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/ExponentialDistribution.html"
+					rel="nofollow">Exponential Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Exponential_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Exponential_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ExponentialDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ExponentialDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/DiscreteDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/DiscreteDistributions.html"
+					rel="nofollow">Finite Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Finite_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Finite_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/FiniteDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/FiniteDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://mathworld.wolfram.com/F-Distribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/F-Distribution.html"
+					rel="nofollow">Fisher's F Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Fisher_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Fisher_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/FisherDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/FisherDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/Fisher-TippettDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/Fisher-TippettDistribution.html"
+					rel="nofollow">Fisher-Tippett Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/FisherTippett_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/FisherTippett_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/FisherTippettDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/FisherTippettDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/GammaDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/GammaDistribution.html"
+					rel="nofollow">Gamma Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Gamma_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Gamma_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GammaDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GammaDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/CauchyDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/CauchyDistribution.html"
+					rel="nofollow">General Cauchy Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/GeneralCauchy_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/GeneralCauchy_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GeneralCauchyDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GeneralCauchyDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Generalized_extreme_value_distribution"
+					class="external text"
+					title="http://mathworld.wolfram.com/CauchyDistribution.html"
+					rel="nofollow">Generalized Extreme Value (GEV) Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/GeneralizedExtremeValue_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/GeneralCauchy_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GeneralizedExtremeValueDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GeneralCauchyDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/GeometricDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/GeometricDistribution.html"
+					rel="nofollow">Geometric Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Geometric_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Geometric_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GeometricDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GeometricDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Log-normal_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Log-normal_distribution"
+					rel="nofollow">Gilbrats Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Gilbrats_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Gilbrats_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GilbratsDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GilbratsDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Shifted_Gompertz_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Shifted_Gompertz_distribution"
+					rel="nofollow">Gompertz Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Gompertz_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Gompertz_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GompertzDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GompertzDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/GumbelDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/GumbelDistribution.html"
+					rel="nofollow">Gumbel Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Gumbel_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Gumbel_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GumbelDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/GumbelDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/Half-NormalDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/Half-NormalDistribution.html"
+					rel="nofollow">Half-Normal Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/HalfNormal_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/HalfNormal_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/HalfNormalDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/HalfNormalDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/HypergeometricDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/HypergeometricDistribution.html"
+					rel="nofollow">HyperGeometric Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/HyperGeometric_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/HyperGeometric_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/HypergeometricDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/HypergeometricDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Hyperbolic_secant_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Hyperbolic_secant_distribution"
+					rel="nofollow">Hyperbolic-Secant Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/HyperbolicSecant_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/HyperbolicSecant_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/HyperbolicSecantDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/HyperbolicSecantDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Inverse-gamma_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Inverse-gamma_distribution"
+					rel="nofollow">Inverse-Gamma Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/InverseGamma_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/InverseGamma_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGammaDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGammaDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Inverse_Gaussian_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Inverse_Gaussian_distribution"
+					rel="nofollow">Inverse Gaussian (Wald) Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/InverseGaussian_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/InverseGaussian_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGaussianDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGaussianDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://www.mathwave.com/articles/johnson_sb_distribution.html"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Inverse_Gaussian_distribution"
+					rel="nofollow">Johnson SB (Bounded) Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/JohnsonSBDistribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/InverseGaussian_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/JohnsonSBDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGaussianDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://www.mathwave.com/articles/johnson_su_distribution.html"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Inverse_Gaussian_distribution"
+					rel="nofollow">Johnson SU (Unbounded) Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/JohnsonSUDistribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/InverseGaussian_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/JohnsonSUDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGaussianDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Inverse_Gaussian_distribution"
+					rel="nofollow">Kolmogorov Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Kolmogorov_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/InverseGaussian_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/KolmogorovDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/InverseGaussianDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/LaplaceDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/LaplaceDistribution.html"
+					rel="nofollow">Laplace Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Laplace_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Laplace_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LaplaceDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LaplaceDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/LogarithmicDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/LogarithmicDistribution.html"
+					rel="nofollow">Logarithmic-Series Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/LogarithmicSeries_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/LogarithmicSeries_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogarithmicDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogarithmicDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/LogisticDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/LogisticDistribution.html"
+					rel="nofollow">Logistic Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Logistic_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Logistic_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogisticDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogisticDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/lexpdf.htm"
+					class="external text"
+					title="http://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/lexpdf.htm"
+					rel="nofollow">Logistic-Exponential Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/LogisticExponential_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/LogisticExponential_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogisticExponentialDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogisticExponentialDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/LogNormalDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/LogNormalDistribution.html"
+					rel="nofollow">Log-Normal Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/LogNormal_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/LogNormal_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogNormalDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LogNormalDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/pa2pdf.htm"
+					class="external text"
+					title="http://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/pa2pdf.htm"
+					rel="nofollow">Lomax Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Lomax_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Lomax_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LomaxDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/LomaxDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					rel="nofollow">Matching Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Matching_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Matching_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MatchDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MatchDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/MaxwellDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/MaxwellDistribution.html"
+					rel="nofollow">Maxwell Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Maxwell_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Maxwell_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MaxwellDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MaxwellDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/ContinuousDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/ContinuousDistributions.html"
+					rel="nofollow">Minimax Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Minimax_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Minimax_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MinimaxDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MinimaxDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					rel="nofollow">Mixture Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Mixture_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Mixture_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MixtureDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MixtureDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					rel="nofollow">Multinomial Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Multinomial_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Mixture_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MixtureDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/mutpdf.htm"
+					class="external text"
+					title="http://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/mutpdf.htm"
+					rel="nofollow">Muth Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Muth_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Muth_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MuthDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/MuthDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/NegativeBinomialDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/NegativeBinomialDistribution.html"
+					rel="nofollow">Negative-Binomial Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/NegativeBinomial_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/NegativeBinomial_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NegativeBinomialDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NegativeBinomialDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://planetmath.org/encyclopedia/NegativeHypergeometricDistribution.html"
+					class="external text"
+					title="http://planetmath.org/encyclopedia/NegativeHypergeometricDistribution.html"
+					rel="nofollow">Negative-HyperGeometric Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/NegativeHypergeometric_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/NegativeHypergeometric_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NegativeHypergeometricDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NegativeHypergeometricDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://dx.doi.org/10.1016/j.spl.2005.09.009"
+					class="external text"
+					title="http://planetmath.org/encyclopedia/NegativeHypergeometricDistribution.html"
+					rel="nofollow">Negative-Multinomial Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/NegativeMultinomial_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/NegativeHypergeometric_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NegativeMultiNomialDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NegativeHypergeometricDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/NormalDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/NormalDistribution.html"
+					rel="nofollow">Normal Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Normal_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Normal_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NormalDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NormalDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/Truncated_normal_distribution"
+					class="external text"
+					title="http://mathworld.wolfram.com/NormalDistribution.html"
+					rel="nofollow">Normal Truncated Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/NormalTruncated_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Normal_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NormalTruncatedDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/NormalDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://en.wikipedia.org/wiki/Pareto_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Pareto_distribution"
+					rel="nofollow">Pareto Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Pareto_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Pareto_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ParetoDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ParetoDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/DiscreteDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/DiscreteDistribution.html"
+					rel="nofollow">Point-Mass Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/PointMass_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/PointMass_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PointMassDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PointMassDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/PoissonDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/PoissonDistribution.html"
+					rel="nofollow">Poisson Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Poisson_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Poisson_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PoissonDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PoissonDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/DiscreteDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/DiscreteDistribution.html"
+					rel="nofollow">Poker-Dice Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/PokerDice_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/PokerDice_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PokerDiceDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PokerDiceDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/PowerFunctionDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/PowerFunctionDistribution.html"
+					rel="nofollow">Power-Function Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/PowerFunction_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/PowerFunction_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PowerFunctionDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/PowerFunctionDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/RayleighDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/RayleighDistribution.html"
+					rel="nofollow">Rayleigh Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Rayleigh_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Rayleigh_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/RayleighDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/RayleighDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://en.wikipedia.org/wiki/Rice_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Rice_distribution"
+					rel="nofollow">Rice (Rician) Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Rice_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Rice_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/RiceDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/RiceDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/Studentst-Distribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/Studentst-Distribution.html"
+					rel="nofollow">Student's T Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/StudentT_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/StudentT_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/StudentDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/StudentDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/Studentst-Distribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/Studentst-Distribution.html"
+					rel="nofollow">Student's T Non-Central Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/StudentT_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/StudentT_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/StudentNoncentralDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/StudentNoncentralDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/TriangularDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/TriangularDistribution.html"
+					rel="nofollow">Triangle Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Triangle_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Triangle_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/TriangleDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/TriangleDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://www.springerlink.com/content/u71g0104356x70u1/"
+					class="external text"
+					title="http://www.springerlink.com/content/u71g0104356x70u1/"
+					rel="nofollow">Two-Sided Power Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/TwoSidedPower_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/TwoSidedPower_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/TwoSidedPowerDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/TwoSidedPowerDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://en.wikipedia.org/wiki/U-quadratic_distribution"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/U-quadratic_distribution"
+					rel="nofollow">U-Quadratic Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/UQuadratic_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/UQuadratic_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/UQuadraticDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/UQuadraticDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/vonMisesDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/vonMisesDistribution.html"
+					rel="nofollow">Von Mises Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/VonMises_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/VonMises_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/VonMisesDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/VonMisesDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					rel="nofollow">WalkMaxDistribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/WalkMax_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/WalkMax_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/WalkMaxDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/WalkMaxDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/topics/StatisticalDistributions.html"
+					rel="nofollow">WalkPositionDistribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/WalkPosition_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/WalkPosition_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/WalkPositionDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/WalkPositionDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://mathworld.wolfram.com/WeibullDistribution.html"
+					class="external text"
+					title="http://mathworld.wolfram.com/WeibullDistribution.html"
+					rel="nofollow">Weibull Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/Weibull_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/Weibull_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/WeibullDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/WeibullDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://en.wikipedia.org/wiki/Zipf-Mandelbrot_law"
+					class="external text"
+					title="http://en.wikipedia.org/wiki/Zipf-Mandelbrot_law"
+					rel="nofollow">Zipf-Mandelbrot Distribution</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/dist/ZipfMandelbrot_Distribution.html"
+					class="external text"
+					title="http://socr.ucla.edu/htmls/dist/ZipfMandelbrot_Distribution.html"
+					rel="nofollow">Interactive View</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ZipfMandelbrotDistribution.html"
+					class="external text"
+					title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/ZipfMandelbrotDistribution.html"
+					rel="nofollow">Java API</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+<!--/span-->
+</div>
+<!--/row--> <footer>
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+</div>
+<!--/.fluid-container-->
+
+<!-- Le javascript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../js/jquery.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-transition.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-alert.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tab.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-popover.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-button.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-typeahead.js" type="text/javascript"></script>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+
+</body>
+</html>

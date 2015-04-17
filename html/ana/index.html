@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Analyses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="http://socr.umich.edu/html/feed.rss">
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="http://socr.umich.edu/html/feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR
+		Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+
+	</ul>
+	</li>
+	<li><a href="http://www.socr.umich.edu/html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+		<ul id="menu3" class="dropdown-menu" role="menu"
+			aria-labelledby="drop5">
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+			Calculators</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+			Tables</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+			and Image-Processing Applets</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+			Java Applets</a></li>
+		</ul>
+	</li>
+	<li> <a href="http://nursing.umich.edu" rel="tooltip" 
+			title="University of Michigan School of Nursing">UMSN</a></li>	
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="row-fluid"><!--/span-->
+		<p>This list represents the complete collection of analyses provided
+		as part of the SOCR Analyses Java applets (must be synchronized with <a
+			href="http://socr.ucla.edu/htmls/jars/implementedAnalysis.txt">implementedAnalysis.txt</a>).
+		<a
+			href="http://wiki.stat.ucla.edu/socr/index.php/Help_pages_for_SOCR_Analyses"
+			class="external text"
+			title="http://wiki.stat.ucla.edu/socr/index.php/Help_pages_for_SOCR_Analyses"
+			rel="nofollow">Help on Analyses Applets</a> and here are some <a
+			href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_AnalysesActivities"
+			title="SOCR EduMaterials AnalysisActivities">Analyses Activities</a>.</p>
+		
+		<p><a class="btn" href="SOCR_Analyses.html">Start the SOCR Analysis Applet »</a></p>
+		
+		<table class="table" style="text-align: center;" align="center">
+			<tbody>
+				<tr>
+					<td style="font-weight: bold;">SOCR Analyses</td>
+					<td><span style="font-weight: bold;">Interactive View</span><br>
+					</td>
+					<td><b>Java Library</b></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_ANOVA_1Way"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_ANOVA_1Way"
+						rel="nofollow">ANOVA 1-Way</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/ANOVA1Way_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/ANOVA1Way_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/AnovaOneWay.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/distributions/AnovaOneWay.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_ANOVA_2Way"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_ANOVA_2Way"
+						rel="nofollow">ANOVA 2-Way</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/ANOVA2Way_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/ANOVA2Way_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/AnovaOneWay.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/AnovaOneWay.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_XIII:_Multinomial_Experiments_and_Contingency_Tables"
+						class="external text"
+						title="http://wiki.socr.umich.edu/index.php/EBook#Chapter_XIII:_Multinomial_Experiments_and_Contingency_Tables"
+						rel="nofollow">Chi-Square Contingency Tables</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/ChiSquareCT_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/ChiSquareCT_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/ChiSquareContingencyTable.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/ChiSquareContingencyTable.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_XIII:_Multinomial_Experiments_and_Contingency_Tables"
+						class="external text"
+						title="EBook#Chapter_XIII:_Multinomial_Experiments_and_Contingency_Tables"
+						rel="nofollow">Chi-Square Goodness of Fit</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/ChiSquareGF_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/ChiSquareGF_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/ChiSquareModelFit.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/ChiSquareModelFit.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/EBhttp://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_Activities_General_CI_Experiment"
+						class="external text"
+						title="EBook#Chapter_XIII:_Multinomial_Experiments_and_Contingency_Tables"
+						rel="nofollow">Confidence Interval Analysis</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/ConfidenceInterval_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/ChiSquareGF_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/ConfidenceIntervalAnalysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/ChiSquareModelFit.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://en.wikipedia.org/wiki/Fisher%27s_exact_test"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Fisher%27s_exact_test"
+						rel="nofollow">Fisher's Exact Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/FishersExactTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/FishersExactTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/FisherExact.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/FisherExact.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_AnalysisActivities_FlignerKilleen"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Fisher%27s_exact_test"
+						rel="nofollow">Fligner-Killeen Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/FlignerKilleen_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/FishersExactTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/FlignerKilleen.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/FisherExact.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://en.wikipedia.org/wiki/Friedman_test"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Friedman_test" rel="nofollow">Friedman's
+					Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/FriedmansTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/FriedmansTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/Friedman.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/Friedman.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_AnalysisActivities_KolmogorovSmirnoff"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Friedman_test" rel="nofollow">Kolmogorov-Smirnoff
+					Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/KolmogorovSmirnoff_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/FriedmansTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/KolmogorovSmirnoff.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/Friedman.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance"
+						rel="nofollow">Kruskal-Wallis Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/KruskalWallis_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoIndependentKruskalWallis_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/KruskalWallis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentKruskalWallis.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: top;"><a
+						href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_AnalysisActivities_HierarchicalClustering">Hierarchical
+					Clustering</a><br>
+					</td>
+					<td style="vertical-align: top;"><a
+						href="http://www.socr.ucla.edu/htmls/ana/HierarchicalClustering_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoIndependentKruskalWallis_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td style="vertical-align: top;"><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/KruskalWallis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentKruskalWallis.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://en.wikipedia.org/wiki/Logistic_regression"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance"
+						rel="nofollow">Logistic Regression Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/LogisticRegression_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoIndependentKruskalWallis_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/LogisticRegression.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentKruskalWallis.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_X:_Correlation_and_Regression"
+						class="external text"
+						title="EBook#Chapter_X:_Correlation_and_Regression" rel="nofollow">Multiple
+					Linear Regression</a><br>
+					</td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/MultipleRegression_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/MultipleRegression_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/MultiLinearRegression.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/MultiLinearRegression.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://en.wikipedia.org/wiki/Statistical_power"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Statistical_power"
+						rel="nofollow">Normal Distribution Power Analysis</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/NormalPower_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/NormalPower_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/NormalPower.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/NormalPower.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://en.wikipedia.org/wiki/Statistical_hypothesis_testing"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Statistical_hypothesis_testing"
+						rel="nofollow">Proportion Test (Dichotomous)</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/ProportionTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/ProportionTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/DichotomousProportion.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/DichotomousProportion.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_StudentsT"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_StudentsT"
+						rel="nofollow">One-Sample T-Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/OneSampleTTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/OneSampleTTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/OneT.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/OneT.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_Hypothesis_L_Mean#Known_Variance"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_StudentsT"
+						rel="nofollow">One-Sample Z-Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/OneSampleZTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/OneSampleTTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/OneZ.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/OneT.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_AnalysisActivities_PCA"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_StudentsT"
+						rel="nofollow">Principal Component Analysia (PCA)</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/PrincipalComponent_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/OneSampleTTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/PrincipalComponentAnalysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/OneT.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_X:_Correlation_and_Regression"
+						class="external text"
+						title="http://wiki.socr.umich.edu/index.php/EBook#Chapter_X:_Correlation_and_Regression"
+						rel="nofollow">Simple Linear Regression</a><br>
+					</td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/SimpleRegression_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/SimpleRegression_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/SimpleLinearRegression.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/SimpleLinearRegression.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://en.wikipedia.org/wiki/Survival_analysis"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Survival_analysis"
+						rel="nofollow">Survival Analysis</a><br>
+					</td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/Survival_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/Survival_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/Survival.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/Survival.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_IX:_Inferences_From_Two_Samples"
+						class="external text"
+						title="EBook#Chapter_IX:_Inferences_From_Two_Samples" rel="nofollow">Two
+					Independent Sample T-Test (Pooled)</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/TwoIndependentTTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoIndependentTTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentT.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentT.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_IX:_Inferences_From_Two_Samples"
+						class="external text"
+						title="http://wiki.socr.umich.edu/index.php/EBook#Chapter_IX:_Inferences_From_Two_Samples"
+						rel="nofollow">Two Independent Sample T-Test (Unpooled)</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/TwoIndependentTTestUnpooled_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoIndependentTTestUnpooled_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentTUnpooled.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentTUnpooled.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_NonParam_2MedianIndep"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_NonParam_2MedianIndep"
+						rel="nofollow">Two Independent Sample Wilcoxon Rank Sum Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/TwoIndependentSampleWilcoxonRankSum_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoIndependentSampleWilcoxonRankSum_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentWilcoxon.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoIndependentWilcoxon.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_NonParam_2MedianIndep"
+						class="external text"
+						title="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_NonParam_2MedianIndep"
+						rel="nofollow">Two Paired Sample Sign-Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/TwoPairedSampleSign-Test_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoPairedSampleSignTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoPairedSignTest.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoPairedSignTest.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://en.wikipedia.org/wiki/Wilcoxon_signed-rank_test"
+						class="external text"
+						title="http://en.wikipedia.org/wiki/Wilcoxon_signed-rank_test"
+						rel="nofollow">Two Paired Sample (Wilcoxon) Signed-Rank Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/TwoPairedSampleSignedRankTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoPairedSampleSignedRankTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoPairedSignedRank.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoPairedSignedRank.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://wiki.socr.umich.edu/index.php/EBook#Chapter_VIII:_Hypothesis_Testing"
+						class="external text"
+						title="http://wiki.socr.umich.edu/index.php/EBook#Chapter_VIII:_Hypothesis_Testing"
+						rel="nofollow">Two Paired Sample T-Test</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/htmls/ana/TwoPairedSampleTTest_Analysis.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/htmls/ana/TwoPairedSampleTTest_Analysis.html"
+						rel="nofollow">Interactive View</a></td>
+					<td><a
+						href="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoPairedT.html"
+						class="external text"
+						title="http://www.socr.ucla.edu/docs/edu/ucla/stat/SOCR/analyses/gui/TwoPairedT.html"
+						rel="nofollow">Java API</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+<!--/span-->
+</div>
+<!--/row--> <footer>
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+</div>
+<!--/.fluid-container-->
+
+<!-- Le javascript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../js/jquery.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-transition.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-alert.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tab.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-popover.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-button.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-typeahead.js" type="text/javascript"></script>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+
+</body>
+</html>

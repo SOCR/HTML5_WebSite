@@ -1,0 +1,22 @@
+# This file created by edu.ucla.stat.SOCR.core.CreateImplementationFile,
+# search from /Users/jenny/work/My_SOCR/classes/edu/ucla/stat/SOCR/chart/demo
+# current format is "name, classname"
+# there are 204 files in the package edu.ucla.stat.SOCR.chart.demo
+# BarChartDemo3$CustomRenderer.class is an Inner class
+# BarChartDemo7$LabelGenerator.class is an Inner class
+# BarChartDemo9$CustomBarRenderer.class is an Inner class
+# PieChart3DDemo3$CustomLabelGenerator.class is an Inner class
+# PieChartDemo4$Rotator.class is an Inner class
+
+[Root]
+
+subCategory = 3D Charts
+
+[3D Charts]
+item = Demo1_ArrayInput, edu.ucla.stat.SOCR.chart.j3d.demo.Chart3DDemo1_ArrayInput
+item = Demo2_TripletInput, edu.ucla.stat.SOCR.chart.j3d.demo.Chart3DDemo2_TripletInput
+item = Demo3_MatrixInput, edu.ucla.stat.SOCR.chart.j3d.demo.Chart3DDemo3_MatrixInput
+item = Demo4_BinaryInput, edu.ucla.stat.SOCR.chart.j3d.demo.Chart3DDemo4_BinaryInput
+item = Demo5_BrainImg, edu.ucla.stat.SOCR.chart.j3d.demo.Chart3DDemo5_BinaryInput_BrainImg
+
+

@@ -1,0 +1,56 @@
+#blacklogo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.threeDRenderer {
+	background-color: #000;
+	#height: 100%;
+	right: 0%
+	position: absolute;
+	bottom: 0%;
+	top: 0%;
+	overflow: hidden !important;	
+}
+
+.switchView {
+	width:40px;
+	height:5%;
+	
+}
+
+.twoDRenderer {
+	border-left: thin solid #666;
+	border-right: thin solid #666;
+	background-color: #000;
+	height: 23.333%; /*was 33.333%*/
+	position: absolute;
+	left: 200px;
+}
+
+#yellow_slider {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  background: yellow;
+}
+
+#red_slider {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  background: red;
+}
+
+#green_slider {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  background: green;
+}
+
+#yellow_ctrl {
+  border-bottom: thin solid #666;
+}
+
+#red_ctrl {
+  border-bottom: thin solid #666;
+}

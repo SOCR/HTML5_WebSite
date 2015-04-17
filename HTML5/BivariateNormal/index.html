@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Bivariate Normal Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+	<link href="../../css/bootstrap.css" rel="stylesheet">
+  
+	<style type="text/css">
+	body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	</style>
+	<link href="../../js/bootstrap-responsive.css" rel="stylesheet">
+	
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	      		<script src="js/html5.js"></script>
+	    	<![endif]-->
+	
+	<link rel="shortcut icon" href="../../img/SOCR_Web_Icon.ico">
+	<link rel="alternate" type="application/rss+xml" rel="tooltip"
+		title="SOCR News" href="http://socr.umich.edu/html/feed.rss">
+
+
+  <script type="text/javascript" src="./scripts/core.js"></script>
+  <script type="text/javascript" src="./scripts/NormalCalculator2.js"></script>
+  <!--  script type="text/javascript" src="./scripts/MathJax.js"></script> -->
+  <script type="text/javascript" src="./scripts/distributions.js"></script>
+  <script type="text/javascript" src="./scripts/Cholesky.js"></script>
+  <script type="text/javascript" src="./scripts/ProbCalc.js"></script>
+  <script type="text/javascript" src="./scripts/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="./scripts/SurfaceHandlers.js"></script>
+  <script type="text/javascript" src="./scripts/SurfacePlot.js"></script>
+  <script type="text/javascript" src="./scripts/ColourGradient.js"></script>
+  <script type="text/javascript" src="./scripts/glMatrix-0.9.5.min.js"></script>
+  <script type="text/javascript" src="./scripts/webgl-utils.js"></script>
+
+
+  <script type="text/javascript">
+  function isWebGL() { try { 
+	  	return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } };
+		glAllow = isWebGL();
+     	rowS = 0;
+ 		initi = false;
+		mu1 = 0;
+		mu2 = 0;
+		sigma1 = 1;
+		sigma2 = 1;
+		xLab = [-3,-2,-1,0,1,2,3];
+		yLab = [3,2,1,0,-1,-2,-3];
+		Xset = false;
+		Yset = false;
+		xLowCut = Number.NEGATIVE_INFINITY;
+		yLowCut = Number.NEGATIVE_INFINITY;
+		xCut = Number.POSITIVE_INFINITY;//4*sigmaX;//value to cut off at. BE CAREFUL: NOTICE THAT THE ACTUAL VALUE OF SIGMA IS NOT CHANGING, BUT ONLY THE DISPLAY
+		yCut = Number.POSITIVE_INFINITY;//4*sigmaY;//value to cut off at
+
+		function updateMinMaxDefaults() {
+
+			xCut=Number.POSITIVE_INFINITY; xLowCut=Number.NEGATIVE_INFINITY;
+			yLowCut=Number.NEGATIVE_INFINITY; yCut=Number.POSITIVE_INFINITY;
+
+			document.getElementById("lowX").innerHTML="-∞";
+			document.getElementById("highX").innerHTML="∞";
+			document.getElementById("lowY").innerHTML= "-∞";
+			document.getElementById("highY").innerHTML= "∞";
+
+			document.getElementById("xLowProb_Input").value="-∞";
+			document.getElementById("xProb_Input").value="∞";
+			document.getElementById("yLowProb_Input").value="-∞";
+			document.getElementById("yProb_Input").value="∞";
+			initialize();
+
+		}
+				function showValueSigmaX(newValue,e)
+				{
+					//if(((e.keyCode == 13))){
+						oldSig = sigma1;
+						tmp = Math.round(newValue*100);
+						newValue = tmp/100;
+						sigma1 = newValue;
+						for(var i = 0; i<7; i++)
+						{
+							xLab[i] = ((i-3)*sigma1 + mu1).toFixed(3);
+						}
+						updateMinMaxDefaults();
+						$('canvas').remove('.surfacePlotCanvas')
+						setUp();
+						document.getElementById("rangeSigmaX").innerHTML=newValue;
+						initialize();
+					//}
+				}
+
+			function showValueSigmaY(newValue,e)
+			{
+			//	if(((e.keyCode == 13))){
+				oldSig = sigma2;
+				tmp = Math.round(newValue*100);
+				newValue = tmp/100;
+				sigma2 = newValue;
+				for(var i = 0; i<7; i++)
+				{	yLab[i] = ((i-3)*sigma2 + mu2).toFixed(3);  }
+				updateMinMaxDefaults();
+				$('canvas').remove('.surfacePlotCanvas')
+				setUp();
+				document.getElementById("rangeSigmaY").innerHTML=newValue;
+				console.log(document.getElementById("xProb_Input"));
+				initialize();
+			//	}
+			}
+			function xProbFunc(value,e){
+				var yProbObj = document.getElementById("yProb_Input");
+				var xLowProbObj = document.getElementById("xLowProb_Input");
+				var yLowProbObj = document.getElementById("yLowProb_Input");
+				console.log(e);
+				//	if(e==undefined||e.keyCode ==13){
+
+				if(yProbObj==undefined || isNaN(yProbObj.value)){
+					yCut = Number.POSITIVE_INFINITY;
+				}
+				if(xLowProbObj==undefined || isNaN(xLowProbObj.value))
+				{
+					xLowCut = Number.NEGATIVE_INFINITY;
+				}
+				if(yLowProbObj==undefined || isNaN(yLowProbObj.value))
+				{
+					yLowCut = Number.NEGATIVE_INFINITY;
+				}
+				if(!isNaN(value)){
+					xCut = value;
+					Xset=true;
+				}
+				else{
+					xCut = Number.POSITIVE_INFINITY;
+				}
+
+				var prob = 0;
+				prob = sample().toFixed(4);
+				var text;
+				//if y not number, cut == infinity
+				text = "P("+((xLowCut==Number.NEGATIVE_INFINITY)? "-∞":xLowCut)+" < X < "+((xCut==Number.POSITIVE_INFINITY)? "∞":xCut)+" ∩ "+((yLowCut==Number.NEGATIVE_INFINITY)? "-∞":yLowCut)+" < Y< "+((yCut==Number.POSITIVE_INFINITY)? "∞":yCut)+") = "+prob+"\n";
+				textArea.value += text;
+				$('canvas').remove('.surfacePlotCanvas')
+				setUp();
+				document.getElementById("highY").innerHTML=((xCut==Number.POSITIVE_INFINITY)? "∞":xCut);
+				initialize();
+			}
+
+			function xLowProbFunc(value,e){
+				var xProbObj = document.getElementById("xProb_Input");
+				var yProbObj = document.getElementById("yProb_Input");
+				var yLowProbObj = document.getElementById("yLowProb_Input");
+				//	if(e==undefined||e.keyCode ==13){
+
+				if(yProbObj==undefined || isNaN(yProbObj.value)){
+					yCut = Number.POSITIVE_INFINITY;
+				}
+				if(xProbObj==undefined || isNaN(xProbObj.value))
+				{
+					xCut = Number.POSITIVE_INFINITY;
+				}
+				if(yLowProbObj==undefined || isNaN(yLowProbObj.value))
+				{
+					yLowCut = Number.NEGATIVE_INFINITY;
+				}
+				if(!isNaN(value)){
+					xLowCut = value;
+					Xset=true;
+				}
+				else{
+					xLowCut = Number.NEGATIVE_INFINITY;
+				}
+	
+				var prob = 0;
+				prob = sample().toFixed(4);
+				var text;
+				//if y not number, cut == infinity
+				text = "P("+((xLowCut==Number.NEGATIVE_INFINITY)? "-∞":xLowCut)+" < X < "+((xCut==Number.POSITIVE_INFINITY)? "∞":xCut)+" ∩ "+((yLowCut==Number.NEGATIVE_INFINITY)? "-∞":yLowCut)+" < Y< "+((yCut==Number.POSITIVE_INFINITY)? "∞":yCut)+") = "+prob+"\n";
+				textArea.value += text;
+				$('canvas').remove('.surfacePlotCanvas')
+				setUp();
+				document.getElementById("lowY").innerHTML=((xLowCut==Number.NEGATIVE_INFINITY)? "-∞":xLowCut);
+				initialize();
+		}
+
+		function yProb(value, e){
+			var xProbObj = document.getElementById("xProb_Input");
+			var xLowProbObj = document.getElementById("xLowProb_Input");
+			var yLowProbObj = document.getElementById("yLowProb_Input");
+			yProbObj = document.getElementById("yProb_Input");
+			//if(e.keyCode ==13){
+			//console.log("pressed enter");
+	
+			if(xLowProbObj==undefined || isNaN(xLowProbObj.value)){
+				xLowCut = Number.NEGATIVE_INFINITY;
+			}
+			if(xProbObj==undefined || isNaN(xProbObj.value))
+			{
+				xCut = Number.POSITIVE_INFINITY;
+			}
+			if(yLowProbObj==undefined || isNaN(yLowProbObj.value))
+			{
+				yLowCut = Number.NEGATIVE_INFINITY;
+			}
+			if(!isNaN(value)){
+				yCut = value;
+				Yset = true;
+			}
+			else{
+				yCut = Number.POSITIVE_INFINITY;
+			}
+	
+			var prob = 0;
+			prob = sample().toFixed(4);
+			var text;
+			text = "P("+((xLowCut==Number.NEGATIVE_INFINITY)? "-∞":xLowCut)+" < X < "+((xCut==Number.POSITIVE_INFINITY)? "∞":xCut)+" ∩ "+((yLowCut==Number.NEGATIVE_INFINITY)? "-∞":yLowCut)+" < Y< "+((yCut==Number.POSITIVE_INFINITY)? "∞":yCut)+") = "+prob+"\n";
+			textArea.value += text;
+			$('canvas').remove('.surfacePlotCanvas')
+			setUp();
+			document.getElementById("highX").innerHTML=((yCut==Number.POSITIVE_INFINITY)? "∞":yCut);
+			initialize();
+		}
+
+		function yLowProb(value, e){
+			var xProbObj = document.getElementById("xProb_Input");
+			var yProbObj = document.getElementById("yProb_Input");
+			var xLowProbObj = document.getElementById("xLowProb_Input");
+	
+			console.log(e);
+			console.log(xProbObj);
+			//	if(e.keyCode ==13){
+			//		console.log("pressed enter");
+			if(xLowProbObj==undefined || isNaN(xLowProbObj.value)){
+				xLowCut = Number.NEGATIVE_INFINITY;
+			}
+			if(xProbObj==undefined || isNaN(xProbObj.value))
+			{
+				xCut = Number.POSITIVE_INFINITY;
+			}
+			if(yProbObj==undefined || isNaN(yProbObj.value))
+			{
+				yCut = Number.POSITIVE_INFINITY;
+			}
+			if(!isNaN(value)){
+				yLowCut = value;
+				console.log(yLowCut);
+				Yset = true;
+			}
+			else{
+				yLowCut = Number.NEGATIVE_INFINITY;
+			}
+
+			var prob = 0;
+			prob = sample().toFixed(4);
+			var text;
+			text = "P("+((xLowCut==Number.NEGATIVE_INFINITY)? "-∞":xLowCut)+" < X < "+((xCut==Number.POSITIVE_INFINITY)? "∞":xCut)+" ∩ "+((yLowCut==Number.NEGATIVE_INFINITY)? "-∞":yLowCut)+" < Y< "+((yCut==Number.POSITIVE_INFINITY)? "∞":yCut)+") = "+prob+"\n";
+			textArea.value += text;
+			$('canvas').remove('.surfacePlotCanvas')
+			setUp();
+			document.getElementById("lowX").innerHTML=((yLowCut==Number.NEGATIVE_INFINITY)? "-∞":yLowCut);
+			initialize();
+		}
+
+		is_chrome = /chrome/i.test( navigator.userAgent );
+		function showValue(newValue,e)
+		{
+			console.log(e, e.type, is_chrome);
+			if((newValue<.9999 && newValue>-0.9999)/*&&((e.keyCode == 13))*/){
+				tmp = Math.round(newValue*10000);
+				newValue = tmp/10000;
+				rowS = newValue;
+			} else {	// added this ELSE to ensure correlation is forced in [-1 : +1]
+				newValue = 0.0;
+			}
+			updateMinMaxDefaults();
+			$('canvas').remove('.surfacePlotCanvas')
+			setUp();
+			document.getElementById("range").innerHTML=newValue;
+			initialize();
+		} 
+	
+		
+		function showValueMu1(newValue,e) {
+			console.log(e, e.type, is_chrome);
+			//if(((e.keyCode == 13))){
+				tmp = Math.round(newValue*100);
+				newValue = tmp/100;
+				mu1 = newValue;
+				
+				for(var i = 0; i<7; i++)
+				{
+					xLab[i] = (newValue - 3 +i).toFixed(3);
+				} //update labels when using webGL
+				updateMinMaxDefaults();
+				$('canvas').remove('.surfacePlotCanvas')
+				setUp();
+				document.getElementById("rangeMu1").innerHTML=newValue;
+				initialize();
+		} 
+	
+		function showValueMu2(newValue, e) {
+				//		if(((e.keyCode == 13))){
+				tmp = Math.round(newValue*100);
+				newValue = tmp/100;
+				mu2 = newValue;
+				var j=6;
+				for(var i = 0; i<7; i++)
+				{
+				yLab[j] =(newValue - 3 +i).toFixed(3);
+				//update tooltip vals when this is called
+				j--;
+				}
+				updateMinMaxDefaults();
+				$('canvas').remove('.surfacePlotCanvas')
+				setUp();
+				document.getElementById("rangeMu2").innerHTML=newValue;
+				initialize();
+				// yProb(newValue);
+		} 
+		
+		setCondX=false;
+		setCondLowX = false;
+		setCondLowY = false;
+		setCondY=false;
+		setMargX=true;
+		setMargY=false;
+		function CondHighX(){
+			// console.log(document.getElementById("CondLow").style.display);
+			setCondX=true;
+			setCondLowX = false;
+			setCondLowY = false;
+			setCondY=false;
+			setMargX=false;
+			setMargY=false;
+			initialize();
+		}
+		function CondLowX(){
+			setCondX=false;
+			setCondLowX = true;
+			setCondLowY = false;
+			setCondY=false;
+			setMargX=false;
+			setMargY=false;
+			initialize();
+		}
+		function CondHighY(){
+			setCondX=false;
+			setCondLowX = false;
+			setCondLowY = false;
+			setCondY=true;
+			setMargX=false;
+			setMargY=false;
+			initialize();
+		}
+		function CondLowY(){
+			setCondX=false;
+			setCondLowX = false;
+			setCondLowY = true;
+			setCondY=false;
+			setMargX=false;
+			setMargY=false;
+			initialize();
+		}
+		
+		function setMarginalX(box){
+			setCondX=false;
+			setCondLowX = false;
+			setCondLowY = false;
+			setCondY=false;
+			setMargX=true;
+			setMargY=false;
+			initialize();
+		}
+		function setMarginalY(box){
+			setCondX=false;
+			setCondLowX = false;
+			setCondLowY = false;
+			setCondY=false;
+			setMargX=false;
+			setMargY=true;
+			initialize();
+		}
+</script>
+
+
+  <script id="shader-fs" type="x-shader/x-fragment">
+	#ifdef GL_ES
+	precision highp float;
+	#endif
+
+	varying vec4 vColor;
+	varying vec3 vLightWeighting;
+
+	void main(void)
+	{   gl_FragColor = vec4(vColor.rgb * vLightWeighting, vColor.a);   }
+  </script>
+  
+  <script id="shader-vs" type="x-shader/x-vertex">
+	attribute vec3 aVertexPosition;
+	attribute vec3 aVertexNormal;
+	attribute vec4 aVertexColor;
+
+	uniform mat4 uMVMatrix;
+	uniform mat4 uPMatrix;
+	uniform mat3 uNMatrix;
+	varying vec4 vColor;
+
+	uniform vec3 uAmbientColor;
+	uniform vec3 uLightingDirection;
+	uniform vec3 uDirectionalColor;
+	varying vec3 vLightWeighting;
+
+	void main(void)
+	{	gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+
+		vec3 transformedNormal = uNMatrix * aVertexNormal;
+		float directionalLightWeighting = max(dot(transformedNormal, uLightingDirection), 0.0);
+		vLightWeighting = uAmbientColor + uDirectionalColor * directionalLightWeighting;
+		vColor = aVertexColor;
+	}
+  </script>
+  <script id="axes-shader-fs" type="x-shader/x-fragment">
+	precision mediump float;
+	varying vec4 vColor;
+
+	void main(void)
+	{   gl_FragColor = vColor;  }
+  </script>
+  
+  <script id="axes-shader-vs" type="x-shader/x-vertex">
+	attribute vec3 aVertexPosition;
+	attribute vec4 aVertexColor;
+	uniform mat4 uMVMatrix;
+	uniform mat4 uPMatrix;
+	varying vec4 vColor;
+	uniform vec3 uAxesColour;
+
+	void main(void)
+	{
+		gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+		vColor = vec4(uAxesColour, 1.0);
+	}
+  </script>
+  
+  <script id="texture-shader-fs" type="x-shader/x-fragment">
+	#ifdef GL_ES
+	precision highp float;
+	#endif
+
+	varying vec2 vTextureCoord;
+
+	uniform sampler2D uSampler;
+
+	void main(void)
+	{    gl_FragColor = texture2D(uSampler, vTextureCoord);  }
+  </script>
+  
+  <script id="texture-shader-vs" type="x-shader/x-vertex">
+	attribute vec3 aVertexPosition;
+
+	attribute vec2 aTextureCoord;
+	varying vec2 vTextureCoord;
+
+	uniform mat4 uMVMatrix;
+	uniform mat4 uPMatrix;
+
+	void main(void)
+	{
+		gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+		vTextureCoord = aTextureCoord;
+	}
+  </script>
+</head>
+
+<body onload="initialize();">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="http://socr.umich.edu/html/feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR
+		Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+
+	</ul>
+	</li>
+	<li><a href="http://www.socr.umich.edu/html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+		Calculators</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+		and Image-Processing Applets</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+		Java Applets</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="row-fluid"><!--/span-->
+	
+	<div id="wrapper-content">
+	<div id="content" align="center">
+	<!-- Start of Webapp code --> 
+	<!-- BIVAR NORM CODE--> 
+	<!-- Component Event Handling: decide on "onkey" vs. "onmouseout" for triggering
+			event handling/actions based on new user input. 
+			See: http://www.w3schools.com/tags/tag_input.asp 
+	-->
+	
+	<table>
+		<tbody>
+			<tr align="center">
+				<td style="width: 50%;"><big><big><b>Settings</b></big></big></td>
+				<td style="width: 50%;"><big><big><b>Controls&nbsp;&nbsp;&nbsp;&nbsp;
+				<br>
+				</b></big></big></td>
+			</tr>
+			<tr>
+				<td style="width: 15%;"><small><label
+					id="row_Label" for="row_Input"><var></var></label></small>
+				<table style="text-align: left; width: 197px; height: 162px;"
+					border="0" cellpadding="2" cellspacing="2">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; text-align: right;"
+								nowrap="nowrap"><small><var>ρ</var> = <span
+								id="range"></span></small> <input size="3" min="-0.9900" max="0.9900"
+								value="0" step="0.0001" onblur="showValue(this.value, event);"></td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top; text-align: right;"
+								nowrap="nowrap"><label id="muX_Label" for="muX_Input"><small><var>μ<sub>x</sub></var>=</small></label><span
+								id="rangeMu1"></span><input size="3" min="-10" max="10" value="0"
+								step="0.01" onblur="showValueMu1(this.value, event);"></td>
+							<td style="vertical-align: top; text-align: right;"
+								nowrap="nowrap"><small><label id="muY_Label"
+								for="muY_Input"><var>μ<sub>y</sub></var>=</label><span
+								id="rangeMu2"></span></small> <input id="muY_Input" size="3" min="-10"
+								max="10" value="0" step="0.01"
+								onblur="showValueMu2(this.value, event);"></td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top; text-align: right;"
+								nowrap="nowrap"><small><label id="sigmaX_Label"
+								for="sigmaX_Input"><var>σ<sub>x</sub></var>=</label><span
+								id="rangeSigmaX"></span></small><input size="3" min="0" max="10"
+								value="1" step="0.01"
+								onblur="showValueSigmaX(this.value, event);"></td>
+							<td style="vertical-align: top; text-align: right;"
+								nowrap="nowrap"><small><label id="sigmaY_Label"
+								for="sigmaY_Input"><var>σ<sub>y</sub></var>=</label><span
+								id="rangeSigmaY"></span></small> <input size="3" min="0" max="10"
+								value="1" step="0.01"
+								onblur="showValueSigmaY(this.value, event);"></td>
+						</tr>
+					</tbody>
+				</table>
+				<small> <input id="allowWebGL" checked="checked"
+					onclick="toggleChart(this)" type="checkbox"> Use WebGL </small></td>
+				<td style="width: 25%;">
+				<table style="width: 100%; text-align: left;" border="0"
+					cellpadding="2" cellspacing="2">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top;"><input size="1"
+								id="xLowProb_Input" value="-∞"
+								onblur="xLowProbFunc(this.value,event);" type="xLowProb">
+							</td>
+							<td style="vertical-align: top;" nowrap="nowrap"><small><label
+								id="xProb_Label" for="xProb_Input"> &lt; X &lt; </label> </small></td>
+							<td style="vertical-align: top;"><input size="1"
+								id="xProb_Input" value="∞" onblur="xProbFunc(this.value,event);"
+								type="xProb"><br>
+							</td>
+						 </tr>
+						 <tr>
+							<td style="vertical-align: top;"><input size="1"
+								id="yLowProb_Input" value="-∞"
+								onblur="yLowProb(this.value, event);" type="yLowProb"></td>
+							<td style="vertical-align: top;" nowrap="nowrap"><small><label
+								size="3" id="yProb_Label" for="yProb_Input">&lt; Y &lt; </label></small></td>
+							<td style="vertical-align: top;"><input size="1"
+								id="yProb_Input" value="∞" onblur="yProb(this.value, event);"
+								type="yProb"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table style="width: 100%; text-align: left;" cellpadding="2"
+					cellspacing="2">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top;"><small><input
+								id="MarginalX" onmouseup="setMarginalX();" name="univar"
+								value="MarginalX" type="radio" checked="true"> <a
+								href="http://en.wikipedia.org/wiki/Conditional_probability">Marginal
+							</a>of X </small></td>
+							<td style="vertical-align: top;"><small><input
+								id="MarignalY" onmouseup="setMarginalY();" name="univar"
+								value="MarginalY" type="radio"> Marginal of Y </small></td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;"><small><input
+								id="CondtionalLowX" onmouseup="CondLowX();" name="univar"
+								value="ConditionalX" type="radio"> <a
+								href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_Prob_Rules#Conditional_Probability">Conditional
+							</a>of X|Y = <span id="lowX">-∞</span> </small></td>
+							<td style="vertical-align: top;"><small><input
+								id="CondtionalHighX" onmouseup="CondHighX();" name="univar"
+								value="ConditionalX1" type="radio"> Conditional of X|Y =
+							<span id="highX">∞</span> </small></td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;"><small><input
+								id="CondtionalLowY" onmouseup="CondLowY();" name="univar"
+								value="ConditionalY1" type="radio"> Conditional of Y|X =
+							<span id="lowY">-∞</span> </small></td>
+							<td style="vertical-align: top;"><small><input
+								id="CondtionalHighY" onmouseup="CondHighY();" name="univar"
+								value="ConditionalY2" type="radio"> Conditional of Y|X =
+							<span id="highY">∞</span> </small></td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="text-align: center;"><small> <b>Probability
+				Results</b> <textarea id="recordTable" readonly="true" wrap="off"
+					class="table" cols="40" title="Probability"></textarea> <script> 
+		  textArea = document.getElementById("recordTable"); 
+		  
+		  document.getElementById("recordTable").scrollTop = document.getElementById("recordTable").scrollHeight;      			
+		  </script> </small></div>
+				<small> </small></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td><!--////////////////////////////////////////////////////////-->
+				<div id="surfacePlotDiv", style="width: 300px";><!-- SurfacePlot goes here... --> 
+				<script	type="text/javascript">
+	
+					function isIE()
+					{
+						return false;//return /msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent);
+					}
+					
+					
+					var surfacePlot;
+					var xVals;
+					var yVals;
+					var minX = 0;
+					var maxX =0;
+					var minY = 0;
+					var maxY = 0;
+					
+					function setUp()
+					{
+						var numRows = 45; //smoothness of curve
+						var numCols = 45; //smoothness of curve
+					
+						var tooltipStrings = new Array();
+						var values = new Array();
+						/*var*/ xVals = new Array();
+						/*var*/ yVals = new Array();
+						var data = {nRows: numRows, nCols: numCols, formattedValues: values};
+						var d = 360 / numRows;
+						var idx = 0;
+						var row = 0;//rowS;
+						var muX = 0; //set to value of slider Q: why not reset when value of slider changes
+						var muY = 0;
+						var sigmaX = 1;
+						var sigmaY = 1;
+						var x = 0;
+						var y =0;
+					
+						for (var i = 0; i < numRows; i++) //doubled values found
+						{
+							values[i] = new Array();
+						
+							for (var j = 0; j < numCols; j++)//doubled values found
+							{
+								//allows for neagive vals
+								
+								x = (i-(numRows*0.5)) * d * Math.PI / 180.0;
+								y = (j-(numCols*0.5)) * d * Math.PI / 180.0;
+								
+								var value = 0.0;
+								
+								if(x<=((xCut-mu1)/sigma1) && y<=((yCut-mu2)/sigma2) && x>=((xLowCut-mu1)/sigma1) && y>=((yLowCut-mu2)/sigma2))
+								//cutting plane
+								{
+									value = (1/(2*Math.PI*sigmaX*sigmaY*Math.sqrt(1-(rowS*rowS))))*
+										Math.exp((-1/(2*(1-(rowS*rowS))))*((Math.pow(((x-muX)/sigmaX), 2) + 
+										Math.pow(((y-muY)/sigmaY),2)-(2*rowS*((x-muX)/sigmaX)*((y-muY)/sigmaY)))));
+								}
+								else if(glAllow){//to show cuting plane when not using webGL
+									value = 0.000;
+								}
+								else {//cuts model whe probability selected
+									value = 0.001;
+								}
+								
+								
+								values[i][j] = value;//4.0+ .25;
+								var a = (-1/(2*(1-rowS*rowS)));
+								var b = Math.pow(((mu1-mu1)/sigma1), 2);
+								var c = Math.pow(((mu2-mu2)/sigma2),2);
+								var tmpF1 = ((mu1-mu1)/sigma1);
+								var tmpF2 = ((mu2-mu2)/sigma2);
+								var f = 2*rowS*tmpF1*tmpF2;
+								var Max = (1/(2*Math.PI*sigma1*sigma2*Math.sqrt(1-(rowS*rowS))))*Math.exp(a*(b + c -f));
+							
+								tooltipStrings[idx] = "x:" + (sigma1*(x +mu1)).toFixed(4)+
+									/*to adjust tooltip when slider changes*/
+									", y:" + (sigma2*(y+mu2)).toFixed(4)+
+									/*to adjust tooltip when slider changes*/
+									" f(x, y) = " + Max.toFixed(4);
+								idx++;
+							}
+						}
+						//Initializes an instance of SurfacePlot
+						surfacePlot = new SurfacePlot(document.getElementById("surfacePlotDiv"));
+						//Touch Event Listeners for document
+						document.addEventListener("touchstart", touchHandler, true);
+					    document.addEventListener("touchmove", touchHandler, true);
+					    document.addEventListener("touchend", touchHandler, true);
+					    document.addEventListener("touchcancel", touchHandler, true); 
+					
+						
+						// Don't fill polygons in IE. It's too slow.
+						var fillPly =false;// !isIE();
+					
+						// Define a colour gradient.
+						var colour1 = {red:255, green:0, blue:0};
+						var colour2 = {red:255, green:0, blue:0};
+						var colour3 = {red:255, green:0, blue:0};
+						var colour4 = {red:0, green:0, blue:0};
+						var colour5 = {red:0, green:0, blue:0};
+						var colours = [colour1, colour2, colour3, colour4, colour5];
+						
+						// Axis labels.
+						var xAxisHeader = "X";
+						var yAxisHeader = "Y";
+						var zAxisHeader = "f(x, y)";
+						
+						var renderDataPoints = false;
+						var background = '#ffffff';
+						var axisForeColour = '#000000';
+						var hideFloorPolygons = true;
+						var chartOrigin = {x: 250, y:300};//origin of entire plot
+						
+						// Options for the basic canvas pliot.
+						var basicPlotOptions = {fillPolygons: fillPly, tooltips: tooltipStrings, renderPoints: renderDataPoints }
+						
+						// use loop to get min of x vals and min of y vals, and change scale based on that
+						// labels for the plot
+						// Options for the webGL plot.
+						//look up web gl option and see if any of those would help
+						var niceMaxX = 4;
+						var nice
+						
+						
+						var xLabels = xLab;
+						var yLabels = yLab;
+						var zLabels = [0, 1, 2, 3, 4, 5];
+						var glOptions = {xLabels: xLabels, yLabels: yLabels, zLabels: zLabels, chkControlId: "allowWebGL" , autoCalcZScale: true};
+						
+						// Options common to both types of plot.
+						var
+						options = {xPos: 0, yPos: 0, width: 300, height: 300, colourGradient: colours,
+						xTitle: xAxisHeader, yTitle: yAxisHeader, zTitle: zAxisHeader,
+						backColour: background, axisTextColour: axisForeColour, hideFlatMinPolygons: hideFloorPolygons, origin: chartOrigin};
+						
+						surfacePlot.draw(data, options, basicPlotOptions, glOptions);
+					}
+					
+					setUp();
+					
+					function sliderUpdate(newValue)
+					{
+						mu1 = newValue;
+						showValue(newValue);
+						//document.getElementById("range").innerHTML=newValue;
+						surfacePlot.cleanUp();
+					}
+					function toggleChart(chkbox)
+					{
+						if(isWebGL()){
+							glAllow = chkbox.checked;
+						}
+						//console.log(glAllow);
+						$('canvas').remove('.surfacePlotCanvas')
+						setUp();
+						surfacePlot.redraw();
+					}
+			      </script></div>
+						<br>
+				</td>
+				<td class="device" colspan="2"><canvas id="distCanvas"
+					title="Distribution graph" width="300" height="250">Distribution
+					graph</canvas></td>
+				<td style="width: 30%;"><big><big><b>Instructions</b></big></big></br>
+					<ul>
+						<li><small><span style="font-weight: bold;">Requirements
+						</span>- modern web-browser with HTML and JavaScript support. The 3D view
+						of the bivariate distribution requires <a
+							href="http://www.khronos.org/webgl/">WebGL</a> support.<br>
+						</small></li>
+						<li><small>See the <a
+							href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_BivariateNormal_JS_Activity">SOCR
+						Bivariate Normal Distribution <span style="font-weight: bold;">Activity</span></a>.</small></li>
+						<li><small>Use the <span style="font-weight: bold;">Settings
+						</span>to initialize the web-app. To activate new input settings click
+						outside the component. <br>
+						</small></li>
+						<li><small>In the <span style="font-weight: bold;">Control
+						</span>panel you can select the appropriate bivariate limits for the X and
+						Y variables, choose desired <span style="font-style: italic;">Marginal
+						</span>or <span style="font-style: italic;">Conditional </span>probability
+						function, and view the 1D Normal Distribution graph. Use any
+						non-numerical character to specify infinity (<big>∞</big>).<br>
+						</small></li>
+						<li><small>You can rotate the bivariate normal
+						distribution in 3D by clicking and dragging on the graph.</small></li>
+						<li><small><span style="font-weight: bold;">Probability
+						Results</span> are reported in the bottom text area.<br>
+						</small></li>
+					</ul>
+				</td>
+				
+			</tr>
+		</tbody>
+	</table>
+	<!--END OF BIVAR NORM CODE--> <!-- End of Webapp code </div>-->
+</div>
+</div>
+
+<!--/span-->
+</div>
+<!--/row-->
+
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+</div>
+<!--/.fluid-container-->
+
+<!-- Le javascript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../js/jquery.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-transition.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-alert.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tab.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-popover.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-button.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-typeahead.js" type="text/javascript"></script>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+
+</body>
+</html>

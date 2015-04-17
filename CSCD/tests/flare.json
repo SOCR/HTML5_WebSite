@@ -1,0 +1,34 @@
+{
+ "name": "flare",
+ "children": [
+  {
+   "name": "General Chronic Disease",
+   "children": [
+    {
+     "name": "cluster",
+     "children": [
+      {"name": "AgglomerativeCluster", "size": 75},
+      {"name": "MergeEdge", "size": 65},
+      {"name": "MergeEdge", "size": 55},
+      {"name": "MergeEdge", "size": 45}
+     ]
+    },
+    {
+     "name": "Severe Single Diagnosis",
+     "children": [
+      {"name": "AspectRatioBanker", "size": 20},
+      {"name": "AspectRatioBanker", "size": 15},
+      {"name": "AspectRatioBanker", "size": 10}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Complex High-Rick Cases",
+   "children": [
+    {"name": "Easing", "size": 5},
+    {"name": "Tween", "size": 1}
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Fisher (F) Distribution Table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="../html/feed.rss">
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/people">SOCR Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1" href="../html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/navigators/Carousel"
+			rel="tooltip" title="Carousel Resource Navigator">Carousel Viewer</a></li>
+	</ul>
+	</li>
+	<li><a href="../html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+		Calculators</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+		and Image-Processing Applets</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+		Java Applets</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+<big><b><font color="navy" size="5"><big><u><a
+ href="http://socr.ucla.edu/htmls/dist/Fisher_Distribution.html">F
+Distribution</a> Tables</u> </big></font></b></big></br>
+
+<p> The F distribution is a right-skewed distribution used most
+commonly in
+Analysis of Variance. When referencing the F distribution, the <font
+ color="#cc0000"><u><b>numerator degrees of freedom are always given
+first</b></u></font>,
+as switching the order of degrees of freedom changes the distribution
+(e.g.,
+F<sub>(10,12)</sub> does not equal F<sub>(12,10)</sub> ). For the four
+F
+tables below, the rows represent denominator degrees of freedom and the
+columns
+represent numerator degrees of freedom. The right tail area is given in
+the name of the table. For example, to determine the .05 critical value
+for an F distribution with 10 and 12 degrees of freedom, look in the 10
+column
+(numerator) and 12 row (denominator) of the F Table for alpha=.05. F<sub>(.05,
+10, 12)</sub> = 2.7534. You can use the <a
+ href="http://socr.ucla.edu/htmls/dist/Fisher_Distribution.html">interactive
+F-Distribution Applet</a> to obtain more accurate measures.<br>
+</p>
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><font color="navy" size="4">F
+Table
+for α = 0.10</font><br>
+      </td>
+      <td align="center" valign="middle"><img alt="F_Distribution_Graph"
+ src="F_Distrib_Pic.jpg" align="middle"><!-- height="100" width="200" src="F_Distrib_Pic.jpg" -->
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<center></center>
+<p>
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <th><font size="2">&nbsp;\</font></th>
+      <th><font size="2">df<sub>1</sub>=1</font></th>
+      <th><font size="2">2 </font></th>
+      <th><font size="2">3 </font></th>
+      <th><font size="2">4 </font></th>
+      <th><font size="2">5 </font></th>
+      <th><font size="2">6 </font></th>
+      <th><font size="2">7 </font></th>
+      <th><font size="2">8 </font></th>
+      <th><font size="2">9 </font></th>
+      <th><font size="2">10 </font></th>
+      <th><font size="2">12 </font></th>
+      <th><font size="2">15 </font></th>
+      <th><font size="2">20 </font></th>
+      <th><font size="2">24 </font></th>
+      <th><font size="2">30 </font></th>
+      <th><font size="2">40 </font></th>
+      <th><font size="2">60 </font></th>
+      <th><font size="2">120 </font></th>
+      <th><font size="2">∞ </font></th>
+    </tr>
+    <tr>
+      <th><font size="2">df</font><font size="2"><sub>2</sub></font><font
+ size="2">=1 </font></th>
+      <td align="right"><font size="2"> 39.86346</font></td>
+      <td align="right"><font size="2"> 49.50000</font></td>
+      <td align="right"><font size="2"> 53.59324</font></td>
+      <td align="right"><font size="2"> 55.83296</font></td>
+      <td align="right"><font size="2"> 57.24008</font></td>
+      <td align="right"><font size="2"> 58.20442</font></td>
+      <td align="right"><font size="2"> 58.90595</font></td>
+      <td align="right"><font size="2"> 59.43898</font></td>
+      <td align="right"><font size="2"> 59.85759</font></td>
+      <td align="right"><font size="2"> 60.19498</font></td>
+      <td align="right"><font size="2"> 60.70521</font></td>
+      <td align="right"><font size="2"> 61.22034</font></td>
+      <td align="right"><font size="2"> 61.74029</font></td>
+      <td align="right"><font size="2"> 62.00205</font></td>
+      <td align="right"><font size="2"> 62.26497</font></td>
+      <td align="right"><font size="2"> 62.52905</font></td>
+      <td align="right"><font size="2"> 62.79428</font></td>
+      <td align="right"><font size="2"> 63.06064</font></td>
+      <td align="right"><font size="2"> 63.32812</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">2 </font></th>
+      <td align="right"><font size="2"> 8.52632</font></td>
+      <td align="right"><font size="2"> 9.00000</font></td>
+      <td align="right"><font size="2"> 9.16179</font></td>
+      <td align="right"><font size="2"> 9.24342</font></td>
+      <td align="right"><font size="2"> 9.29263</font></td>
+      <td align="right"><font size="2"> 9.32553</font></td>
+      <td align="right"><font size="2"> 9.34908</font></td>
+      <td align="right"><font size="2"> 9.36677</font></td>
+      <td align="right"><font size="2"> 9.38054</font></td>
+      <td align="right"><font size="2"> 9.39157</font></td>
+      <td align="right"><font size="2"> 9.40813</font></td>
+      <td align="right"><font size="2"> 9.42471</font></td>
+      <td align="right"><font size="2"> 9.44131</font></td>
+      <td align="right"><font size="2"> 9.44962</font></td>
+      <td align="right"><font size="2"> 9.45793</font></td>
+      <td align="right"><font size="2"> 9.46624</font></td>
+      <td align="right"><font size="2"> 9.47456</font></td>
+      <td align="right"><font size="2"> 9.48289</font></td>
+      <td align="right"><font size="2"> 9.49122</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">3 </font></th>
+      <td align="right"><font size="2"> 5.53832</font></td>
+      <td align="right"><font size="2"> 5.46238</font></td>
+      <td align="right"><font size="2"> 5.39077</font></td>
+      <td align="right"><font size="2"> 5.34264</font></td>
+      <td align="right"><font size="2"> 5.30916</font></td>
+      <td align="right"><font size="2"> 5.28473</font></td>
+      <td align="right"><font size="2"> 5.26619</font></td>
+      <td align="right"><font size="2"> 5.25167</font></td>
+      <td align="right"><font size="2"> 5.24000</font></td>
+      <td align="right"><font size="2"> 5.23041</font></td>
+      <td align="right"><font size="2"> 5.21562</font></td>
+      <td align="right"><font size="2"> 5.20031</font></td>
+      <td align="right"><font size="2"> 5.18448</font></td>
+      <td align="right"><font size="2"> 5.17636</font></td>
+      <td align="right"><font size="2"> 5.16811</font></td>
+      <td align="right"><font size="2"> 5.15972</font></td>
+      <td align="right"><font size="2"> 5.15119</font></td>
+      <td align="right"><font size="2"> 5.14251</font></td>
+      <td align="right"><font size="2"> 5.13370</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">4 </font></th>
+      <td align="right"><font size="2"> 4.54477</font></td>
+      <td align="right"><font size="2"> 4.32456</font></td>
+      <td align="right"><font size="2"> 4.19086</font></td>
+      <td align="right"><font size="2"> 4.10725</font></td>
+      <td align="right"><font size="2"> 4.05058</font></td>
+      <td align="right"><font size="2"> 4.00975</font></td>
+      <td align="right"><font size="2"> 3.97897</font></td>
+      <td align="right"><font size="2"> 3.95494</font></td>
+      <td align="right"><font size="2"> 3.93567</font></td>
+      <td align="right"><font size="2"> 3.91988</font></td>
+      <td align="right"><font size="2"> 3.89553</font></td>
+      <td align="right"><font size="2"> 3.87036</font></td>
+      <td align="right"><font size="2"> 3.84434</font></td>
+      <td align="right"><font size="2"> 3.83099</font></td>
+      <td align="right"><font size="2"> 3.81742</font></td>
+      <td align="right"><font size="2"> 3.80361</font></td>
+      <td align="right"><font size="2"> 3.78957</font></td>
+      <td align="right"><font size="2"> 3.77527</font></td>
+      <td align="right"><font size="2"> 3.76073</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">5 </font></th>
+      <td align="right"><font size="2"> 4.06042</font></td>
+      <td align="right"><font size="2"> 3.77972</font></td>
+      <td align="right"><font size="2"> 3.61948</font></td>
+      <td align="right"><font size="2"> 3.52020</font></td>
+      <td align="right"><font size="2"> 3.45298</font></td>
+      <td align="right"><font size="2"> 3.40451</font></td>
+      <td align="right"><font size="2"> 3.36790</font></td>
+      <td align="right"><font size="2"> 3.33928</font></td>
+      <td align="right"><font size="2"> 3.31628</font></td>
+      <td align="right"><font size="2"> 3.29740</font></td>
+      <td align="right"><font size="2"> 3.26824</font></td>
+      <td align="right"><font size="2"> 3.23801</font></td>
+      <td align="right"><font size="2"> 3.20665</font></td>
+      <td align="right"><font size="2"> 3.19052</font></td>
+      <td align="right"><font size="2"> 3.17408</font></td>
+      <td align="right"><font size="2"> 3.15732</font></td>
+      <td align="right"><font size="2"> 3.14023</font></td>
+      <td align="right"><font size="2"> 3.12279</font></td>
+      <td align="right"><font size="2"> 3.10500</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">6 </font></th>
+      <td align="right"><font size="2"> 3.77595</font></td>
+      <td align="right"><font size="2"> 3.46330</font></td>
+      <td align="right"><font size="2"> 3.28876</font></td>
+      <td align="right"><font size="2"> 3.18076</font></td>
+      <td align="right"><font size="2"> 3.10751</font></td>
+      <td align="right"><font size="2"> 3.05455</font></td>
+      <td align="right"><font size="2"> 3.01446</font></td>
+      <td align="right"><font size="2"> 2.98304</font></td>
+      <td align="right"><font size="2"> 2.95774</font></td>
+      <td align="right"><font size="2"> 2.93693</font></td>
+      <td align="right"><font size="2"> 2.90472</font></td>
+      <td align="right"><font size="2"> 2.87122</font></td>
+      <td align="right"><font size="2"> 2.83634</font></td>
+      <td align="right"><font size="2"> 2.81834</font></td>
+      <td align="right"><font size="2"> 2.79996</font></td>
+      <td align="right"><font size="2"> 2.78117</font></td>
+      <td align="right"><font size="2"> 2.76195</font></td>
+      <td align="right"><font size="2"> 2.74229</font></td>
+      <td align="right"><font size="2"> 2.72216</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">7 </font></th>
+      <td align="right"><font size="2"> 3.58943</font></td>
+      <td align="right"><font size="2"> 3.25744</font></td>
+      <td align="right"><font size="2"> 3.07407</font></td>
+      <td align="right"><font size="2"> 2.96053</font></td>
+      <td align="right"><font size="2"> 2.88334</font></td>
+      <td align="right"><font size="2"> 2.82739</font></td>
+      <td align="right"><font size="2"> 2.78493</font></td>
+      <td align="right"><font size="2"> 2.75158</font></td>
+      <td align="right"><font size="2"> 2.72468</font></td>
+      <td align="right"><font size="2"> 2.70251</font></td>
+      <td align="right"><font size="2"> 2.66811</font></td>
+      <td align="right"><font size="2"> 2.63223</font></td>
+      <td align="right"><font size="2"> 2.59473</font></td>
+      <td align="right"><font size="2"> 2.57533</font></td>
+      <td align="right"><font size="2"> 2.55546</font></td>
+      <td align="right"><font size="2"> 2.53510</font></td>
+      <td align="right"><font size="2"> 2.51422</font></td>
+      <td align="right"><font size="2"> 2.49279</font></td>
+      <td align="right"><font size="2"> 2.47079</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">8 </font></th>
+      <td align="right"><font size="2"> 3.45792</font></td>
+      <td align="right"><font size="2"> 3.11312</font></td>
+      <td align="right"><font size="2"> 2.92380</font></td>
+      <td align="right"><font size="2"> 2.80643</font></td>
+      <td align="right"><font size="2"> 2.72645</font></td>
+      <td align="right"><font size="2"> 2.66833</font></td>
+      <td align="right"><font size="2"> 2.62413</font></td>
+      <td align="right"><font size="2"> 2.58935</font></td>
+      <td align="right"><font size="2"> 2.56124</font></td>
+      <td align="right"><font size="2"> 2.53804</font></td>
+      <td align="right"><font size="2"> 2.50196</font></td>
+      <td align="right"><font size="2"> 2.46422</font></td>
+      <td align="right"><font size="2"> 2.42464</font></td>
+      <td align="right"><font size="2"> 2.40410</font></td>
+      <td align="right"><font size="2"> 2.38302</font></td>
+      <td align="right"><font size="2"> 2.36136</font></td>
+      <td align="right"><font size="2"> 2.33910</font></td>
+      <td align="right"><font size="2"> 2.31618</font></td>
+      <td align="right"><font size="2"> 2.29257</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">9 </font></th>
+      <td align="right"><font size="2"> 3.36030</font></td>
+      <td align="right"><font size="2"> 3.00645</font></td>
+      <td align="right"><font size="2"> 2.81286</font></td>
+      <td align="right"><font size="2"> 2.69268</font></td>
+      <td align="right"><font size="2"> 2.61061</font></td>
+      <td align="right"><font size="2"> 2.55086</font></td>
+      <td align="right"><font size="2"> 2.50531</font></td>
+      <td align="right"><font size="2"> 2.46941</font></td>
+      <td align="right"><font size="2"> 2.44034</font></td>
+      <td align="right"><font size="2"> 2.41632</font></td>
+      <td align="right"><font size="2"> 2.37888</font></td>
+      <td align="right"><font size="2"> 2.33962</font></td>
+      <td align="right"><font size="2"> 2.29832</font></td>
+      <td align="right"><font size="2"> 2.27683</font></td>
+      <td align="right"><font size="2"> 2.25472</font></td>
+      <td align="right"><font size="2"> 2.23196</font></td>
+      <td align="right"><font size="2"> 2.20849</font></td>
+      <td align="right"><font size="2"> 2.18427</font></td>
+      <td align="right"><font size="2"> 2.15923</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">10 </font></th>
+      <td align="right"><font size="2"> 3.28502</font></td>
+      <td align="right"><font size="2"> 2.92447</font></td>
+      <td align="right"><font size="2"> 2.72767</font></td>
+      <td align="right"><font size="2"> 2.60534</font></td>
+      <td align="right"><font size="2"> 2.52164</font></td>
+      <td align="right"><font size="2"> 2.46058</font></td>
+      <td align="right"><font size="2"> 2.41397</font></td>
+      <td align="right"><font size="2"> 2.37715</font></td>
+      <td align="right"><font size="2"> 2.34731</font></td>
+      <td align="right"><font size="2"> 2.32260</font></td>
+      <td align="right"><font size="2"> 2.28405</font></td>
+      <td align="right"><font size="2"> 2.24351</font></td>
+      <td align="right"><font size="2"> 2.20074</font></td>
+      <td align="right"><font size="2"> 2.17843</font></td>
+      <td align="right"><font size="2"> 2.15543</font></td>
+      <td align="right"><font size="2"> 2.13169</font></td>
+      <td align="right"><font size="2"> 2.10716</font></td>
+      <td align="right"><font size="2"> 2.08176</font></td>
+      <td align="right"><font size="2"> 2.05542</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">11 </font></th>
+      <td align="right"><font size="2"> 3.22520</font></td>
+      <td align="right"><font size="2"> 2.85951</font></td>
+      <td align="right"><font size="2"> 2.66023</font></td>
+      <td align="right"><font size="2"> 2.53619</font></td>
+      <td align="right"><font size="2"> 2.45118</font></td>
+      <td align="right"><font size="2"> 2.38907</font></td>
+      <td align="right"><font size="2"> 2.34157</font></td>
+      <td align="right"><font size="2"> 2.30400</font></td>
+      <td align="right"><font size="2"> 2.27350</font></td>
+      <td align="right"><font size="2"> 2.24823</font></td>
+      <td align="right"><font size="2"> 2.20873</font></td>
+      <td align="right"><font size="2"> 2.16709</font></td>
+      <td align="right"><font size="2"> 2.12305</font></td>
+      <td align="right"><font size="2"> 2.10001</font></td>
+      <td align="right"><font size="2"> 2.07621</font></td>
+      <td align="right"><font size="2"> 2.05161</font></td>
+      <td align="right"><font size="2"> 2.02612</font></td>
+      <td align="right"><font size="2"> 1.99965</font></td>
+      <td align="right"><font size="2"> 1.97211</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">12 </font></th>
+      <td align="right"><font size="2"> 3.17655</font></td>
+      <td align="right"><font size="2"> 2.80680</font></td>
+      <td align="right"><font size="2"> 2.60552</font></td>
+      <td align="right"><font size="2"> 2.48010</font></td>
+      <td align="right"><font size="2"> 2.39402</font></td>
+      <td align="right"><font size="2"> 2.33102</font></td>
+      <td align="right"><font size="2"> 2.28278</font></td>
+      <td align="right"><font size="2"> 2.24457</font></td>
+      <td align="right"><font size="2"> 2.21352</font></td>
+      <td align="right"><font size="2"> 2.18776</font></td>
+      <td align="right"><font size="2"> 2.14744</font></td>
+      <td align="right"><font size="2"> 2.10485</font></td>
+      <td align="right"><font size="2"> 2.05968</font></td>
+      <td align="right"><font size="2"> 2.03599</font></td>
+      <td align="right"><font size="2"> 2.01149</font></td>
+      <td align="right"><font size="2"> 1.98610</font></td>
+      <td align="right"><font size="2"> 1.95973</font></td>
+      <td align="right"><font size="2"> 1.93228</font></td>
+      <td align="right"><font size="2"> 1.90361</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">13 </font></th>
+      <td align="right"><font size="2"> 3.13621</font></td>
+      <td align="right"><font size="2"> 2.76317</font></td>
+      <td align="right"><font size="2"> 2.56027</font></td>
+      <td align="right"><font size="2"> 2.43371</font></td>
+      <td align="right"><font size="2"> 2.34672</font></td>
+      <td align="right"><font size="2"> 2.28298</font></td>
+      <td align="right"><font size="2"> 2.23410</font></td>
+      <td align="right"><font size="2"> 2.19535</font></td>
+      <td align="right"><font size="2"> 2.16382</font></td>
+      <td align="right"><font size="2"> 2.13763</font></td>
+      <td align="right"><font size="2"> 2.09659</font></td>
+      <td align="right"><font size="2"> 2.05316</font></td>
+      <td align="right"><font size="2"> 2.00698</font></td>
+      <td align="right"><font size="2"> 1.98272</font></td>
+      <td align="right"><font size="2"> 1.95757</font></td>
+      <td align="right"><font size="2"> 1.93147</font></td>
+      <td align="right"><font size="2"> 1.90429</font></td>
+      <td align="right"><font size="2"> 1.87591</font></td>
+      <td align="right"><font size="2"> 1.84620</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">14 </font></th>
+      <td align="right"><font size="2"> 3.10221</font></td>
+      <td align="right"><font size="2"> 2.72647</font></td>
+      <td align="right"><font size="2"> 2.52222</font></td>
+      <td align="right"><font size="2"> 2.39469</font></td>
+      <td align="right"><font size="2"> 2.30694</font></td>
+      <td align="right"><font size="2"> 2.24256</font></td>
+      <td align="right"><font size="2"> 2.19313</font></td>
+      <td align="right"><font size="2"> 2.15390</font></td>
+      <td align="right"><font size="2"> 2.12195</font></td>
+      <td align="right"><font size="2"> 2.09540</font></td>
+      <td align="right"><font size="2"> 2.05371</font></td>
+      <td align="right"><font size="2"> 2.00953</font></td>
+      <td align="right"><font size="2"> 1.96245</font></td>
+      <td align="right"><font size="2"> 1.93766</font></td>
+      <td align="right"><font size="2"> 1.91193</font></td>
+      <td align="right"><font size="2"> 1.88516</font></td>
+      <td align="right"><font size="2"> 1.85723</font></td>
+      <td align="right"><font size="2"> 1.82800</font></td>
+      <td align="right"><font size="2"> 1.79728</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">15 </font></th>
+      <td align="right"><font size="2"> 3.07319</font></td>
+      <td align="right"><font size="2"> 2.69517</font></td>
+      <td align="right"><font size="2"> 2.48979</font></td>
+      <td align="right"><font size="2"> 2.36143</font></td>
+      <td align="right"><font size="2"> 2.27302</font></td>
+      <td align="right"><font size="2"> 2.20808</font></td>
+      <td align="right"><font size="2"> 2.15818</font></td>
+      <td align="right"><font size="2"> 2.11853</font></td>
+      <td align="right"><font size="2"> 2.08621</font></td>
+      <td align="right"><font size="2"> 2.05932</font></td>
+      <td align="right"><font size="2"> 2.01707</font></td>
+      <td align="right"><font size="2"> 1.97222</font></td>
+      <td align="right"><font size="2"> 1.92431</font></td>
+      <td align="right"><font size="2"> 1.89904</font></td>
+      <td align="right"><font size="2"> 1.87277</font></td>
+      <td align="right"><font size="2"> 1.84539</font></td>
+      <td align="right"><font size="2"> 1.81676</font></td>
+      <td align="right"><font size="2"> 1.78672</font></td>
+      <td align="right"><font size="2"> 1.75505</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">16 </font></th>
+      <td align="right"><font size="2"> 3.04811</font></td>
+      <td align="right"><font size="2"> 2.66817</font></td>
+      <td align="right"><font size="2"> 2.46181</font></td>
+      <td align="right"><font size="2"> 2.33274</font></td>
+      <td align="right"><font size="2"> 2.24376</font></td>
+      <td align="right"><font size="2"> 2.17833</font></td>
+      <td align="right"><font size="2"> 2.12800</font></td>
+      <td align="right"><font size="2"> 2.08798</font></td>
+      <td align="right"><font size="2"> 2.05533</font></td>
+      <td align="right"><font size="2"> 2.02815</font></td>
+      <td align="right"><font size="2"> 1.98539</font></td>
+      <td align="right"><font size="2"> 1.93992</font></td>
+      <td align="right"><font size="2"> 1.89127</font></td>
+      <td align="right"><font size="2"> 1.86556</font></td>
+      <td align="right"><font size="2"> 1.83879</font></td>
+      <td align="right"><font size="2"> 1.81084</font></td>
+      <td align="right"><font size="2"> 1.78156</font></td>
+      <td align="right"><font size="2"> 1.75075</font></td>
+      <td align="right"><font size="2"> 1.71817</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">17 </font></th>
+      <td align="right"><font size="2"> 3.02623</font></td>
+      <td align="right"><font size="2"> 2.64464</font></td>
+      <td align="right"><font size="2"> 2.43743</font></td>
+      <td align="right"><font size="2"> 2.30775</font></td>
+      <td align="right"><font size="2"> 2.21825</font></td>
+      <td align="right"><font size="2"> 2.15239</font></td>
+      <td align="right"><font size="2"> 2.10169</font></td>
+      <td align="right"><font size="2"> 2.06134</font></td>
+      <td align="right"><font size="2"> 2.02839</font></td>
+      <td align="right"><font size="2"> 2.00094</font></td>
+      <td align="right"><font size="2"> 1.95772</font></td>
+      <td align="right"><font size="2"> 1.91169</font></td>
+      <td align="right"><font size="2"> 1.86236</font></td>
+      <td align="right"><font size="2"> 1.83624</font></td>
+      <td align="right"><font size="2"> 1.80901</font></td>
+      <td align="right"><font size="2"> 1.78053</font></td>
+      <td align="right"><font size="2"> 1.75063</font></td>
+      <td align="right"><font size="2"> 1.71909</font></td>
+      <td align="right"><font size="2"> 1.68564</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">18 </font></th>
+      <td align="right"><font size="2"> 3.00698</font></td>
+      <td align="right"><font size="2"> 2.62395</font></td>
+      <td align="right"><font size="2"> 2.41601</font></td>
+      <td align="right"><font size="2"> 2.28577</font></td>
+      <td align="right"><font size="2"> 2.19583</font></td>
+      <td align="right"><font size="2"> 2.12958</font></td>
+      <td align="right"><font size="2"> 2.07854</font></td>
+      <td align="right"><font size="2"> 2.03789</font></td>
+      <td align="right"><font size="2"> 2.00467</font></td>
+      <td align="right"><font size="2"> 1.97698</font></td>
+      <td align="right"><font size="2"> 1.93334</font></td>
+      <td align="right"><font size="2"> 1.88681</font></td>
+      <td align="right"><font size="2"> 1.83685</font></td>
+      <td align="right"><font size="2"> 1.81035</font></td>
+      <td align="right"><font size="2"> 1.78269</font></td>
+      <td align="right"><font size="2"> 1.75371</font></td>
+      <td align="right"><font size="2"> 1.72322</font></td>
+      <td align="right"><font size="2"> 1.69099</font></td>
+      <td align="right"><font size="2"> 1.65671</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">19 </font></th>
+      <td align="right"><font size="2"> 2.98990</font></td>
+      <td align="right"><font size="2"> 2.60561</font></td>
+      <td align="right"><font size="2"> 2.39702</font></td>
+      <td align="right"><font size="2"> 2.26630</font></td>
+      <td align="right"><font size="2"> 2.17596</font></td>
+      <td align="right"><font size="2"> 2.10936</font></td>
+      <td align="right"><font size="2"> 2.05802</font></td>
+      <td align="right"><font size="2"> 2.01710</font></td>
+      <td align="right"><font size="2"> 1.98364</font></td>
+      <td align="right"><font size="2"> 1.95573</font></td>
+      <td align="right"><font size="2"> 1.91170</font></td>
+      <td align="right"><font size="2"> 1.86471</font></td>
+      <td align="right"><font size="2"> 1.81416</font></td>
+      <td align="right"><font size="2"> 1.78731</font></td>
+      <td align="right"><font size="2"> 1.75924</font></td>
+      <td align="right"><font size="2"> 1.72979</font></td>
+      <td align="right"><font size="2"> 1.69876</font></td>
+      <td align="right"><font size="2"> 1.66587</font></td>
+      <td align="right"><font size="2"> 1.63077</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">20 </font></th>
+      <td align="right"><font size="2"> 2.97465</font></td>
+      <td align="right"><font size="2"> 2.58925</font></td>
+      <td align="right"><font size="2"> 2.38009</font></td>
+      <td align="right"><font size="2"> 2.24893</font></td>
+      <td align="right"><font size="2"> 2.15823</font></td>
+      <td align="right"><font size="2"> 2.09132</font></td>
+      <td align="right"><font size="2"> 2.03970</font></td>
+      <td align="right"><font size="2"> 1.99853</font></td>
+      <td align="right"><font size="2"> 1.96485</font></td>
+      <td align="right"><font size="2"> 1.93674</font></td>
+      <td align="right"><font size="2"> 1.89236</font></td>
+      <td align="right"><font size="2"> 1.84494</font></td>
+      <td align="right"><font size="2"> 1.79384</font></td>
+      <td align="right"><font size="2"> 1.76667</font></td>
+      <td align="right"><font size="2"> 1.73822</font></td>
+      <td align="right"><font size="2"> 1.70833</font></td>
+      <td align="right"><font size="2"> 1.67678</font></td>
+      <td align="right"><font size="2"> 1.64326</font></td>
+      <td align="right"><font size="2"> 1.60738</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">21 </font></th>
+      <td align="right"><font size="2"> 2.96096</font></td>
+      <td align="right"><font size="2"> 2.57457</font></td>
+      <td align="right"><font size="2"> 2.36489</font></td>
+      <td align="right"><font size="2"> 2.23334</font></td>
+      <td align="right"><font size="2"> 2.14231</font></td>
+      <td align="right"><font size="2"> 2.07512</font></td>
+      <td align="right"><font size="2"> 2.02325</font></td>
+      <td align="right"><font size="2"> 1.98186</font></td>
+      <td align="right"><font size="2"> 1.94797</font></td>
+      <td align="right"><font size="2"> 1.91967</font></td>
+      <td align="right"><font size="2"> 1.87497</font></td>
+      <td align="right"><font size="2"> 1.82715</font></td>
+      <td align="right"><font size="2"> 1.77555</font></td>
+      <td align="right"><font size="2"> 1.74807</font></td>
+      <td align="right"><font size="2"> 1.71927</font></td>
+      <td align="right"><font size="2"> 1.68896</font></td>
+      <td align="right"><font size="2"> 1.65691</font></td>
+      <td align="right"><font size="2"> 1.62278</font></td>
+      <td align="right"><font size="2"> 1.58615</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">22 </font></th>
+      <td align="right"><font size="2"> 2.94858</font></td>
+      <td align="right"><font size="2"> 2.56131</font></td>
+      <td align="right"><font size="2"> 2.35117</font></td>
+      <td align="right"><font size="2"> 2.21927</font></td>
+      <td align="right"><font size="2"> 2.12794</font></td>
+      <td align="right"><font size="2"> 2.06050</font></td>
+      <td align="right"><font size="2"> 2.00840</font></td>
+      <td align="right"><font size="2"> 1.96680</font></td>
+      <td align="right"><font size="2"> 1.93273</font></td>
+      <td align="right"><font size="2"> 1.90425</font></td>
+      <td align="right"><font size="2"> 1.85925</font></td>
+      <td align="right"><font size="2"> 1.81106</font></td>
+      <td align="right"><font size="2"> 1.75899</font></td>
+      <td align="right"><font size="2"> 1.73122</font></td>
+      <td align="right"><font size="2"> 1.70208</font></td>
+      <td align="right"><font size="2"> 1.67138</font></td>
+      <td align="right"><font size="2"> 1.63885</font></td>
+      <td align="right"><font size="2"> 1.60415</font></td>
+      <td align="right"><font size="2"> 1.56678</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">23 </font></th>
+      <td align="right"><font size="2"> 2.93736</font></td>
+      <td align="right"><font size="2"> 2.54929</font></td>
+      <td align="right"><font size="2"> 2.33873</font></td>
+      <td align="right"><font size="2"> 2.20651</font></td>
+      <td align="right"><font size="2"> 2.11491</font></td>
+      <td align="right"><font size="2"> 2.04723</font></td>
+      <td align="right"><font size="2"> 1.99492</font></td>
+      <td align="right"><font size="2"> 1.95312</font></td>
+      <td align="right"><font size="2"> 1.91888</font></td>
+      <td align="right"><font size="2"> 1.89025</font></td>
+      <td align="right"><font size="2"> 1.84497</font></td>
+      <td align="right"><font size="2"> 1.79643</font></td>
+      <td align="right"><font size="2"> 1.74392</font></td>
+      <td align="right"><font size="2"> 1.71588</font></td>
+      <td align="right"><font size="2"> 1.68643</font></td>
+      <td align="right"><font size="2"> 1.65535</font></td>
+      <td align="right"><font size="2"> 1.62237</font></td>
+      <td align="right"><font size="2"> 1.58711</font></td>
+      <td align="right"><font size="2"> 1.54903</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">24 </font></th>
+      <td align="right"><font size="2"> 2.92712</font></td>
+      <td align="right"><font size="2"> 2.53833</font></td>
+      <td align="right"><font size="2"> 2.32739</font></td>
+      <td align="right"><font size="2"> 2.19488</font></td>
+      <td align="right"><font size="2"> 2.10303</font></td>
+      <td align="right"><font size="2"> 2.03513</font></td>
+      <td align="right"><font size="2"> 1.98263</font></td>
+      <td align="right"><font size="2"> 1.94066</font></td>
+      <td align="right"><font size="2"> 1.90625</font></td>
+      <td align="right"><font size="2"> 1.87748</font></td>
+      <td align="right"><font size="2"> 1.83194</font></td>
+      <td align="right"><font size="2"> 1.78308</font></td>
+      <td align="right"><font size="2"> 1.73015</font></td>
+      <td align="right"><font size="2"> 1.70185</font></td>
+      <td align="right"><font size="2"> 1.67210</font></td>
+      <td align="right"><font size="2"> 1.64067</font></td>
+      <td align="right"><font size="2"> 1.60726</font></td>
+      <td align="right"><font size="2"> 1.57146</font></td>
+      <td align="right"><font size="2"> 1.53270</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">25 </font></th>
+      <td align="right"><font size="2"> 2.91774</font></td>
+      <td align="right"><font size="2"> 2.52831</font></td>
+      <td align="right"><font size="2"> 2.31702</font></td>
+      <td align="right"><font size="2"> 2.18424</font></td>
+      <td align="right"><font size="2"> 2.09216</font></td>
+      <td align="right"><font size="2"> 2.02406</font></td>
+      <td align="right"><font size="2"> 1.97138</font></td>
+      <td align="right"><font size="2"> 1.92925</font></td>
+      <td align="right"><font size="2"> 1.89469</font></td>
+      <td align="right"><font size="2"> 1.86578</font></td>
+      <td align="right"><font size="2"> 1.82000</font></td>
+      <td align="right"><font size="2"> 1.77083</font></td>
+      <td align="right"><font size="2"> 1.71752</font></td>
+      <td align="right"><font size="2"> 1.68898</font></td>
+      <td align="right"><font size="2"> 1.65895</font></td>
+      <td align="right"><font size="2"> 1.62718</font></td>
+      <td align="right"><font size="2"> 1.59335</font></td>
+      <td align="right"><font size="2"> 1.55703</font></td>
+      <td align="right"><font size="2"> 1.51760</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">26 </font></th>
+      <td align="right"><font size="2"> 2.90913</font></td>
+      <td align="right"><font size="2"> 2.51910</font></td>
+      <td align="right"><font size="2"> 2.30749</font></td>
+      <td align="right"><font size="2"> 2.17447</font></td>
+      <td align="right"><font size="2"> 2.08218</font></td>
+      <td align="right"><font size="2"> 2.01389</font></td>
+      <td align="right"><font size="2"> 1.96104</font></td>
+      <td align="right"><font size="2"> 1.91876</font></td>
+      <td align="right"><font size="2"> 1.88407</font></td>
+      <td align="right"><font size="2"> 1.85503</font></td>
+      <td align="right"><font size="2"> 1.80902</font></td>
+      <td align="right"><font size="2"> 1.75957</font></td>
+      <td align="right"><font size="2"> 1.70589</font></td>
+      <td align="right"><font size="2"> 1.67712</font></td>
+      <td align="right"><font size="2"> 1.64682</font></td>
+      <td align="right"><font size="2"> 1.61472</font></td>
+      <td align="right"><font size="2"> 1.58050</font></td>
+      <td align="right"><font size="2"> 1.54368</font></td>
+      <td align="right"><font size="2"> 1.50360</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">27 </font></th>
+      <td align="right"><font size="2"> 2.90119</font></td>
+      <td align="right"><font size="2"> 2.51061</font></td>
+      <td align="right"><font size="2"> 2.29871</font></td>
+      <td align="right"><font size="2"> 2.16546</font></td>
+      <td align="right"><font size="2"> 2.07298</font></td>
+      <td align="right"><font size="2"> 2.00452</font></td>
+      <td align="right"><font size="2"> 1.95151</font></td>
+      <td align="right"><font size="2"> 1.90909</font></td>
+      <td align="right"><font size="2"> 1.87427</font></td>
+      <td align="right"><font size="2"> 1.84511</font></td>
+      <td align="right"><font size="2"> 1.79889</font></td>
+      <td align="right"><font size="2"> 1.74917</font></td>
+      <td align="right"><font size="2"> 1.69514</font></td>
+      <td align="right"><font size="2"> 1.66616</font></td>
+      <td align="right"><font size="2"> 1.63560</font></td>
+      <td align="right"><font size="2"> 1.60320</font></td>
+      <td align="right"><font size="2"> 1.56859</font></td>
+      <td align="right"><font size="2"> 1.53129</font></td>
+      <td align="right"><font size="2"> 1.49057</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">28 </font></th>
+      <td align="right"><font size="2"> 2.89385</font></td>
+      <td align="right"><font size="2"> 2.50276</font></td>
+      <td align="right"><font size="2"> 2.29060</font></td>
+      <td align="right"><font size="2"> 2.15714</font></td>
+      <td align="right"><font size="2"> 2.06447</font></td>
+      <td align="right"><font size="2"> 1.99585</font></td>
+      <td align="right"><font size="2"> 1.94270</font></td>
+      <td align="right"><font size="2"> 1.90014</font></td>
+      <td align="right"><font size="2"> 1.86520</font></td>
+      <td align="right"><font size="2"> 1.83593</font></td>
+      <td align="right"><font size="2"> 1.78951</font></td>
+      <td align="right"><font size="2"> 1.73954</font></td>
+      <td align="right"><font size="2"> 1.68519</font></td>
+      <td align="right"><font size="2"> 1.65600</font></td>
+      <td align="right"><font size="2"> 1.62519</font></td>
+      <td align="right"><font size="2"> 1.59250</font></td>
+      <td align="right"><font size="2"> 1.55753</font></td>
+      <td align="right"><font size="2"> 1.51976</font></td>
+      <td align="right"><font size="2"> 1.47841</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">29 </font></th>
+      <td align="right"><font size="2"> 2.88703</font></td>
+      <td align="right"><font size="2"> 2.49548</font></td>
+      <td align="right"><font size="2"> 2.28307</font></td>
+      <td align="right"><font size="2"> 2.14941</font></td>
+      <td align="right"><font size="2"> 2.05658</font></td>
+      <td align="right"><font size="2"> 1.98781</font></td>
+      <td align="right"><font size="2"> 1.93452</font></td>
+      <td align="right"><font size="2"> 1.89184</font></td>
+      <td align="right"><font size="2"> 1.85679</font></td>
+      <td align="right"><font size="2"> 1.82741</font></td>
+      <td align="right"><font size="2"> 1.78081</font></td>
+      <td align="right"><font size="2"> 1.73060</font></td>
+      <td align="right"><font size="2"> 1.67593</font></td>
+      <td align="right"><font size="2"> 1.64655</font></td>
+      <td align="right"><font size="2"> 1.61551</font></td>
+      <td align="right"><font size="2"> 1.58253</font></td>
+      <td align="right"><font size="2"> 1.54721</font></td>
+      <td align="right"><font size="2"> 1.50899</font></td>
+      <td align="right"><font size="2"> 1.46704</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">30 </font></th>
+      <td align="right"><font size="2"> 2.88069</font></td>
+      <td align="right"><font size="2"> 2.48872</font></td>
+      <td align="right"><font size="2"> 2.27607</font></td>
+      <td align="right"><font size="2"> 2.14223</font></td>
+      <td align="right"><font size="2"> 2.04925</font></td>
+      <td align="right"><font size="2"> 1.98033</font></td>
+      <td align="right"><font size="2"> 1.92692</font></td>
+      <td align="right"><font size="2"> 1.88412</font></td>
+      <td align="right"><font size="2"> 1.84896</font></td>
+      <td align="right"><font size="2"> 1.81949</font></td>
+      <td align="right"><font size="2"> 1.77270</font></td>
+      <td align="right"><font size="2"> 1.72227</font></td>
+      <td align="right"><font size="2"> 1.66731</font></td>
+      <td align="right"><font size="2"> 1.63774</font></td>
+      <td align="right"><font size="2"> 1.60648</font></td>
+      <td align="right"><font size="2"> 1.57323</font></td>
+      <td align="right"><font size="2"> 1.53757</font></td>
+      <td align="right"><font size="2"> 1.49891</font></td>
+      <td align="right"><font size="2"> 1.45636</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">40 </font></th>
+      <td align="right"><font size="2"> 2.83535</font></td>
+      <td align="right"><font size="2"> 2.44037</font></td>
+      <td align="right"><font size="2"> 2.22609</font></td>
+      <td align="right"><font size="2"> 2.09095</font></td>
+      <td align="right"><font size="2"> 1.99682</font></td>
+      <td align="right"><font size="2"> 1.92688</font></td>
+      <td align="right"><font size="2"> 1.87252</font></td>
+      <td align="right"><font size="2"> 1.82886</font></td>
+      <td align="right"><font size="2"> 1.79290</font></td>
+      <td align="right"><font size="2"> 1.76269</font></td>
+      <td align="right"><font size="2"> 1.71456</font></td>
+      <td align="right"><font size="2"> 1.66241</font></td>
+      <td align="right"><font size="2"> 1.60515</font></td>
+      <td align="right"><font size="2"> 1.57411</font></td>
+      <td align="right"><font size="2"> 1.54108</font></td>
+      <td align="right"><font size="2"> 1.50562</font></td>
+      <td align="right"><font size="2"> 1.46716</font></td>
+      <td align="right"><font size="2"> 1.42476</font></td>
+      <td align="right"><font size="2"> 1.37691</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">60 </font></th>
+      <td align="right"><font size="2"> 2.79107</font></td>
+      <td align="right"><font size="2"> 2.39325</font></td>
+      <td align="right"><font size="2"> 2.17741</font></td>
+      <td align="right"><font size="2"> 2.04099</font></td>
+      <td align="right"><font size="2"> 1.94571</font></td>
+      <td align="right"><font size="2"> 1.87472</font></td>
+      <td align="right"><font size="2"> 1.81939</font></td>
+      <td align="right"><font size="2"> 1.77483</font></td>
+      <td align="right"><font size="2"> 1.73802</font></td>
+      <td align="right"><font size="2"> 1.70701</font></td>
+      <td align="right"><font size="2"> 1.65743</font></td>
+      <td align="right"><font size="2"> 1.60337</font></td>
+      <td align="right"><font size="2"> 1.54349</font></td>
+      <td align="right"><font size="2"> 1.51072</font></td>
+      <td align="right"><font size="2"> 1.47554</font></td>
+      <td align="right"><font size="2"> 1.43734</font></td>
+      <td align="right"><font size="2"> 1.39520</font></td>
+      <td align="right"><font size="2"> 1.34757</font></td>
+      <td align="right"><font size="2"> 1.29146</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">120</font></th>
+      <td align="right"><font size="2"> 2.74781</font></td>
+      <td align="right"><font size="2"> 2.34734</font></td>
+      <td align="right"><font size="2"> 2.12999</font></td>
+      <td align="right"><font size="2"> 1.99230</font></td>
+      <td align="right"><font size="2"> 1.89587</font></td>
+      <td align="right"><font size="2"> 1.82381</font></td>
+      <td align="right"><font size="2"> 1.76748</font></td>
+      <td align="right"><font size="2"> 1.72196</font></td>
+      <td align="right"><font size="2"> 1.68425</font></td>
+      <td align="right"><font size="2"> 1.65238</font></td>
+      <td align="right"><font size="2"> 1.60120</font></td>
+      <td align="right"><font size="2"> 1.54500</font></td>
+      <td align="right"><font size="2"> 1.48207</font></td>
+      <td align="right"><font size="2"> 1.44723</font></td>
+      <td align="right"><font size="2"> 1.40938</font></td>
+      <td align="right"><font size="2"> 1.36760</font></td>
+      <td align="right"><font size="2"> 1.32034</font></td>
+      <td align="right"><font size="2"> 1.26457</font></td>
+      <td align="right"><font size="2"> 1.19256</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">∞</font></th>
+      <td align="right"><font size="2"> 2.70554</font></td>
+      <td align="right"><font size="2"> 2.30259</font></td>
+      <td align="right"><font size="2"> 2.08380</font></td>
+      <td align="right"><font size="2"> 1.94486</font></td>
+      <td align="right"><font size="2"> 1.84727</font></td>
+      <td align="right"><font size="2"> 1.77411</font></td>
+      <td align="right"><font size="2"> 1.71672</font></td>
+      <td align="right"><font size="2"> 1.67020</font></td>
+      <td align="right"><font size="2"> 1.63152</font></td>
+      <td align="right"><font size="2"> 1.59872</font></td>
+      <td align="right"><font size="2"> 1.54578</font></td>
+      <td align="right"><font size="2"> 1.48714</font></td>
+      <td align="right"><font size="2"> 1.42060</font></td>
+      <td align="right"><font size="2"> 1.38318</font></td>
+      <td align="right"><font size="2"> 1.34187</font></td>
+      <td align="right"><font size="2"> 1.29513</font></td>
+      <td align="right"><font size="2"> 1.23995</font></td>
+      <td align="right"><font size="2"> 1.16860</font></td>
+      <td align="right"><font size="2"> 1.00000</font></td>
+    </tr>
+  </tbody>
+</table>
+</br>
+</p>
+
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><font color="navy" size="4">F
+Table
+for α = 0.05</font><br>
+      </td>
+      <td align="center" valign="middle"><img alt="F_Distribution_Graph"
+ src="F_Distrib_Pic.jpg" align="middle"> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <th><font size="2">/</font></th>
+      <th><font size="2">df<sub>1</sub>=1</font></th>
+      <th><font size="2">2 </font></th>
+      <th><font size="2">3 </font></th>
+      <th><font size="2">4 </font></th>
+      <th><font size="2">5 </font></th>
+      <th><font size="2">6 </font></th>
+      <th><font size="2">7 </font></th>
+      <th><font size="2">8 </font></th>
+      <th><font size="2">9 </font></th>
+      <th><font size="2">10 </font></th>
+      <th><font size="2">12 </font></th>
+      <th><font size="2">15 </font></th>
+      <th><font size="2">20 </font></th>
+      <th><font size="2">24 </font></th>
+      <th><font size="2">30 </font></th>
+      <th><font size="2">40 </font></th>
+      <th><font size="2">60 </font></th>
+      <th><font size="2">120 </font></th>
+      <th><font size="2">∞ </font></th>
+    </tr>
+    <tr>
+      <th>df<font size="2"><sub>2</sub></font><font size="2">=1 </font></th>
+      <td align="right"><font size="2"> 161.4476</font></td>
+      <td align="right"><font size="2"> 199.5000</font></td>
+      <td align="right"><font size="2"> 215.7073</font></td>
+      <td align="right"><font size="2"> 224.5832</font></td>
+      <td align="right"><font size="2"> 230.1619</font></td>
+      <td align="right"><font size="2"> 233.9860</font></td>
+      <td align="right"><font size="2"> 236.7684</font></td>
+      <td align="right"><font size="2"> 238.8827</font></td>
+      <td align="right"><font size="2"> 240.5433</font></td>
+      <td align="right"><font size="2"> 241.8817</font></td>
+      <td align="right"><font size="2"> 243.9060</font></td>
+      <td align="right"><font size="2"> 245.9499</font></td>
+      <td align="right"><font size="2"> 248.0131</font></td>
+      <td align="right"><font size="2"> 249.0518</font></td>
+      <td align="right"><font size="2"> 250.0951</font></td>
+      <td align="right"><font size="2"> 251.1432</font></td>
+      <td align="right"><font size="2"> 252.1957</font></td>
+      <td align="right"><font size="2"> 253.2529</font></td>
+      <td align="right"><font size="2"> 254.3144</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">2 </font></th>
+      <td align="right"><font size="2"> 18.5128</font></td>
+      <td align="right"><font size="2"> 19.0000</font></td>
+      <td align="right"><font size="2"> 19.1643</font></td>
+      <td align="right"><font size="2"> 19.2468</font></td>
+      <td align="right"><font size="2"> 19.2964</font></td>
+      <td align="right"><font size="2"> 19.3295</font></td>
+      <td align="right"><font size="2"> 19.3532</font></td>
+      <td align="right"><font size="2"> 19.3710</font></td>
+      <td align="right"><font size="2"> 19.3848</font></td>
+      <td align="right"><font size="2"> 19.3959</font></td>
+      <td align="right"><font size="2"> 19.4125</font></td>
+      <td align="right"><font size="2"> 19.4291</font></td>
+      <td align="right"><font size="2"> 19.4458</font></td>
+      <td align="right"><font size="2"> 19.4541</font></td>
+      <td align="right"><font size="2"> 19.4624</font></td>
+      <td align="right"><font size="2"> 19.4707</font></td>
+      <td align="right"><font size="2"> 19.4791</font></td>
+      <td align="right"><font size="2"> 19.4874</font></td>
+      <td align="right"><font size="2"> 19.4957</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">3 </font></th>
+      <td align="right"><font size="2"> 10.1280</font></td>
+      <td align="right"><font size="2"> 9.5521</font></td>
+      <td align="right"><font size="2"> 9.2766</font></td>
+      <td align="right"><font size="2"> 9.1172</font></td>
+      <td align="right"><font size="2"> 9.0135</font></td>
+      <td align="right"><font size="2"> 8.9406</font></td>
+      <td align="right"><font size="2"> 8.8867</font></td>
+      <td align="right"><font size="2"> 8.8452</font></td>
+      <td align="right"><font size="2"> 8.8123</font></td>
+      <td align="right"><font size="2"> 8.7855</font></td>
+      <td align="right"><font size="2"> 8.7446</font></td>
+      <td align="right"><font size="2"> 8.7029</font></td>
+      <td align="right"><font size="2"> 8.6602</font></td>
+      <td align="right"><font size="2"> 8.6385</font></td>
+      <td align="right"><font size="2"> 8.6166</font></td>
+      <td align="right"><font size="2"> 8.5944</font></td>
+      <td align="right"><font size="2"> 8.5720</font></td>
+      <td align="right"><font size="2"> 8.5494</font></td>
+      <td align="right"><font size="2"> 8.5264</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">4 </font></th>
+      <td align="right"><font size="2"> 7.7086</font></td>
+      <td align="right"><font size="2"> 6.9443</font></td>
+      <td align="right"><font size="2"> 6.5914</font></td>
+      <td align="right"><font size="2"> 6.3882</font></td>
+      <td align="right"><font size="2"> 6.2561</font></td>
+      <td align="right"><font size="2"> 6.1631</font></td>
+      <td align="right"><font size="2"> 6.0942</font></td>
+      <td align="right"><font size="2"> 6.0410</font></td>
+      <td align="right"><font size="2"> 5.9988</font></td>
+      <td align="right"><font size="2"> 5.9644</font></td>
+      <td align="right"><font size="2"> 5.9117</font></td>
+      <td align="right"><font size="2"> 5.8578</font></td>
+      <td align="right"><font size="2"> 5.8025</font></td>
+      <td align="right"><font size="2"> 5.7744</font></td>
+      <td align="right"><font size="2"> 5.7459</font></td>
+      <td align="right"><font size="2"> 5.7170</font></td>
+      <td align="right"><font size="2"> 5.6877</font></td>
+      <td align="right"><font size="2"> 5.6581</font></td>
+      <td align="right"><font size="2"> 5.6281</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">5 </font></th>
+      <td align="right"><font size="2"> 6.6079</font></td>
+      <td align="right"><font size="2"> 5.7861</font></td>
+      <td align="right"><font size="2"> 5.4095</font></td>
+      <td align="right"><font size="2"> 5.1922</font></td>
+      <td align="right"><font size="2"> 5.0503</font></td>
+      <td align="right"><font size="2"> 4.9503</font></td>
+      <td align="right"><font size="2"> 4.8759</font></td>
+      <td align="right"><font size="2"> 4.8183</font></td>
+      <td align="right"><font size="2"> 4.7725</font></td>
+      <td align="right"><font size="2"> 4.7351</font></td>
+      <td align="right"><font size="2"> 4.6777</font></td>
+      <td align="right"><font size="2"> 4.6188</font></td>
+      <td align="right"><font size="2"> 4.5581</font></td>
+      <td align="right"><font size="2"> 4.5272</font></td>
+      <td align="right"><font size="2"> 4.4957</font></td>
+      <td align="right"><font size="2"> 4.4638</font></td>
+      <td align="right"><font size="2"> 4.4314</font></td>
+      <td align="right"><font size="2"> 4.3985</font></td>
+      <td align="right"><font size="2"> 4.3650</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">6 </font></th>
+      <td align="right"><font size="2"> 5.9874</font></td>
+      <td align="right"><font size="2"> 5.1433</font></td>
+      <td align="right"><font size="2"> 4.7571</font></td>
+      <td align="right"><font size="2"> 4.5337</font></td>
+      <td align="right"><font size="2"> 4.3874</font></td>
+      <td align="right"><font size="2"> 4.2839</font></td>
+      <td align="right"><font size="2"> 4.2067</font></td>
+      <td align="right"><font size="2"> 4.1468</font></td>
+      <td align="right"><font size="2"> 4.0990</font></td>
+      <td align="right"><font size="2"> 4.0600</font></td>
+      <td align="right"><font size="2"> 3.9999</font></td>
+      <td align="right"><font size="2"> 3.9381</font></td>
+      <td align="right"><font size="2"> 3.8742</font></td>
+      <td align="right"><font size="2"> 3.8415</font></td>
+      <td align="right"><font size="2"> 3.8082</font></td>
+      <td align="right"><font size="2"> 3.7743</font></td>
+      <td align="right"><font size="2"> 3.7398</font></td>
+      <td align="right"><font size="2"> 3.7047</font></td>
+      <td align="right"><font size="2"> 3.6689</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">7 </font></th>
+      <td align="right"><font size="2"> 5.5914</font></td>
+      <td align="right"><font size="2"> 4.7374</font></td>
+      <td align="right"><font size="2"> 4.3468</font></td>
+      <td align="right"><font size="2"> 4.1203</font></td>
+      <td align="right"><font size="2"> 3.9715</font></td>
+      <td align="right"><font size="2"> 3.8660</font></td>
+      <td align="right"><font size="2"> 3.7870</font></td>
+      <td align="right"><font size="2"> 3.7257</font></td>
+      <td align="right"><font size="2"> 3.6767</font></td>
+      <td align="right"><font size="2"> 3.6365</font></td>
+      <td align="right"><font size="2"> 3.5747</font></td>
+      <td align="right"><font size="2"> 3.5107</font></td>
+      <td align="right"><font size="2"> 3.4445</font></td>
+      <td align="right"><font size="2"> 3.4105</font></td>
+      <td align="right"><font size="2"> 3.3758</font></td>
+      <td align="right"><font size="2"> 3.3404</font></td>
+      <td align="right"><font size="2"> 3.3043</font></td>
+      <td align="right"><font size="2"> 3.2674</font></td>
+      <td align="right"><font size="2"> 3.2298</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">8 </font></th>
+      <td align="right"><font size="2"> 5.3177</font></td>
+      <td align="right"><font size="2"> 4.4590</font></td>
+      <td align="right"><font size="2"> 4.0662</font></td>
+      <td align="right"><font size="2"> 3.8379</font></td>
+      <td align="right"><font size="2"> 3.6875</font></td>
+      <td align="right"><font size="2"> 3.5806</font></td>
+      <td align="right"><font size="2"> 3.5005</font></td>
+      <td align="right"><font size="2"> 3.4381</font></td>
+      <td align="right"><font size="2"> 3.3881</font></td>
+      <td align="right"><font size="2"> 3.3472</font></td>
+      <td align="right"><font size="2"> 3.2839</font></td>
+      <td align="right"><font size="2"> 3.2184</font></td>
+      <td align="right"><font size="2"> 3.1503</font></td>
+      <td align="right"><font size="2"> 3.1152</font></td>
+      <td align="right"><font size="2"> 3.0794</font></td>
+      <td align="right"><font size="2"> 3.0428</font></td>
+      <td align="right"><font size="2"> 3.0053</font></td>
+      <td align="right"><font size="2"> 2.9669</font></td>
+      <td align="right"><font size="2"> 2.9276</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">9 </font></th>
+      <td align="right"><font size="2"> 5.1174</font></td>
+      <td align="right"><font size="2"> 4.2565</font></td>
+      <td align="right"><font size="2"> 3.8625</font></td>
+      <td align="right"><font size="2"> 3.6331</font></td>
+      <td align="right"><font size="2"> 3.4817</font></td>
+      <td align="right"><font size="2"> 3.3738</font></td>
+      <td align="right"><font size="2"> 3.2927</font></td>
+      <td align="right"><font size="2"> 3.2296</font></td>
+      <td align="right"><font size="2"> 3.1789</font></td>
+      <td align="right"><font size="2"> 3.1373</font></td>
+      <td align="right"><font size="2"> 3.0729</font></td>
+      <td align="right"><font size="2"> 3.0061</font></td>
+      <td align="right"><font size="2"> 2.9365</font></td>
+      <td align="right"><font size="2"> 2.9005</font></td>
+      <td align="right"><font size="2"> 2.8637</font></td>
+      <td align="right"><font size="2"> 2.8259</font></td>
+      <td align="right"><font size="2"> 2.7872</font></td>
+      <td align="right"><font size="2"> 2.7475</font></td>
+      <td align="right"><font size="2"> 2.7067</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">10 </font></th>
+      <td align="right"><font size="2"> 4.9646</font></td>
+      <td align="right"><font size="2"> 4.1028</font></td>
+      <td align="right"><font size="2"> 3.7083</font></td>
+      <td align="right"><font size="2"> 3.4780</font></td>
+      <td align="right"><font size="2"> 3.3258</font></td>
+      <td align="right"><font size="2"> 3.2172</font></td>
+      <td align="right"><font size="2"> 3.1355</font></td>
+      <td align="right"><font size="2"> 3.0717</font></td>
+      <td align="right"><font size="2"> 3.0204</font></td>
+      <td align="right"><font size="2"> 2.9782</font></td>
+      <td align="right"><font size="2"> 2.9130</font></td>
+      <td align="right"><font size="2"> 2.8450</font></td>
+      <td align="right"><font size="2"> 2.7740</font></td>
+      <td align="right"><font size="2"> 2.7372</font></td>
+      <td align="right"><font size="2"> 2.6996</font></td>
+      <td align="right"><font size="2"> 2.6609</font></td>
+      <td align="right"><font size="2"> 2.6211</font></td>
+      <td align="right"><font size="2"> 2.5801</font></td>
+      <td align="right"><font size="2"> 2.5379</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">11 </font></th>
+      <td align="right"><font size="2"> 4.8443</font></td>
+      <td align="right"><font size="2"> 3.9823</font></td>
+      <td align="right"><font size="2"> 3.5874</font></td>
+      <td align="right"><font size="2"> 3.3567</font></td>
+      <td align="right"><font size="2"> 3.2039</font></td>
+      <td align="right"><font size="2"> 3.0946</font></td>
+      <td align="right"><font size="2"> 3.0123</font></td>
+      <td align="right"><font size="2"> 2.9480</font></td>
+      <td align="right"><font size="2"> 2.8962</font></td>
+      <td align="right"><font size="2"> 2.8536</font></td>
+      <td align="right"><font size="2"> 2.7876</font></td>
+      <td align="right"><font size="2"> 2.7186</font></td>
+      <td align="right"><font size="2"> 2.6464</font></td>
+      <td align="right"><font size="2"> 2.6090</font></td>
+      <td align="right"><font size="2"> 2.5705</font></td>
+      <td align="right"><font size="2"> 2.5309</font></td>
+      <td align="right"><font size="2"> 2.4901</font></td>
+      <td align="right"><font size="2"> 2.4480</font></td>
+      <td align="right"><font size="2"> 2.4045</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">12 </font></th>
+      <td align="right"><font size="2"> 4.7472</font></td>
+      <td align="right"><font size="2"> 3.8853</font></td>
+      <td align="right"><font size="2"> 3.4903</font></td>
+      <td align="right"><font size="2"> 3.2592</font></td>
+      <td align="right"><font size="2"> 3.1059</font></td>
+      <td align="right"><font size="2"> 2.9961</font></td>
+      <td align="right"><font size="2"> 2.9134</font></td>
+      <td align="right"><font size="2"> 2.8486</font></td>
+      <td align="right"><font size="2"> 2.7964</font></td>
+      <td align="right"><font size="2"> 2.7534</font></td>
+      <td align="right"><font size="2"> 2.6866</font></td>
+      <td align="right"><font size="2"> 2.6169</font></td>
+      <td align="right"><font size="2"> 2.5436</font></td>
+      <td align="right"><font size="2"> 2.5055</font></td>
+      <td align="right"><font size="2"> 2.4663</font></td>
+      <td align="right"><font size="2"> 2.4259</font></td>
+      <td align="right"><font size="2"> 2.3842</font></td>
+      <td align="right"><font size="2"> 2.3410</font></td>
+      <td align="right"><font size="2"> 2.2962</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">13 </font></th>
+      <td align="right"><font size="2"> 4.6672</font></td>
+      <td align="right"><font size="2"> 3.8056</font></td>
+      <td align="right"><font size="2"> 3.4105</font></td>
+      <td align="right"><font size="2"> 3.1791</font></td>
+      <td align="right"><font size="2"> 3.0254</font></td>
+      <td align="right"><font size="2"> 2.9153</font></td>
+      <td align="right"><font size="2"> 2.8321</font></td>
+      <td align="right"><font size="2"> 2.7669</font></td>
+      <td align="right"><font size="2"> 2.7144</font></td>
+      <td align="right"><font size="2"> 2.6710</font></td>
+      <td align="right"><font size="2"> 2.6037</font></td>
+      <td align="right"><font size="2"> 2.5331</font></td>
+      <td align="right"><font size="2"> 2.4589</font></td>
+      <td align="right"><font size="2"> 2.4202</font></td>
+      <td align="right"><font size="2"> 2.3803</font></td>
+      <td align="right"><font size="2"> 2.3392</font></td>
+      <td align="right"><font size="2"> 2.2966</font></td>
+      <td align="right"><font size="2"> 2.2524</font></td>
+      <td align="right"><font size="2"> 2.2064</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">14 </font></th>
+      <td align="right"><font size="2"> 4.6001</font></td>
+      <td align="right"><font size="2"> 3.7389</font></td>
+      <td align="right"><font size="2"> 3.3439</font></td>
+      <td align="right"><font size="2"> 3.1122</font></td>
+      <td align="right"><font size="2"> 2.9582</font></td>
+      <td align="right"><font size="2"> 2.8477</font></td>
+      <td align="right"><font size="2"> 2.7642</font></td>
+      <td align="right"><font size="2"> 2.6987</font></td>
+      <td align="right"><font size="2"> 2.6458</font></td>
+      <td align="right"><font size="2"> 2.6022</font></td>
+      <td align="right"><font size="2"> 2.5342</font></td>
+      <td align="right"><font size="2"> 2.4630</font></td>
+      <td align="right"><font size="2"> 2.3879</font></td>
+      <td align="right"><font size="2"> 2.3487</font></td>
+      <td align="right"><font size="2"> 2.3082</font></td>
+      <td align="right"><font size="2"> 2.2664</font></td>
+      <td align="right"><font size="2"> 2.2229</font></td>
+      <td align="right"><font size="2"> 2.1778</font></td>
+      <td align="right"><font size="2"> 2.1307</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">15 </font></th>
+      <td align="right"><font size="2"> 4.5431</font></td>
+      <td align="right"><font size="2"> 3.6823</font></td>
+      <td align="right"><font size="2"> 3.2874</font></td>
+      <td align="right"><font size="2"> 3.0556</font></td>
+      <td align="right"><font size="2"> 2.9013</font></td>
+      <td align="right"><font size="2"> 2.7905</font></td>
+      <td align="right"><font size="2"> 2.7066</font></td>
+      <td align="right"><font size="2"> 2.6408</font></td>
+      <td align="right"><font size="2"> 2.5876</font></td>
+      <td align="right"><font size="2"> 2.5437</font></td>
+      <td align="right"><font size="2"> 2.4753</font></td>
+      <td align="right"><font size="2"> 2.4034</font></td>
+      <td align="right"><font size="2"> 2.3275</font></td>
+      <td align="right"><font size="2"> 2.2878</font></td>
+      <td align="right"><font size="2"> 2.2468</font></td>
+      <td align="right"><font size="2"> 2.2043</font></td>
+      <td align="right"><font size="2"> 2.1601</font></td>
+      <td align="right"><font size="2"> 2.1141</font></td>
+      <td align="right"><font size="2"> 2.0658</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">16 </font></th>
+      <td align="right"><font size="2"> 4.4940</font></td>
+      <td align="right"><font size="2"> 3.6337</font></td>
+      <td align="right"><font size="2"> 3.2389</font></td>
+      <td align="right"><font size="2"> 3.0069</font></td>
+      <td align="right"><font size="2"> 2.8524</font></td>
+      <td align="right"><font size="2"> 2.7413</font></td>
+      <td align="right"><font size="2"> 2.6572</font></td>
+      <td align="right"><font size="2"> 2.5911</font></td>
+      <td align="right"><font size="2"> 2.5377</font></td>
+      <td align="right"><font size="2"> 2.4935</font></td>
+      <td align="right"><font size="2"> 2.4247</font></td>
+      <td align="right"><font size="2"> 2.3522</font></td>
+      <td align="right"><font size="2"> 2.2756</font></td>
+      <td align="right"><font size="2"> 2.2354</font></td>
+      <td align="right"><font size="2"> 2.1938</font></td>
+      <td align="right"><font size="2"> 2.1507</font></td>
+      <td align="right"><font size="2"> 2.1058</font></td>
+      <td align="right"><font size="2"> 2.0589</font></td>
+      <td align="right"><font size="2"> 2.0096</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">17 </font></th>
+      <td align="right"><font size="2"> 4.4513</font></td>
+      <td align="right"><font size="2"> 3.5915</font></td>
+      <td align="right"><font size="2"> 3.1968</font></td>
+      <td align="right"><font size="2"> 2.9647</font></td>
+      <td align="right"><font size="2"> 2.8100</font></td>
+      <td align="right"><font size="2"> 2.6987</font></td>
+      <td align="right"><font size="2"> 2.6143</font></td>
+      <td align="right"><font size="2"> 2.5480</font></td>
+      <td align="right"><font size="2"> 2.4943</font></td>
+      <td align="right"><font size="2"> 2.4499</font></td>
+      <td align="right"><font size="2"> 2.3807</font></td>
+      <td align="right"><font size="2"> 2.3077</font></td>
+      <td align="right"><font size="2"> 2.2304</font></td>
+      <td align="right"><font size="2"> 2.1898</font></td>
+      <td align="right"><font size="2"> 2.1477</font></td>
+      <td align="right"><font size="2"> 2.1040</font></td>
+      <td align="right"><font size="2"> 2.0584</font></td>
+      <td align="right"><font size="2"> 2.0107</font></td>
+      <td align="right"><font size="2"> 1.9604</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">18 </font></th>
+      <td align="right"><font size="2"> 4.4139</font></td>
+      <td align="right"><font size="2"> 3.5546</font></td>
+      <td align="right"><font size="2"> 3.1599</font></td>
+      <td align="right"><font size="2"> 2.9277</font></td>
+      <td align="right"><font size="2"> 2.7729</font></td>
+      <td align="right"><font size="2"> 2.6613</font></td>
+      <td align="right"><font size="2"> 2.5767</font></td>
+      <td align="right"><font size="2"> 2.5102</font></td>
+      <td align="right"><font size="2"> 2.4563</font></td>
+      <td align="right"><font size="2"> 2.4117</font></td>
+      <td align="right"><font size="2"> 2.3421</font></td>
+      <td align="right"><font size="2"> 2.2686</font></td>
+      <td align="right"><font size="2"> 2.1906</font></td>
+      <td align="right"><font size="2"> 2.1497</font></td>
+      <td align="right"><font size="2"> 2.1071</font></td>
+      <td align="right"><font size="2"> 2.0629</font></td>
+      <td align="right"><font size="2"> 2.0166</font></td>
+      <td align="right"><font size="2"> 1.9681</font></td>
+      <td align="right"><font size="2"> 1.9168</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">19 </font></th>
+      <td align="right"><font size="2"> 4.3807</font></td>
+      <td align="right"><font size="2"> 3.5219</font></td>
+      <td align="right"><font size="2"> 3.1274</font></td>
+      <td align="right"><font size="2"> 2.8951</font></td>
+      <td align="right"><font size="2"> 2.7401</font></td>
+      <td align="right"><font size="2"> 2.6283</font></td>
+      <td align="right"><font size="2"> 2.5435</font></td>
+      <td align="right"><font size="2"> 2.4768</font></td>
+      <td align="right"><font size="2"> 2.4227</font></td>
+      <td align="right"><font size="2"> 2.3779</font></td>
+      <td align="right"><font size="2"> 2.3080</font></td>
+      <td align="right"><font size="2"> 2.2341</font></td>
+      <td align="right"><font size="2"> 2.1555</font></td>
+      <td align="right"><font size="2"> 2.1141</font></td>
+      <td align="right"><font size="2"> 2.0712</font></td>
+      <td align="right"><font size="2"> 2.0264</font></td>
+      <td align="right"><font size="2"> 1.9795</font></td>
+      <td align="right"><font size="2"> 1.9302</font></td>
+      <td align="right"><font size="2"> 1.8780</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">20 </font></th>
+      <td align="right"><font size="2"> 4.3512</font></td>
+      <td align="right"><font size="2"> 3.4928</font></td>
+      <td align="right"><font size="2"> 3.0984</font></td>
+      <td align="right"><font size="2"> 2.8661</font></td>
+      <td align="right"><font size="2"> 2.7109</font></td>
+      <td align="right"><font size="2"> 2.5990</font></td>
+      <td align="right"><font size="2"> 2.5140</font></td>
+      <td align="right"><font size="2"> 2.4471</font></td>
+      <td align="right"><font size="2"> 2.3928</font></td>
+      <td align="right"><font size="2"> 2.3479</font></td>
+      <td align="right"><font size="2"> 2.2776</font></td>
+      <td align="right"><font size="2"> 2.2033</font></td>
+      <td align="right"><font size="2"> 2.1242</font></td>
+      <td align="right"><font size="2"> 2.0825</font></td>
+      <td align="right"><font size="2"> 2.0391</font></td>
+      <td align="right"><font size="2"> 1.9938</font></td>
+      <td align="right"><font size="2"> 1.9464</font></td>
+      <td align="right"><font size="2"> 1.8963</font></td>
+      <td align="right"><font size="2"> 1.8432</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">21 </font></th>
+      <td align="right"><font size="2"> 4.3248</font></td>
+      <td align="right"><font size="2"> 3.4668</font></td>
+      <td align="right"><font size="2"> 3.0725</font></td>
+      <td align="right"><font size="2"> 2.8401</font></td>
+      <td align="right"><font size="2"> 2.6848</font></td>
+      <td align="right"><font size="2"> 2.5727</font></td>
+      <td align="right"><font size="2"> 2.4876</font></td>
+      <td align="right"><font size="2"> 2.4205</font></td>
+      <td align="right"><font size="2"> 2.3660</font></td>
+      <td align="right"><font size="2"> 2.3210</font></td>
+      <td align="right"><font size="2"> 2.2504</font></td>
+      <td align="right"><font size="2"> 2.1757</font></td>
+      <td align="right"><font size="2"> 2.0960</font></td>
+      <td align="right"><font size="2"> 2.0540</font></td>
+      <td align="right"><font size="2"> 2.0102</font></td>
+      <td align="right"><font size="2"> 1.9645</font></td>
+      <td align="right"><font size="2"> 1.9165</font></td>
+      <td align="right"><font size="2"> 1.8657</font></td>
+      <td align="right"><font size="2"> 1.8117</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">22 </font></th>
+      <td align="right"><font size="2"> 4.3009</font></td>
+      <td align="right"><font size="2"> 3.4434</font></td>
+      <td align="right"><font size="2"> 3.0491</font></td>
+      <td align="right"><font size="2"> 2.8167</font></td>
+      <td align="right"><font size="2"> 2.6613</font></td>
+      <td align="right"><font size="2"> 2.5491</font></td>
+      <td align="right"><font size="2"> 2.4638</font></td>
+      <td align="right"><font size="2"> 2.3965</font></td>
+      <td align="right"><font size="2"> 2.3419</font></td>
+      <td align="right"><font size="2"> 2.2967</font></td>
+      <td align="right"><font size="2"> 2.2258</font></td>
+      <td align="right"><font size="2"> 2.1508</font></td>
+      <td align="right"><font size="2"> 2.0707</font></td>
+      <td align="right"><font size="2"> 2.0283</font></td>
+      <td align="right"><font size="2"> 1.9842</font></td>
+      <td align="right"><font size="2"> 1.9380</font></td>
+      <td align="right"><font size="2"> 1.8894</font></td>
+      <td align="right"><font size="2"> 1.8380</font></td>
+      <td align="right"><font size="2"> 1.7831</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">23 </font></th>
+      <td align="right"><font size="2"> 4.2793</font></td>
+      <td align="right"><font size="2"> 3.4221</font></td>
+      <td align="right"><font size="2"> 3.0280</font></td>
+      <td align="right"><font size="2"> 2.7955</font></td>
+      <td align="right"><font size="2"> 2.6400</font></td>
+      <td align="right"><font size="2"> 2.5277</font></td>
+      <td align="right"><font size="2"> 2.4422</font></td>
+      <td align="right"><font size="2"> 2.3748</font></td>
+      <td align="right"><font size="2"> 2.3201</font></td>
+      <td align="right"><font size="2"> 2.2747</font></td>
+      <td align="right"><font size="2"> 2.2036</font></td>
+      <td align="right"><font size="2"> 2.1282</font></td>
+      <td align="right"><font size="2"> 2.0476</font></td>
+      <td align="right"><font size="2"> 2.0050</font></td>
+      <td align="right"><font size="2"> 1.9605</font></td>
+      <td align="right"><font size="2"> 1.9139</font></td>
+      <td align="right"><font size="2"> 1.8648</font></td>
+      <td align="right"><font size="2"> 1.8128</font></td>
+      <td align="right"><font size="2"> 1.7570</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">24 </font></th>
+      <td align="right"><font size="2"> 4.2597</font></td>
+      <td align="right"><font size="2"> 3.4028</font></td>
+      <td align="right"><font size="2"> 3.0088</font></td>
+      <td align="right"><font size="2"> 2.7763</font></td>
+      <td align="right"><font size="2"> 2.6207</font></td>
+      <td align="right"><font size="2"> 2.5082</font></td>
+      <td align="right"><font size="2"> 2.4226</font></td>
+      <td align="right"><font size="2"> 2.3551</font></td>
+      <td align="right"><font size="2"> 2.3002</font></td>
+      <td align="right"><font size="2"> 2.2547</font></td>
+      <td align="right"><font size="2"> 2.1834</font></td>
+      <td align="right"><font size="2"> 2.1077</font></td>
+      <td align="right"><font size="2"> 2.0267</font></td>
+      <td align="right"><font size="2"> 1.9838</font></td>
+      <td align="right"><font size="2"> 1.9390</font></td>
+      <td align="right"><font size="2"> 1.8920</font></td>
+      <td align="right"><font size="2"> 1.8424</font></td>
+      <td align="right"><font size="2"> 1.7896</font></td>
+      <td align="right"><font size="2"> 1.7330</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">25 </font></th>
+      <td align="right"><font size="2"> 4.2417</font></td>
+      <td align="right"><font size="2"> 3.3852</font></td>
+      <td align="right"><font size="2"> 2.9912</font></td>
+      <td align="right"><font size="2"> 2.7587</font></td>
+      <td align="right"><font size="2"> 2.6030</font></td>
+      <td align="right"><font size="2"> 2.4904</font></td>
+      <td align="right"><font size="2"> 2.4047</font></td>
+      <td align="right"><font size="2"> 2.3371</font></td>
+      <td align="right"><font size="2"> 2.2821</font></td>
+      <td align="right"><font size="2"> 2.2365</font></td>
+      <td align="right"><font size="2"> 2.1649</font></td>
+      <td align="right"><font size="2"> 2.0889</font></td>
+      <td align="right"><font size="2"> 2.0075</font></td>
+      <td align="right"><font size="2"> 1.9643</font></td>
+      <td align="right"><font size="2"> 1.9192</font></td>
+      <td align="right"><font size="2"> 1.8718</font></td>
+      <td align="right"><font size="2"> 1.8217</font></td>
+      <td align="right"><font size="2"> 1.7684</font></td>
+      <td align="right"><font size="2"> 1.7110</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">26 </font></th>
+      <td align="right"><font size="2"> 4.2252</font></td>
+      <td align="right"><font size="2"> 3.3690</font></td>
+      <td align="right"><font size="2"> 2.9752</font></td>
+      <td align="right"><font size="2"> 2.7426</font></td>
+      <td align="right"><font size="2"> 2.5868</font></td>
+      <td align="right"><font size="2"> 2.4741</font></td>
+      <td align="right"><font size="2"> 2.3883</font></td>
+      <td align="right"><font size="2"> 2.3205</font></td>
+      <td align="right"><font size="2"> 2.2655</font></td>
+      <td align="right"><font size="2"> 2.2197</font></td>
+      <td align="right"><font size="2"> 2.1479</font></td>
+      <td align="right"><font size="2"> 2.0716</font></td>
+      <td align="right"><font size="2"> 1.9898</font></td>
+      <td align="right"><font size="2"> 1.9464</font></td>
+      <td align="right"><font size="2"> 1.9010</font></td>
+      <td align="right"><font size="2"> 1.8533</font></td>
+      <td align="right"><font size="2"> 1.8027</font></td>
+      <td align="right"><font size="2"> 1.7488</font></td>
+      <td align="right"><font size="2"> 1.6906</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">27 </font></th>
+      <td align="right"><font size="2"> 4.2100</font></td>
+      <td align="right"><font size="2"> 3.3541</font></td>
+      <td align="right"><font size="2"> 2.9604</font></td>
+      <td align="right"><font size="2"> 2.7278</font></td>
+      <td align="right"><font size="2"> 2.5719</font></td>
+      <td align="right"><font size="2"> 2.4591</font></td>
+      <td align="right"><font size="2"> 2.3732</font></td>
+      <td align="right"><font size="2"> 2.3053</font></td>
+      <td align="right"><font size="2"> 2.2501</font></td>
+      <td align="right"><font size="2"> 2.2043</font></td>
+      <td align="right"><font size="2"> 2.1323</font></td>
+      <td align="right"><font size="2"> 2.0558</font></td>
+      <td align="right"><font size="2"> 1.9736</font></td>
+      <td align="right"><font size="2"> 1.9299</font></td>
+      <td align="right"><font size="2"> 1.8842</font></td>
+      <td align="right"><font size="2"> 1.8361</font></td>
+      <td align="right"><font size="2"> 1.7851</font></td>
+      <td align="right"><font size="2"> 1.7306</font></td>
+      <td align="right"><font size="2"> 1.6717</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">28 </font></th>
+      <td align="right"><font size="2"> 4.1960</font></td>
+      <td align="right"><font size="2"> 3.3404</font></td>
+      <td align="right"><font size="2"> 2.9467</font></td>
+      <td align="right"><font size="2"> 2.7141</font></td>
+      <td align="right"><font size="2"> 2.5581</font></td>
+      <td align="right"><font size="2"> 2.4453</font></td>
+      <td align="right"><font size="2"> 2.3593</font></td>
+      <td align="right"><font size="2"> 2.2913</font></td>
+      <td align="right"><font size="2"> 2.2360</font></td>
+      <td align="right"><font size="2"> 2.1900</font></td>
+      <td align="right"><font size="2"> 2.1179</font></td>
+      <td align="right"><font size="2"> 2.0411</font></td>
+      <td align="right"><font size="2"> 1.9586</font></td>
+      <td align="right"><font size="2"> 1.9147</font></td>
+      <td align="right"><font size="2"> 1.8687</font></td>
+      <td align="right"><font size="2"> 1.8203</font></td>
+      <td align="right"><font size="2"> 1.7689</font></td>
+      <td align="right"><font size="2"> 1.7138</font></td>
+      <td align="right"><font size="2"> 1.6541</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">29 </font></th>
+      <td align="right"><font size="2"> 4.1830</font></td>
+      <td align="right"><font size="2"> 3.3277</font></td>
+      <td align="right"><font size="2"> 2.9340</font></td>
+      <td align="right"><font size="2"> 2.7014</font></td>
+      <td align="right"><font size="2"> 2.5454</font></td>
+      <td align="right"><font size="2"> 2.4324</font></td>
+      <td align="right"><font size="2"> 2.3463</font></td>
+      <td align="right"><font size="2"> 2.2783</font></td>
+      <td align="right"><font size="2"> 2.2229</font></td>
+      <td align="right"><font size="2"> 2.1768</font></td>
+      <td align="right"><font size="2"> 2.1045</font></td>
+      <td align="right"><font size="2"> 2.0275</font></td>
+      <td align="right"><font size="2"> 1.9446</font></td>
+      <td align="right"><font size="2"> 1.9005</font></td>
+      <td align="right"><font size="2"> 1.8543</font></td>
+      <td align="right"><font size="2"> 1.8055</font></td>
+      <td align="right"><font size="2"> 1.7537</font></td>
+      <td align="right"><font size="2"> 1.6981</font></td>
+      <td align="right"><font size="2"> 1.6376</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">30 </font></th>
+      <td align="right"><font size="2"> 4.1709</font></td>
+      <td align="right"><font size="2"> 3.3158</font></td>
+      <td align="right"><font size="2"> 2.9223</font></td>
+      <td align="right"><font size="2"> 2.6896</font></td>
+      <td align="right"><font size="2"> 2.5336</font></td>
+      <td align="right"><font size="2"> 2.4205</font></td>
+      <td align="right"><font size="2"> 2.3343</font></td>
+      <td align="right"><font size="2"> 2.2662</font></td>
+      <td align="right"><font size="2"> 2.2107</font></td>
+      <td align="right"><font size="2"> 2.1646</font></td>
+      <td align="right"><font size="2"> 2.0921</font></td>
+      <td align="right"><font size="2"> 2.0148</font></td>
+      <td align="right"><font size="2"> 1.9317</font></td>
+      <td align="right"><font size="2"> 1.8874</font></td>
+      <td align="right"><font size="2"> 1.8409</font></td>
+      <td align="right"><font size="2"> 1.7918</font></td>
+      <td align="right"><font size="2"> 1.7396</font></td>
+      <td align="right"><font size="2"> 1.6835</font></td>
+      <td align="right"><font size="2"> 1.6223</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">40 </font></th>
+      <td align="right"><font size="2"> 4.0847</font></td>
+      <td align="right"><font size="2"> 3.2317</font></td>
+      <td align="right"><font size="2"> 2.8387</font></td>
+      <td align="right"><font size="2"> 2.6060</font></td>
+      <td align="right"><font size="2"> 2.4495</font></td>
+      <td align="right"><font size="2"> 2.3359</font></td>
+      <td align="right"><font size="2"> 2.2490</font></td>
+      <td align="right"><font size="2"> 2.1802</font></td>
+      <td align="right"><font size="2"> 2.1240</font></td>
+      <td align="right"><font size="2"> 2.0772</font></td>
+      <td align="right"><font size="2"> 2.0035</font></td>
+      <td align="right"><font size="2"> 1.9245</font></td>
+      <td align="right"><font size="2"> 1.8389</font></td>
+      <td align="right"><font size="2"> 1.7929</font></td>
+      <td align="right"><font size="2"> 1.7444</font></td>
+      <td align="right"><font size="2"> 1.6928</font></td>
+      <td align="right"><font size="2"> 1.6373</font></td>
+      <td align="right"><font size="2"> 1.5766</font></td>
+      <td align="right"><font size="2"> 1.5089</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">60 </font></th>
+      <td align="right"><font size="2"> 4.0012</font></td>
+      <td align="right"><font size="2"> 3.1504</font></td>
+      <td align="right"><font size="2"> 2.7581</font></td>
+      <td align="right"><font size="2"> 2.5252</font></td>
+      <td align="right"><font size="2"> 2.3683</font></td>
+      <td align="right"><font size="2"> 2.2541</font></td>
+      <td align="right"><font size="2"> 2.1665</font></td>
+      <td align="right"><font size="2"> 2.0970</font></td>
+      <td align="right"><font size="2"> 2.0401</font></td>
+      <td align="right"><font size="2"> 1.9926</font></td>
+      <td align="right"><font size="2"> 1.9174</font></td>
+      <td align="right"><font size="2"> 1.8364</font></td>
+      <td align="right"><font size="2"> 1.7480</font></td>
+      <td align="right"><font size="2"> 1.7001</font></td>
+      <td align="right"><font size="2"> 1.6491</font></td>
+      <td align="right"><font size="2"> 1.5943</font></td>
+      <td align="right"><font size="2"> 1.5343</font></td>
+      <td align="right"><font size="2"> 1.4673</font></td>
+      <td align="right"><font size="2"> 1.3893</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">120</font></th>
+      <td align="right"><font size="2"> 3.9201</font></td>
+      <td align="right"><font size="2"> 3.0718</font></td>
+      <td align="right"><font size="2"> 2.6802</font></td>
+      <td align="right"><font size="2"> 2.4472</font></td>
+      <td align="right"><font size="2"> 2.2899</font></td>
+      <td align="right"><font size="2"> 2.1750</font></td>
+      <td align="right"><font size="2"> 2.0868</font></td>
+      <td align="right"><font size="2"> 2.0164</font></td>
+      <td align="right"><font size="2"> 1.9588</font></td>
+      <td align="right"><font size="2"> 1.9105</font></td>
+      <td align="right"><font size="2"> 1.8337</font></td>
+      <td align="right"><font size="2"> 1.7505</font></td>
+      <td align="right"><font size="2"> 1.6587</font></td>
+      <td align="right"><font size="2"> 1.6084</font></td>
+      <td align="right"><font size="2"> 1.5543</font></td>
+      <td align="right"><font size="2"> 1.4952</font></td>
+      <td align="right"><font size="2"> 1.4290</font></td>
+      <td align="right"><font size="2"> 1.3519</font></td>
+      <td align="right"><font size="2"> 1.2539</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">∞</font></th>
+      <td align="right"><font size="2"> 3.8415</font></td>
+      <td align="right"><font size="2"> 2.9957</font></td>
+      <td align="right"><font size="2"> 2.6049</font></td>
+      <td align="right"><font size="2"> 2.3719</font></td>
+      <td align="right"><font size="2"> 2.2141</font></td>
+      <td align="right"><font size="2"> 2.0986</font></td>
+      <td align="right"><font size="2"> 2.0096</font></td>
+      <td align="right"><font size="2"> 1.9384</font></td>
+      <td align="right"><font size="2"> 1.8799</font></td>
+      <td align="right"><font size="2"> 1.8307</font></td>
+      <td align="right"><font size="2"> 1.7522</font></td>
+      <td align="right"><font size="2"> 1.6664</font></td>
+      <td align="right"><font size="2"> 1.5705</font></td>
+      <td align="right"><font size="2"> 1.5173</font></td>
+      <td align="right"><font size="2"> 1.4591</font></td>
+      <td align="right"><font size="2"> 1.3940</font></td>
+      <td align="right"><font size="2"> 1.3180</font></td>
+      <td align="right"><font size="2"> 1.2214</font></td>
+      <td align="right"><font size="2"> 1.0000</font></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</p>
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><font color="navy" size="4">F
+Table
+for α = 0.025</font><br>
+      </td>
+      <td align="center" valign="middle"><img alt="F_Distribution_Graph"
+ src="F_Distrib_Pic.jpg" align="middle"> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<center></center>
+<p>
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <th><font size="2">/</font></th>
+      <th><font size="2">df<sub>1</sub>=1</font></th>
+      <th><font size="2">2 </font></th>
+      <th><font size="2">3 </font></th>
+      <th><font size="2">4 </font></th>
+      <th><font size="2">5 </font></th>
+      <th><font size="2">6 </font></th>
+      <th><font size="2">7 </font></th>
+      <th><font size="2">8 </font></th>
+      <th><font size="2">9 </font></th>
+      <th><font size="2">10 </font></th>
+      <th><font size="2">12 </font></th>
+      <th><font size="2">15 </font></th>
+      <th><font size="2">20 </font></th>
+      <th><font size="2">24 </font></th>
+      <th><font size="2">30 </font></th>
+      <th><font size="2">40 </font></th>
+      <th><font size="2">60 </font></th>
+      <th><font size="2">120 </font></th>
+      <th><font size="2">∞ </font></th>
+    </tr>
+    <tr>
+      <th><font size="2">df<sub>2</sub>=1</font></th>
+      <td align="right"><font size="2"> 647.7890</font></td>
+      <td align="right"><font size="2"> 799.5000</font></td>
+      <td align="right"><font size="2"> 864.1630</font></td>
+      <td align="right"><font size="2"> 899.5833</font></td>
+      <td align="right"><font size="2"> 921.8479</font></td>
+      <td align="right"><font size="2"> 937.1111</font></td>
+      <td align="right"><font size="2"> 948.2169</font></td>
+      <td align="right"><font size="2"> 956.6562</font></td>
+      <td align="right"><font size="2"> 963.2846</font></td>
+      <td align="right"><font size="2"> 968.6274</font></td>
+      <td align="right"><font size="2"> 976.7079</font></td>
+      <td align="right"><font size="2"> 984.8668</font></td>
+      <td align="right"><font size="2"> 993.1028</font></td>
+      <td align="right"><font size="2"> 997.2492</font></td>
+      <td align="right"><font size="2"> 1001.414</font></td>
+      <td align="right"><font size="2"> 1005.598</font></td>
+      <td align="right"><font size="2"> 1009.800</font></td>
+      <td align="right"><font size="2"> 1014.020</font></td>
+      <td align="right"><font size="2"> 1018.258</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">2 </font></th>
+      <td align="right"><font size="2"> 38.5063</font></td>
+      <td align="right"><font size="2"> 39.0000</font></td>
+      <td align="right"><font size="2"> 39.1655</font></td>
+      <td align="right"><font size="2"> 39.2484</font></td>
+      <td align="right"><font size="2"> 39.2982</font></td>
+      <td align="right"><font size="2"> 39.3315</font></td>
+      <td align="right"><font size="2"> 39.3552</font></td>
+      <td align="right"><font size="2"> 39.3730</font></td>
+      <td align="right"><font size="2"> 39.3869</font></td>
+      <td align="right"><font size="2"> 39.3980</font></td>
+      <td align="right"><font size="2"> 39.4146</font></td>
+      <td align="right"><font size="2"> 39.4313</font></td>
+      <td align="right"><font size="2"> 39.4479</font></td>
+      <td align="right"><font size="2"> 39.4562</font></td>
+      <td align="right"><font size="2"> 39.465</font></td>
+      <td align="right"><font size="2"> 39.473</font></td>
+      <td align="right"><font size="2"> 39.481</font></td>
+      <td align="right"><font size="2"> 39.490</font></td>
+      <td align="right"><font size="2"> 39.498</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">3 </font></th>
+      <td align="right"><font size="2"> 17.4434</font></td>
+      <td align="right"><font size="2"> 16.0441</font></td>
+      <td align="right"><font size="2"> 15.4392</font></td>
+      <td align="right"><font size="2"> 15.1010</font></td>
+      <td align="right"><font size="2"> 14.8848</font></td>
+      <td align="right"><font size="2"> 14.7347</font></td>
+      <td align="right"><font size="2"> 14.6244</font></td>
+      <td align="right"><font size="2"> 14.5399</font></td>
+      <td align="right"><font size="2"> 14.4731</font></td>
+      <td align="right"><font size="2"> 14.4189</font></td>
+      <td align="right"><font size="2"> 14.3366</font></td>
+      <td align="right"><font size="2"> 14.2527</font></td>
+      <td align="right"><font size="2"> 14.1674</font></td>
+      <td align="right"><font size="2"> 14.1241</font></td>
+      <td align="right"><font size="2"> 14.081</font></td>
+      <td align="right"><font size="2"> 14.037</font></td>
+      <td align="right"><font size="2"> 13.992</font></td>
+      <td align="right"><font size="2"> 13.947</font></td>
+      <td align="right"><font size="2"> 13.902</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">4 </font></th>
+      <td align="right"><font size="2"> 12.2179</font></td>
+      <td align="right"><font size="2"> 10.6491</font></td>
+      <td align="right"><font size="2"> 9.9792</font></td>
+      <td align="right"><font size="2"> 9.6045</font></td>
+      <td align="right"><font size="2"> 9.3645</font></td>
+      <td align="right"><font size="2"> 9.1973</font></td>
+      <td align="right"><font size="2"> 9.0741</font></td>
+      <td align="right"><font size="2"> 8.9796</font></td>
+      <td align="right"><font size="2"> 8.9047</font></td>
+      <td align="right"><font size="2"> 8.8439</font></td>
+      <td align="right"><font size="2"> 8.7512</font></td>
+      <td align="right"><font size="2"> 8.6565</font></td>
+      <td align="right"><font size="2"> 8.5599</font></td>
+      <td align="right"><font size="2"> 8.5109</font></td>
+      <td align="right"><font size="2"> 8.461</font></td>
+      <td align="right"><font size="2"> 8.411</font></td>
+      <td align="right"><font size="2"> 8.360</font></td>
+      <td align="right"><font size="2"> 8.309</font></td>
+      <td align="right"><font size="2"> 8.257</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">5 </font></th>
+      <td align="right"><font size="2"> 10.0070</font></td>
+      <td align="right"><font size="2"> 8.4336</font></td>
+      <td align="right"><font size="2"> 7.7636</font></td>
+      <td align="right"><font size="2"> 7.3879</font></td>
+      <td align="right"><font size="2"> 7.1464</font></td>
+      <td align="right"><font size="2"> 6.9777</font></td>
+      <td align="right"><font size="2"> 6.8531</font></td>
+      <td align="right"><font size="2"> 6.7572</font></td>
+      <td align="right"><font size="2"> 6.6811</font></td>
+      <td align="right"><font size="2"> 6.6192</font></td>
+      <td align="right"><font size="2"> 6.5245</font></td>
+      <td align="right"><font size="2"> 6.4277</font></td>
+      <td align="right"><font size="2"> 6.3286</font></td>
+      <td align="right"><font size="2"> 6.2780</font></td>
+      <td align="right"><font size="2"> 6.227</font></td>
+      <td align="right"><font size="2"> 6.175</font></td>
+      <td align="right"><font size="2"> 6.123</font></td>
+      <td align="right"><font size="2"> 6.069</font></td>
+      <td align="right"><font size="2"> 6.015</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">6 </font></th>
+      <td align="right"><font size="2"> 8.8131</font></td>
+      <td align="right"><font size="2"> 7.2599</font></td>
+      <td align="right"><font size="2"> 6.5988</font></td>
+      <td align="right"><font size="2"> 6.2272</font></td>
+      <td align="right"><font size="2"> 5.9876</font></td>
+      <td align="right"><font size="2"> 5.8198</font></td>
+      <td align="right"><font size="2"> 5.6955</font></td>
+      <td align="right"><font size="2"> 5.5996</font></td>
+      <td align="right"><font size="2"> 5.5234</font></td>
+      <td align="right"><font size="2"> 5.4613</font></td>
+      <td align="right"><font size="2"> 5.3662</font></td>
+      <td align="right"><font size="2"> 5.2687</font></td>
+      <td align="right"><font size="2"> 5.1684</font></td>
+      <td align="right"><font size="2"> 5.1172</font></td>
+      <td align="right"><font size="2"> 5.065</font></td>
+      <td align="right"><font size="2"> 5.012</font></td>
+      <td align="right"><font size="2"> 4.959</font></td>
+      <td align="right"><font size="2"> 4.904</font></td>
+      <td align="right"><font size="2"> 4.849</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">7 </font></th>
+      <td align="right"><font size="2"> 8.0727</font></td>
+      <td align="right"><font size="2"> 6.5415</font></td>
+      <td align="right"><font size="2"> 5.8898</font></td>
+      <td align="right"><font size="2"> 5.5226</font></td>
+      <td align="right"><font size="2"> 5.2852</font></td>
+      <td align="right"><font size="2"> 5.1186</font></td>
+      <td align="right"><font size="2"> 4.9949</font></td>
+      <td align="right"><font size="2"> 4.8993</font></td>
+      <td align="right"><font size="2"> 4.8232</font></td>
+      <td align="right"><font size="2"> 4.7611</font></td>
+      <td align="right"><font size="2"> 4.6658</font></td>
+      <td align="right"><font size="2"> 4.5678</font></td>
+      <td align="right"><font size="2"> 4.4667</font></td>
+      <td align="right"><font size="2"> 4.4150</font></td>
+      <td align="right"><font size="2"> 4.362</font></td>
+      <td align="right"><font size="2"> 4.309</font></td>
+      <td align="right"><font size="2"> 4.254</font></td>
+      <td align="right"><font size="2"> 4.199</font></td>
+      <td align="right"><font size="2"> 4.142</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">8 </font></th>
+      <td align="right"><font size="2"> 7.5709</font></td>
+      <td align="right"><font size="2"> 6.0595</font></td>
+      <td align="right"><font size="2"> 5.4160</font></td>
+      <td align="right"><font size="2"> 5.0526</font></td>
+      <td align="right"><font size="2"> 4.8173</font></td>
+      <td align="right"><font size="2"> 4.6517</font></td>
+      <td align="right"><font size="2"> 4.5286</font></td>
+      <td align="right"><font size="2"> 4.4333</font></td>
+      <td align="right"><font size="2"> 4.3572</font></td>
+      <td align="right"><font size="2"> 4.2951</font></td>
+      <td align="right"><font size="2"> 4.1997</font></td>
+      <td align="right"><font size="2"> 4.1012</font></td>
+      <td align="right"><font size="2"> 3.9995</font></td>
+      <td align="right"><font size="2"> 3.9472</font></td>
+      <td align="right"><font size="2"> 3.894</font></td>
+      <td align="right"><font size="2"> 3.840</font></td>
+      <td align="right"><font size="2"> 3.784</font></td>
+      <td align="right"><font size="2"> 3.728</font></td>
+      <td align="right"><font size="2"> 3.670</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">9 </font></th>
+      <td align="right"><font size="2"> 7.2093</font></td>
+      <td align="right"><font size="2"> 5.7147</font></td>
+      <td align="right"><font size="2"> 5.0781</font></td>
+      <td align="right"><font size="2"> 4.7181</font></td>
+      <td align="right"><font size="2"> 4.4844</font></td>
+      <td align="right"><font size="2"> 4.3197</font></td>
+      <td align="right"><font size="2"> 4.1970</font></td>
+      <td align="right"><font size="2"> 4.1020</font></td>
+      <td align="right"><font size="2"> 4.0260</font></td>
+      <td align="right"><font size="2"> 3.9639</font></td>
+      <td align="right"><font size="2"> 3.8682</font></td>
+      <td align="right"><font size="2"> 3.7694</font></td>
+      <td align="right"><font size="2"> 3.6669</font></td>
+      <td align="right"><font size="2"> 3.6142</font></td>
+      <td align="right"><font size="2"> 3.560</font></td>
+      <td align="right"><font size="2"> 3.505</font></td>
+      <td align="right"><font size="2"> 3.449</font></td>
+      <td align="right"><font size="2"> 3.392</font></td>
+      <td align="right"><font size="2"> 3.333</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">10 </font></th>
+      <td align="right"><font size="2"> 6.9367</font></td>
+      <td align="right"><font size="2"> 5.4564</font></td>
+      <td align="right"><font size="2"> 4.8256</font></td>
+      <td align="right"><font size="2"> 4.4683</font></td>
+      <td align="right"><font size="2"> 4.2361</font></td>
+      <td align="right"><font size="2"> 4.0721</font></td>
+      <td align="right"><font size="2"> 3.9498</font></td>
+      <td align="right"><font size="2"> 3.8549</font></td>
+      <td align="right"><font size="2"> 3.7790</font></td>
+      <td align="right"><font size="2"> 3.7168</font></td>
+      <td align="right"><font size="2"> 3.6209</font></td>
+      <td align="right"><font size="2"> 3.5217</font></td>
+      <td align="right"><font size="2"> 3.4185</font></td>
+      <td align="right"><font size="2"> 3.3654</font></td>
+      <td align="right"><font size="2"> 3.311</font></td>
+      <td align="right"><font size="2"> 3.255</font></td>
+      <td align="right"><font size="2"> 3.198</font></td>
+      <td align="right"><font size="2"> 3.140</font></td>
+      <td align="right"><font size="2"> 3.080</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">11 </font></th>
+      <td align="right"><font size="2"> 6.7241</font></td>
+      <td align="right"><font size="2"> 5.2559</font></td>
+      <td align="right"><font size="2"> 4.6300</font></td>
+      <td align="right"><font size="2"> 4.2751</font></td>
+      <td align="right"><font size="2"> 4.0440</font></td>
+      <td align="right"><font size="2"> 3.8807</font></td>
+      <td align="right"><font size="2"> 3.7586</font></td>
+      <td align="right"><font size="2"> 3.6638</font></td>
+      <td align="right"><font size="2"> 3.5879</font></td>
+      <td align="right"><font size="2"> 3.5257</font></td>
+      <td align="right"><font size="2"> 3.4296</font></td>
+      <td align="right"><font size="2"> 3.3299</font></td>
+      <td align="right"><font size="2"> 3.2261</font></td>
+      <td align="right"><font size="2"> 3.1725</font></td>
+      <td align="right"><font size="2"> 3.118</font></td>
+      <td align="right"><font size="2"> 3.061</font></td>
+      <td align="right"><font size="2"> 3.004</font></td>
+      <td align="right"><font size="2"> 2.944</font></td>
+      <td align="right"><font size="2"> 2.883</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">12 </font></th>
+      <td align="right"><font size="2"> 6.5538</font></td>
+      <td align="right"><font size="2"> 5.0959</font></td>
+      <td align="right"><font size="2"> 4.4742</font></td>
+      <td align="right"><font size="2"> 4.1212</font></td>
+      <td align="right"><font size="2"> 3.8911</font></td>
+      <td align="right"><font size="2"> 3.7283</font></td>
+      <td align="right"><font size="2"> 3.6065</font></td>
+      <td align="right"><font size="2"> 3.5118</font></td>
+      <td align="right"><font size="2"> 3.4358</font></td>
+      <td align="right"><font size="2"> 3.3736</font></td>
+      <td align="right"><font size="2"> 3.2773</font></td>
+      <td align="right"><font size="2"> 3.1772</font></td>
+      <td align="right"><font size="2"> 3.0728</font></td>
+      <td align="right"><font size="2"> 3.0187</font></td>
+      <td align="right"><font size="2"> 2.963</font></td>
+      <td align="right"><font size="2"> 2.906</font></td>
+      <td align="right"><font size="2"> 2.848</font></td>
+      <td align="right"><font size="2"> 2.787</font></td>
+      <td align="right"><font size="2"> 2.725</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">13 </font></th>
+      <td align="right"><font size="2"> 6.4143</font></td>
+      <td align="right"><font size="2"> 4.9653</font></td>
+      <td align="right"><font size="2"> 4.3472</font></td>
+      <td align="right"><font size="2"> 3.9959</font></td>
+      <td align="right"><font size="2"> 3.7667</font></td>
+      <td align="right"><font size="2"> 3.6043</font></td>
+      <td align="right"><font size="2"> 3.4827</font></td>
+      <td align="right"><font size="2"> 3.3880</font></td>
+      <td align="right"><font size="2"> 3.3120</font></td>
+      <td align="right"><font size="2"> 3.2497</font></td>
+      <td align="right"><font size="2"> 3.1532</font></td>
+      <td align="right"><font size="2"> 3.0527</font></td>
+      <td align="right"><font size="2"> 2.9477</font></td>
+      <td align="right"><font size="2"> 2.8932</font></td>
+      <td align="right"><font size="2"> 2.837</font></td>
+      <td align="right"><font size="2"> 2.780</font></td>
+      <td align="right"><font size="2"> 2.720</font></td>
+      <td align="right"><font size="2"> 2.659</font></td>
+      <td align="right"><font size="2"> 2.595</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">14 </font></th>
+      <td align="right"><font size="2"> 6.2979</font></td>
+      <td align="right"><font size="2"> 4.8567</font></td>
+      <td align="right"><font size="2"> 4.2417</font></td>
+      <td align="right"><font size="2"> 3.8919</font></td>
+      <td align="right"><font size="2"> 3.6634</font></td>
+      <td align="right"><font size="2"> 3.5014</font></td>
+      <td align="right"><font size="2"> 3.3799</font></td>
+      <td align="right"><font size="2"> 3.2853</font></td>
+      <td align="right"><font size="2"> 3.2093</font></td>
+      <td align="right"><font size="2"> 3.1469</font></td>
+      <td align="right"><font size="2"> 3.0502</font></td>
+      <td align="right"><font size="2"> 2.9493</font></td>
+      <td align="right"><font size="2"> 2.8437</font></td>
+      <td align="right"><font size="2"> 2.7888</font></td>
+      <td align="right"><font size="2"> 2.732</font></td>
+      <td align="right"><font size="2"> 2.674</font></td>
+      <td align="right"><font size="2"> 2.614</font></td>
+      <td align="right"><font size="2"> 2.552</font></td>
+      <td align="right"><font size="2"> 2.487</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">15 </font></th>
+      <td align="right"><font size="2"> 6.1995</font></td>
+      <td align="right"><font size="2"> 4.7650</font></td>
+      <td align="right"><font size="2"> 4.1528</font></td>
+      <td align="right"><font size="2"> 3.8043</font></td>
+      <td align="right"><font size="2"> 3.5764</font></td>
+      <td align="right"><font size="2"> 3.4147</font></td>
+      <td align="right"><font size="2"> 3.2934</font></td>
+      <td align="right"><font size="2"> 3.1987</font></td>
+      <td align="right"><font size="2"> 3.1227</font></td>
+      <td align="right"><font size="2"> 3.0602</font></td>
+      <td align="right"><font size="2"> 2.9633</font></td>
+      <td align="right"><font size="2"> 2.8621</font></td>
+      <td align="right"><font size="2"> 2.7559</font></td>
+      <td align="right"><font size="2"> 2.7006</font></td>
+      <td align="right"><font size="2"> 2.644</font></td>
+      <td align="right"><font size="2"> 2.585</font></td>
+      <td align="right"><font size="2"> 2.524</font></td>
+      <td align="right"><font size="2"> 2.461</font></td>
+      <td align="right"><font size="2"> 2.395</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">16 </font></th>
+      <td align="right"><font size="2"> 6.1151</font></td>
+      <td align="right"><font size="2"> 4.6867</font></td>
+      <td align="right"><font size="2"> 4.0768</font></td>
+      <td align="right"><font size="2"> 3.7294</font></td>
+      <td align="right"><font size="2"> 3.5021</font></td>
+      <td align="right"><font size="2"> 3.3406</font></td>
+      <td align="right"><font size="2"> 3.2194</font></td>
+      <td align="right"><font size="2"> 3.1248</font></td>
+      <td align="right"><font size="2"> 3.0488</font></td>
+      <td align="right"><font size="2"> 2.9862</font></td>
+      <td align="right"><font size="2"> 2.8890</font></td>
+      <td align="right"><font size="2"> 2.7875</font></td>
+      <td align="right"><font size="2"> 2.6808</font></td>
+      <td align="right"><font size="2"> 2.6252</font></td>
+      <td align="right"><font size="2"> 2.568</font></td>
+      <td align="right"><font size="2"> 2.509</font></td>
+      <td align="right"><font size="2"> 2.447</font></td>
+      <td align="right"><font size="2"> 2.383</font></td>
+      <td align="right"><font size="2"> 2.316</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">17 </font></th>
+      <td align="right"><font size="2"> 6.0420</font></td>
+      <td align="right"><font size="2"> 4.6189</font></td>
+      <td align="right"><font size="2"> 4.0112</font></td>
+      <td align="right"><font size="2"> 3.6648</font></td>
+      <td align="right"><font size="2"> 3.4379</font></td>
+      <td align="right"><font size="2"> 3.2767</font></td>
+      <td align="right"><font size="2"> 3.1556</font></td>
+      <td align="right"><font size="2"> 3.0610</font></td>
+      <td align="right"><font size="2"> 2.9849</font></td>
+      <td align="right"><font size="2"> 2.9222</font></td>
+      <td align="right"><font size="2"> 2.8249</font></td>
+      <td align="right"><font size="2"> 2.7230</font></td>
+      <td align="right"><font size="2"> 2.6158</font></td>
+      <td align="right"><font size="2"> 2.5598</font></td>
+      <td align="right"><font size="2"> 2.502</font></td>
+      <td align="right"><font size="2"> 2.442</font></td>
+      <td align="right"><font size="2"> 2.380</font></td>
+      <td align="right"><font size="2"> 2.315</font></td>
+      <td align="right"><font size="2"> 2.247</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">18 </font></th>
+      <td align="right"><font size="2"> 5.9781</font></td>
+      <td align="right"><font size="2"> 4.5597</font></td>
+      <td align="right"><font size="2"> 3.9539</font></td>
+      <td align="right"><font size="2"> 3.6083</font></td>
+      <td align="right"><font size="2"> 3.3820</font></td>
+      <td align="right"><font size="2"> 3.2209</font></td>
+      <td align="right"><font size="2"> 3.0999</font></td>
+      <td align="right"><font size="2"> 3.0053</font></td>
+      <td align="right"><font size="2"> 2.9291</font></td>
+      <td align="right"><font size="2"> 2.8664</font></td>
+      <td align="right"><font size="2"> 2.7689</font></td>
+      <td align="right"><font size="2"> 2.6667</font></td>
+      <td align="right"><font size="2"> 2.5590</font></td>
+      <td align="right"><font size="2"> 2.5027</font></td>
+      <td align="right"><font size="2"> 2.445</font></td>
+      <td align="right"><font size="2"> 2.384</font></td>
+      <td align="right"><font size="2"> 2.321</font></td>
+      <td align="right"><font size="2"> 2.256</font></td>
+      <td align="right"><font size="2"> 2.187</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">19 </font></th>
+      <td align="right"><font size="2"> 5.9216</font></td>
+      <td align="right"><font size="2"> 4.5075</font></td>
+      <td align="right"><font size="2"> 3.9034</font></td>
+      <td align="right"><font size="2"> 3.5587</font></td>
+      <td align="right"><font size="2"> 3.3327</font></td>
+      <td align="right"><font size="2"> 3.1718</font></td>
+      <td align="right"><font size="2"> 3.0509</font></td>
+      <td align="right"><font size="2"> 2.9563</font></td>
+      <td align="right"><font size="2"> 2.8801</font></td>
+      <td align="right"><font size="2"> 2.8172</font></td>
+      <td align="right"><font size="2"> 2.7196</font></td>
+      <td align="right"><font size="2"> 2.6171</font></td>
+      <td align="right"><font size="2"> 2.5089</font></td>
+      <td align="right"><font size="2"> 2.4523</font></td>
+      <td align="right"><font size="2"> 2.394</font></td>
+      <td align="right"><font size="2"> 2.333</font></td>
+      <td align="right"><font size="2"> 2.270</font></td>
+      <td align="right"><font size="2"> 2.203</font></td>
+      <td align="right"><font size="2"> 2.133</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">20 </font></th>
+      <td align="right"><font size="2"> 5.8715</font></td>
+      <td align="right"><font size="2"> 4.4613</font></td>
+      <td align="right"><font size="2"> 3.8587</font></td>
+      <td align="right"><font size="2"> 3.5147</font></td>
+      <td align="right"><font size="2"> 3.2891</font></td>
+      <td align="right"><font size="2"> 3.1283</font></td>
+      <td align="right"><font size="2"> 3.0074</font></td>
+      <td align="right"><font size="2"> 2.9128</font></td>
+      <td align="right"><font size="2"> 2.8365</font></td>
+      <td align="right"><font size="2"> 2.7737</font></td>
+      <td align="right"><font size="2"> 2.6758</font></td>
+      <td align="right"><font size="2"> 2.5731</font></td>
+      <td align="right"><font size="2"> 2.4645</font></td>
+      <td align="right"><font size="2"> 2.4076</font></td>
+      <td align="right"><font size="2"> 2.349</font></td>
+      <td align="right"><font size="2"> 2.287</font></td>
+      <td align="right"><font size="2"> 2.223</font></td>
+      <td align="right"><font size="2"> 2.156</font></td>
+      <td align="right"><font size="2"> 2.085</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">21 </font></th>
+      <td align="right"><font size="2"> 5.8266</font></td>
+      <td align="right"><font size="2"> 4.4199</font></td>
+      <td align="right"><font size="2"> 3.8188</font></td>
+      <td align="right"><font size="2"> 3.4754</font></td>
+      <td align="right"><font size="2"> 3.2501</font></td>
+      <td align="right"><font size="2"> 3.0895</font></td>
+      <td align="right"><font size="2"> 2.9686</font></td>
+      <td align="right"><font size="2"> 2.8740</font></td>
+      <td align="right"><font size="2"> 2.7977</font></td>
+      <td align="right"><font size="2"> 2.7348</font></td>
+      <td align="right"><font size="2"> 2.6368</font></td>
+      <td align="right"><font size="2"> 2.5338</font></td>
+      <td align="right"><font size="2"> 2.4247</font></td>
+      <td align="right"><font size="2"> 2.3675</font></td>
+      <td align="right"><font size="2"> 2.308</font></td>
+      <td align="right"><font size="2"> 2.246</font></td>
+      <td align="right"><font size="2"> 2.182</font></td>
+      <td align="right"><font size="2"> 2.114</font></td>
+      <td align="right"><font size="2"> 2.042</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">22 </font></th>
+      <td align="right"><font size="2"> 5.7863</font></td>
+      <td align="right"><font size="2"> 4.3828</font></td>
+      <td align="right"><font size="2"> 3.7829</font></td>
+      <td align="right"><font size="2"> 3.4401</font></td>
+      <td align="right"><font size="2"> 3.2151</font></td>
+      <td align="right"><font size="2"> 3.0546</font></td>
+      <td align="right"><font size="2"> 2.9338</font></td>
+      <td align="right"><font size="2"> 2.8392</font></td>
+      <td align="right"><font size="2"> 2.7628</font></td>
+      <td align="right"><font size="2"> 2.6998</font></td>
+      <td align="right"><font size="2"> 2.6017</font></td>
+      <td align="right"><font size="2"> 2.4984</font></td>
+      <td align="right"><font size="2"> 2.3890</font></td>
+      <td align="right"><font size="2"> 2.3315</font></td>
+      <td align="right"><font size="2"> 2.272</font></td>
+      <td align="right"><font size="2"> 2.210</font></td>
+      <td align="right"><font size="2"> 2.145</font></td>
+      <td align="right"><font size="2"> 2.076</font></td>
+      <td align="right"><font size="2"> 2.003</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">23 </font></th>
+      <td align="right"><font size="2"> 5.7498</font></td>
+      <td align="right"><font size="2"> 4.3492</font></td>
+      <td align="right"><font size="2"> 3.7505</font></td>
+      <td align="right"><font size="2"> 3.4083</font></td>
+      <td align="right"><font size="2"> 3.1835</font></td>
+      <td align="right"><font size="2"> 3.0232</font></td>
+      <td align="right"><font size="2"> 2.9023</font></td>
+      <td align="right"><font size="2"> 2.8077</font></td>
+      <td align="right"><font size="2"> 2.7313</font></td>
+      <td align="right"><font size="2"> 2.6682</font></td>
+      <td align="right"><font size="2"> 2.5699</font></td>
+      <td align="right"><font size="2"> 2.4665</font></td>
+      <td align="right"><font size="2"> 2.3567</font></td>
+      <td align="right"><font size="2"> 2.2989</font></td>
+      <td align="right"><font size="2"> 2.239</font></td>
+      <td align="right"><font size="2"> 2.176</font></td>
+      <td align="right"><font size="2"> 2.111</font></td>
+      <td align="right"><font size="2"> 2.041</font></td>
+      <td align="right"><font size="2"> 1.968</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">24 </font></th>
+      <td align="right"><font size="2"> 5.7166</font></td>
+      <td align="right"><font size="2"> 4.3187</font></td>
+      <td align="right"><font size="2"> 3.7211</font></td>
+      <td align="right"><font size="2"> 3.3794</font></td>
+      <td align="right"><font size="2"> 3.1548</font></td>
+      <td align="right"><font size="2"> 2.9946</font></td>
+      <td align="right"><font size="2"> 2.8738</font></td>
+      <td align="right"><font size="2"> 2.7791</font></td>
+      <td align="right"><font size="2"> 2.7027</font></td>
+      <td align="right"><font size="2"> 2.6396</font></td>
+      <td align="right"><font size="2"> 2.5411</font></td>
+      <td align="right"><font size="2"> 2.4374</font></td>
+      <td align="right"><font size="2"> 2.3273</font></td>
+      <td align="right"><font size="2"> 2.2693</font></td>
+      <td align="right"><font size="2"> 2.209</font></td>
+      <td align="right"><font size="2"> 2.146</font></td>
+      <td align="right"><font size="2"> 2.080</font></td>
+      <td align="right"><font size="2"> 2.010</font></td>
+      <td align="right"><font size="2"> 1.935</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">25 </font></th>
+      <td align="right"><font size="2"> 5.6864</font></td>
+      <td align="right"><font size="2"> 4.2909</font></td>
+      <td align="right"><font size="2"> 3.6943</font></td>
+      <td align="right"><font size="2"> 3.3530</font></td>
+      <td align="right"><font size="2"> 3.1287</font></td>
+      <td align="right"><font size="2"> 2.9685</font></td>
+      <td align="right"><font size="2"> 2.8478</font></td>
+      <td align="right"><font size="2"> 2.7531</font></td>
+      <td align="right"><font size="2"> 2.6766</font></td>
+      <td align="right"><font size="2"> 2.6135</font></td>
+      <td align="right"><font size="2"> 2.5149</font></td>
+      <td align="right"><font size="2"> 2.4110</font></td>
+      <td align="right"><font size="2"> 2.3005</font></td>
+      <td align="right"><font size="2"> 2.2422</font></td>
+      <td align="right"><font size="2"> 2.182</font></td>
+      <td align="right"><font size="2"> 2.118</font></td>
+      <td align="right"><font size="2"> 2.052</font></td>
+      <td align="right"><font size="2"> 1.981</font></td>
+      <td align="right"><font size="2"> 1.906</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">26 </font></th>
+      <td align="right"><font size="2"> 5.6586</font></td>
+      <td align="right"><font size="2"> 4.2655</font></td>
+      <td align="right"><font size="2"> 3.6697</font></td>
+      <td align="right"><font size="2"> 3.3289</font></td>
+      <td align="right"><font size="2"> 3.1048</font></td>
+      <td align="right"><font size="2"> 2.9447</font></td>
+      <td align="right"><font size="2"> 2.8240</font></td>
+      <td align="right"><font size="2"> 2.7293</font></td>
+      <td align="right"><font size="2"> 2.6528</font></td>
+      <td align="right"><font size="2"> 2.5896</font></td>
+      <td align="right"><font size="2"> 2.4908</font></td>
+      <td align="right"><font size="2"> 2.3867</font></td>
+      <td align="right"><font size="2"> 2.2759</font></td>
+      <td align="right"><font size="2"> 2.2174</font></td>
+      <td align="right"><font size="2"> 2.157</font></td>
+      <td align="right"><font size="2"> 2.093</font></td>
+      <td align="right"><font size="2"> 2.026</font></td>
+      <td align="right"><font size="2"> 1.954</font></td>
+      <td align="right"><font size="2"> 1.878</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">27 </font></th>
+      <td align="right"><font size="2"> 5.6331</font></td>
+      <td align="right"><font size="2"> 4.2421</font></td>
+      <td align="right"><font size="2"> 3.6472</font></td>
+      <td align="right"><font size="2"> 3.3067</font></td>
+      <td align="right"><font size="2"> 3.0828</font></td>
+      <td align="right"><font size="2"> 2.9228</font></td>
+      <td align="right"><font size="2"> 2.8021</font></td>
+      <td align="right"><font size="2"> 2.7074</font></td>
+      <td align="right"><font size="2"> 2.6309</font></td>
+      <td align="right"><font size="2"> 2.5676</font></td>
+      <td align="right"><font size="2"> 2.4688</font></td>
+      <td align="right"><font size="2"> 2.3644</font></td>
+      <td align="right"><font size="2"> 2.2533</font></td>
+      <td align="right"><font size="2"> 2.1946</font></td>
+      <td align="right"><font size="2"> 2.133</font></td>
+      <td align="right"><font size="2"> 2.069</font></td>
+      <td align="right"><font size="2"> 2.002</font></td>
+      <td align="right"><font size="2"> 1.930</font></td>
+      <td align="right"><font size="2"> 1.853</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">28 </font></th>
+      <td align="right"><font size="2"> 5.6096</font></td>
+      <td align="right"><font size="2"> 4.2205</font></td>
+      <td align="right"><font size="2"> 3.6264</font></td>
+      <td align="right"><font size="2"> 3.2863</font></td>
+      <td align="right"><font size="2"> 3.0626</font></td>
+      <td align="right"><font size="2"> 2.9027</font></td>
+      <td align="right"><font size="2"> 2.7820</font></td>
+      <td align="right"><font size="2"> 2.6872</font></td>
+      <td align="right"><font size="2"> 2.6106</font></td>
+      <td align="right"><font size="2"> 2.5473</font></td>
+      <td align="right"><font size="2"> 2.4484</font></td>
+      <td align="right"><font size="2"> 2.3438</font></td>
+      <td align="right"><font size="2"> 2.2324</font></td>
+      <td align="right"><font size="2"> 2.1735</font></td>
+      <td align="right"><font size="2"> 2.112</font></td>
+      <td align="right"><font size="2"> 2.048</font></td>
+      <td align="right"><font size="2"> 1.980</font></td>
+      <td align="right"><font size="2"> 1.907</font></td>
+      <td align="right"><font size="2"> 1.829</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">29 </font></th>
+      <td align="right"><font size="2"> 5.5878</font></td>
+      <td align="right"><font size="2"> 4.2006</font></td>
+      <td align="right"><font size="2"> 3.6072</font></td>
+      <td align="right"><font size="2"> 3.2674</font></td>
+      <td align="right"><font size="2"> 3.0438</font></td>
+      <td align="right"><font size="2"> 2.8840</font></td>
+      <td align="right"><font size="2"> 2.7633</font></td>
+      <td align="right"><font size="2"> 2.6686</font></td>
+      <td align="right"><font size="2"> 2.5919</font></td>
+      <td align="right"><font size="2"> 2.5286</font></td>
+      <td align="right"><font size="2"> 2.4295</font></td>
+      <td align="right"><font size="2"> 2.3248</font></td>
+      <td align="right"><font size="2"> 2.2131</font></td>
+      <td align="right"><font size="2"> 2.1540</font></td>
+      <td align="right"><font size="2"> 2.092</font></td>
+      <td align="right"><font size="2"> 2.028</font></td>
+      <td align="right"><font size="2"> 1.959</font></td>
+      <td align="right"><font size="2"> 1.886</font></td>
+      <td align="right"><font size="2"> 1.807</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">30 </font></th>
+      <td align="right"><font size="2"> 5.5675</font></td>
+      <td align="right"><font size="2"> 4.1821</font></td>
+      <td align="right"><font size="2"> 3.5894</font></td>
+      <td align="right"><font size="2"> 3.2499</font></td>
+      <td align="right"><font size="2"> 3.0265</font></td>
+      <td align="right"><font size="2"> 2.8667</font></td>
+      <td align="right"><font size="2"> 2.7460</font></td>
+      <td align="right"><font size="2"> 2.6513</font></td>
+      <td align="right"><font size="2"> 2.5746</font></td>
+      <td align="right"><font size="2"> 2.5112</font></td>
+      <td align="right"><font size="2"> 2.4120</font></td>
+      <td align="right"><font size="2"> 2.3072</font></td>
+      <td align="right"><font size="2"> 2.1952</font></td>
+      <td align="right"><font size="2"> 2.1359</font></td>
+      <td align="right"><font size="2"> 2.074</font></td>
+      <td align="right"><font size="2"> 2.009</font></td>
+      <td align="right"><font size="2"> 1.940</font></td>
+      <td align="right"><font size="2"> 1.866</font></td>
+      <td align="right"><font size="2"> 1.787</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">40 </font></th>
+      <td align="right"><font size="2"> 5.4239</font></td>
+      <td align="right"><font size="2"> 4.0510</font></td>
+      <td align="right"><font size="2"> 3.4633</font></td>
+      <td align="right"><font size="2"> 3.1261</font></td>
+      <td align="right"><font size="2"> 2.9037</font></td>
+      <td align="right"><font size="2"> 2.7444</font></td>
+      <td align="right"><font size="2"> 2.6238</font></td>
+      <td align="right"><font size="2"> 2.5289</font></td>
+      <td align="right"><font size="2"> 2.4519</font></td>
+      <td align="right"><font size="2"> 2.3882</font></td>
+      <td align="right"><font size="2"> 2.2882</font></td>
+      <td align="right"><font size="2"> 2.1819</font></td>
+      <td align="right"><font size="2"> 2.0677</font></td>
+      <td align="right"><font size="2"> 2.0069</font></td>
+      <td align="right"><font size="2"> 1.943</font></td>
+      <td align="right"><font size="2"> 1.875</font></td>
+      <td align="right"><font size="2"> 1.803</font></td>
+      <td align="right"><font size="2"> 1.724</font></td>
+      <td align="right"><font size="2"> 1.637</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">60 </font></th>
+      <td align="right"><font size="2"> 5.2856</font></td>
+      <td align="right"><font size="2"> 3.9253</font></td>
+      <td align="right"><font size="2"> 3.3425</font></td>
+      <td align="right"><font size="2"> 3.0077</font></td>
+      <td align="right"><font size="2"> 2.7863</font></td>
+      <td align="right"><font size="2"> 2.6274</font></td>
+      <td align="right"><font size="2"> 2.5068</font></td>
+      <td align="right"><font size="2"> 2.4117</font></td>
+      <td align="right"><font size="2"> 2.3344</font></td>
+      <td align="right"><font size="2"> 2.2702</font></td>
+      <td align="right"><font size="2"> 2.1692</font></td>
+      <td align="right"><font size="2"> 2.0613</font></td>
+      <td align="right"><font size="2"> 1.9445</font></td>
+      <td align="right"><font size="2"> 1.8817</font></td>
+      <td align="right"><font size="2"> 1.815</font></td>
+      <td align="right"><font size="2"> 1.744</font></td>
+      <td align="right"><font size="2"> 1.667</font></td>
+      <td align="right"><font size="2"> 1.581</font></td>
+      <td align="right"><font size="2"> 1.482</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">120</font></th>
+      <td align="right"><font size="2"> 5.1523</font></td>
+      <td align="right"><font size="2"> 3.8046</font></td>
+      <td align="right"><font size="2"> 3.2269</font></td>
+      <td align="right"><font size="2"> 2.8943</font></td>
+      <td align="right"><font size="2"> 2.6740</font></td>
+      <td align="right"><font size="2"> 2.5154</font></td>
+      <td align="right"><font size="2"> 2.3948</font></td>
+      <td align="right"><font size="2"> 2.2994</font></td>
+      <td align="right"><font size="2"> 2.2217</font></td>
+      <td align="right"><font size="2"> 2.1570</font></td>
+      <td align="right"><font size="2"> 2.0548</font></td>
+      <td align="right"><font size="2"> 1.9450</font></td>
+      <td align="right"><font size="2"> 1.8249</font></td>
+      <td align="right"><font size="2"> 1.7597</font></td>
+      <td align="right"><font size="2"> 1.690</font></td>
+      <td align="right"><font size="2"> 1.614</font></td>
+      <td align="right"><font size="2"> 1.530</font></td>
+      <td align="right"><font size="2"> 1.433</font></td>
+      <td align="right"><font size="2"> 1.310</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">∞</font></th>
+      <td align="right"><font size="2"> 5.0239</font></td>
+      <td align="right"><font size="2"> 3.6889</font></td>
+      <td align="right"><font size="2"> 3.1161</font></td>
+      <td align="right"><font size="2"> 2.7858</font></td>
+      <td align="right"><font size="2"> 2.5665</font></td>
+      <td align="right"><font size="2"> 2.4082</font></td>
+      <td align="right"><font size="2"> 2.2875</font></td>
+      <td align="right"><font size="2"> 2.1918</font></td>
+      <td align="right"><font size="2"> 2.1136</font></td>
+      <td align="right"><font size="2"> 2.0483</font></td>
+      <td align="right"><font size="2"> 1.9447</font></td>
+      <td align="right"><font size="2"> 1.8326</font></td>
+      <td align="right"><font size="2"> 1.7085</font></td>
+      <td align="right"><font size="2"> 1.6402</font></td>
+      <td align="right"><font size="2"> 1.566</font></td>
+      <td align="right"><font size="2"> 1.484</font></td>
+      <td align="right"><font size="2"> 1.388</font></td>
+      <td align="right"><font size="2"> 1.268</font></td>
+      <td align="right"><font size="2"> 1.000</font></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</p>
+<table aclass="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><font color="navy" size="4">F
+Table
+for α = 0.01</font><br>
+      </td>
+      <td align="center" valign="middle"><img alt="F_Distribution_Graph"
+ src="F_Distrib_Pic.jpg" align="middle"> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<center></center>
+<p>
+<table class="table" style="text-align: center;" align="center">
+  <tbody>
+    <tr>
+      <th><font size="2">/</font></th>
+      <th><font size="2">df<sub>1</sub>=1</font></th>
+      <th><font size="2">2</font></th>
+      <th><font size="2">3</font></th>
+      <th><font size="2">4</font></th>
+      <th><font size="2">5</font></th>
+      <th><font size="2">6</font></th>
+      <th><font size="2">7</font></th>
+      <th><font size="2">8</font></th>
+      <th><font size="2">9</font></th>
+      <th><font size="2">10</font></th>
+      <th><font size="2">12</font></th>
+      <th><font size="2">15</font></th>
+      <th><font size="2">20</font></th>
+      <th><font size="2">24</font></th>
+      <th><font size="2">30</font></th>
+      <th><font size="2">40</font></th>
+      <th><font size="2">60</font></th>
+      <th><font size="2">120</font></th>
+      <th><font size="2">∞</font></th>
+    </tr>
+    <tr>
+      <th><font size="2">df<sub>2</sub>=1</font></th>
+      <td align="right"><font size="2"> 4052.181</font></td>
+      <td align="right"><font size="2"> 4999.500</font></td>
+      <td align="right"><font size="2"> 5403.352</font></td>
+      <td align="right"><font size="2"> 5624.583</font></td>
+      <td align="right"><font size="2"> 5763.650</font></td>
+      <td align="right"><font size="2"> 5858.986</font></td>
+      <td align="right"><font size="2"> 5928.356</font></td>
+      <td align="right"><font size="2"> 5981.070</font></td>
+      <td align="right"><font size="2"> 6022.473</font></td>
+      <td align="right"><font size="2"> 6055.847</font></td>
+      <td align="right"><font size="2"> 6106.321</font></td>
+      <td align="right"><font size="2"> 6157.285</font></td>
+      <td align="right"><font size="2"> 6208.730</font></td>
+      <td align="right"><font size="2"> 6234.631</font></td>
+      <td align="right"><font size="2"> 6260.649</font></td>
+      <td align="right"><font size="2"> 6286.782</font></td>
+      <td align="right"><font size="2"> 6313.030</font></td>
+      <td align="right"><font size="2"> 6339.391</font></td>
+      <td align="right"><font size="2"> 6365.864</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">2 </font></th>
+      <td align="right"><font size="2"> 98.503</font></td>
+      <td align="right"><font size="2"> 99.000</font></td>
+      <td align="right"><font size="2"> 99.166</font></td>
+      <td align="right"><font size="2"> 99.249</font></td>
+      <td align="right"><font size="2"> 99.299</font></td>
+      <td align="right"><font size="2"> 99.333</font></td>
+      <td align="right"><font size="2"> 99.356</font></td>
+      <td align="right"><font size="2"> 99.374</font></td>
+      <td align="right"><font size="2"> 99.388</font></td>
+      <td align="right"><font size="2"> 99.399</font></td>
+      <td align="right"><font size="2"> 99.416</font></td>
+      <td align="right"><font size="2"> 99.433</font></td>
+      <td align="right"><font size="2"> 99.449</font></td>
+      <td align="right"><font size="2"> 99.458</font></td>
+      <td align="right"><font size="2"> 99.466</font></td>
+      <td align="right"><font size="2"> 99.474</font></td>
+      <td align="right"><font size="2"> 99.482</font></td>
+      <td align="right"><font size="2"> 99.491</font></td>
+      <td align="right"><font size="2"> 99.499</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">3 </font></th>
+      <td align="right"><font size="2"> 34.116</font></td>
+      <td align="right"><font size="2"> 30.817</font></td>
+      <td align="right"><font size="2"> 29.457</font></td>
+      <td align="right"><font size="2"> 28.710</font></td>
+      <td align="right"><font size="2"> 28.237</font></td>
+      <td align="right"><font size="2"> 27.911</font></td>
+      <td align="right"><font size="2"> 27.672</font></td>
+      <td align="right"><font size="2"> 27.489</font></td>
+      <td align="right"><font size="2"> 27.345</font></td>
+      <td align="right"><font size="2"> 27.229</font></td>
+      <td align="right"><font size="2"> 27.052</font></td>
+      <td align="right"><font size="2"> 26.872</font></td>
+      <td align="right"><font size="2"> 26.690</font></td>
+      <td align="right"><font size="2"> 26.598</font></td>
+      <td align="right"><font size="2"> 26.505</font></td>
+      <td align="right"><font size="2"> 26.411</font></td>
+      <td align="right"><font size="2"> 26.316</font></td>
+      <td align="right"><font size="2"> 26.221</font></td>
+      <td align="right"><font size="2"> 26.125</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">4 </font></th>
+      <td align="right"><font size="2"> 21.198</font></td>
+      <td align="right"><font size="2"> 18.000</font></td>
+      <td align="right"><font size="2"> 16.694</font></td>
+      <td align="right"><font size="2"> 15.977</font></td>
+      <td align="right"><font size="2"> 15.522</font></td>
+      <td align="right"><font size="2"> 15.207</font></td>
+      <td align="right"><font size="2"> 14.976</font></td>
+      <td align="right"><font size="2"> 14.799</font></td>
+      <td align="right"><font size="2"> 14.659</font></td>
+      <td align="right"><font size="2"> 14.546</font></td>
+      <td align="right"><font size="2"> 14.374</font></td>
+      <td align="right"><font size="2"> 14.198</font></td>
+      <td align="right"><font size="2"> 14.020</font></td>
+      <td align="right"><font size="2"> 13.929</font></td>
+      <td align="right"><font size="2"> 13.838</font></td>
+      <td align="right"><font size="2"> 13.745</font></td>
+      <td align="right"><font size="2"> 13.652</font></td>
+      <td align="right"><font size="2"> 13.558</font></td>
+      <td align="right"><font size="2"> 13.463</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">5 </font></th>
+      <td align="right"><font size="2"> 16.258</font></td>
+      <td align="right"><font size="2"> 13.274</font></td>
+      <td align="right"><font size="2"> 12.060</font></td>
+      <td align="right"><font size="2"> 11.392</font></td>
+      <td align="right"><font size="2"> 10.967</font></td>
+      <td align="right"><font size="2"> 10.672</font></td>
+      <td align="right"><font size="2"> 10.456</font></td>
+      <td align="right"><font size="2"> 10.289</font></td>
+      <td align="right"><font size="2"> 10.158</font></td>
+      <td align="right"><font size="2"> 10.051</font></td>
+      <td align="right"><font size="2"> 9.888</font></td>
+      <td align="right"><font size="2"> 9.722</font></td>
+      <td align="right"><font size="2"> 9.553</font></td>
+      <td align="right"><font size="2"> 9.466</font></td>
+      <td align="right"><font size="2"> 9.379</font></td>
+      <td align="right"><font size="2"> 9.291</font></td>
+      <td align="right"><font size="2"> 9.202</font></td>
+      <td align="right"><font size="2"> 9.112</font></td>
+      <td align="right"><font size="2"> 9.020</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">6 </font></th>
+      <td align="right"><font size="2"> 13.745</font></td>
+      <td align="right"><font size="2"> 10.925</font></td>
+      <td align="right"><font size="2"> 9.780</font></td>
+      <td align="right"><font size="2"> 9.148</font></td>
+      <td align="right"><font size="2"> 8.746</font></td>
+      <td align="right"><font size="2"> 8.466</font></td>
+      <td align="right"><font size="2"> 8.260</font></td>
+      <td align="right"><font size="2"> 8.102</font></td>
+      <td align="right"><font size="2"> 7.976</font></td>
+      <td align="right"><font size="2"> 7.874</font></td>
+      <td align="right"><font size="2"> 7.718</font></td>
+      <td align="right"><font size="2"> 7.559</font></td>
+      <td align="right"><font size="2"> 7.396</font></td>
+      <td align="right"><font size="2"> 7.313</font></td>
+      <td align="right"><font size="2"> 7.229</font></td>
+      <td align="right"><font size="2"> 7.143</font></td>
+      <td align="right"><font size="2"> 7.057</font></td>
+      <td align="right"><font size="2"> 6.969</font></td>
+      <td align="right"><font size="2"> 6.880</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">7 </font></th>
+      <td align="right"><font size="2"> 12.246</font></td>
+      <td align="right"><font size="2"> 9.547</font></td>
+      <td align="right"><font size="2"> 8.451</font></td>
+      <td align="right"><font size="2"> 7.847</font></td>
+      <td align="right"><font size="2"> 7.460</font></td>
+      <td align="right"><font size="2"> 7.191</font></td>
+      <td align="right"><font size="2"> 6.993</font></td>
+      <td align="right"><font size="2"> 6.840</font></td>
+      <td align="right"><font size="2"> 6.719</font></td>
+      <td align="right"><font size="2"> 6.620</font></td>
+      <td align="right"><font size="2"> 6.469</font></td>
+      <td align="right"><font size="2"> 6.314</font></td>
+      <td align="right"><font size="2"> 6.155</font></td>
+      <td align="right"><font size="2"> 6.074</font></td>
+      <td align="right"><font size="2"> 5.992</font></td>
+      <td align="right"><font size="2"> 5.908</font></td>
+      <td align="right"><font size="2"> 5.824</font></td>
+      <td align="right"><font size="2"> 5.737</font></td>
+      <td align="right"><font size="2"> 5.650</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">8 </font></th>
+      <td align="right"><font size="2"> 11.259</font></td>
+      <td align="right"><font size="2"> 8.649</font></td>
+      <td align="right"><font size="2"> 7.591</font></td>
+      <td align="right"><font size="2"> 7.006</font></td>
+      <td align="right"><font size="2"> 6.632</font></td>
+      <td align="right"><font size="2"> 6.371</font></td>
+      <td align="right"><font size="2"> 6.178</font></td>
+      <td align="right"><font size="2"> 6.029</font></td>
+      <td align="right"><font size="2"> 5.911</font></td>
+      <td align="right"><font size="2"> 5.814</font></td>
+      <td align="right"><font size="2"> 5.667</font></td>
+      <td align="right"><font size="2"> 5.515</font></td>
+      <td align="right"><font size="2"> 5.359</font></td>
+      <td align="right"><font size="2"> 5.279</font></td>
+      <td align="right"><font size="2"> 5.198</font></td>
+      <td align="right"><font size="2"> 5.116</font></td>
+      <td align="right"><font size="2"> 5.032</font></td>
+      <td align="right"><font size="2"> 4.946</font></td>
+      <td align="right"><font size="2"> 4.859</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">9 </font></th>
+      <td align="right"><font size="2"> 10.561</font></td>
+      <td align="right"><font size="2"> 8.022</font></td>
+      <td align="right"><font size="2"> 6.992</font></td>
+      <td align="right"><font size="2"> 6.422</font></td>
+      <td align="right"><font size="2"> 6.057</font></td>
+      <td align="right"><font size="2"> 5.802</font></td>
+      <td align="right"><font size="2"> 5.613</font></td>
+      <td align="right"><font size="2"> 5.467</font></td>
+      <td align="right"><font size="2"> 5.351</font></td>
+      <td align="right"><font size="2"> 5.257</font></td>
+      <td align="right"><font size="2"> 5.111</font></td>
+      <td align="right"><font size="2"> 4.962</font></td>
+      <td align="right"><font size="2"> 4.808</font></td>
+      <td align="right"><font size="2"> 4.729</font></td>
+      <td align="right"><font size="2"> 4.649</font></td>
+      <td align="right"><font size="2"> 4.567</font></td>
+      <td align="right"><font size="2"> 4.483</font></td>
+      <td align="right"><font size="2"> 4.398</font></td>
+      <td align="right"><font size="2"> 4.311</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">10 </font></th>
+      <td align="right"><font size="2"> 10.044</font></td>
+      <td align="right"><font size="2"> 7.559</font></td>
+      <td align="right"><font size="2"> 6.552</font></td>
+      <td align="right"><font size="2"> 5.994</font></td>
+      <td align="right"><font size="2"> 5.636</font></td>
+      <td align="right"><font size="2"> 5.386</font></td>
+      <td align="right"><font size="2"> 5.200</font></td>
+      <td align="right"><font size="2"> 5.057</font></td>
+      <td align="right"><font size="2"> 4.942</font></td>
+      <td align="right"><font size="2"> 4.849</font></td>
+      <td align="right"><font size="2"> 4.706</font></td>
+      <td align="right"><font size="2"> 4.558</font></td>
+      <td align="right"><font size="2"> 4.405</font></td>
+      <td align="right"><font size="2"> 4.327</font></td>
+      <td align="right"><font size="2"> 4.247</font></td>
+      <td align="right"><font size="2"> 4.165</font></td>
+      <td align="right"><font size="2"> 4.082</font></td>
+      <td align="right"><font size="2"> 3.996</font></td>
+      <td align="right"><font size="2"> 3.909</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">11 </font></th>
+      <td align="right"><font size="2"> 9.646</font></td>
+      <td align="right"><font size="2"> 7.206</font></td>
+      <td align="right"><font size="2"> 6.217</font></td>
+      <td align="right"><font size="2"> 5.668</font></td>
+      <td align="right"><font size="2"> 5.316</font></td>
+      <td align="right"><font size="2"> 5.069</font></td>
+      <td align="right"><font size="2"> 4.886</font></td>
+      <td align="right"><font size="2"> 4.744</font></td>
+      <td align="right"><font size="2"> 4.632</font></td>
+      <td align="right"><font size="2"> 4.539</font></td>
+      <td align="right"><font size="2"> 4.397</font></td>
+      <td align="right"><font size="2"> 4.251</font></td>
+      <td align="right"><font size="2"> 4.099</font></td>
+      <td align="right"><font size="2"> 4.021</font></td>
+      <td align="right"><font size="2"> 3.941</font></td>
+      <td align="right"><font size="2"> 3.860</font></td>
+      <td align="right"><font size="2"> 3.776</font></td>
+      <td align="right"><font size="2"> 3.690</font></td>
+      <td align="right"><font size="2"> 3.602</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">12 </font></th>
+      <td align="right"><font size="2"> 9.330</font></td>
+      <td align="right"><font size="2"> 6.927</font></td>
+      <td align="right"><font size="2"> 5.953</font></td>
+      <td align="right"><font size="2"> 5.412</font></td>
+      <td align="right"><font size="2"> 5.064</font></td>
+      <td align="right"><font size="2"> 4.821</font></td>
+      <td align="right"><font size="2"> 4.640</font></td>
+      <td align="right"><font size="2"> 4.499</font></td>
+      <td align="right"><font size="2"> 4.388</font></td>
+      <td align="right"><font size="2"> 4.296</font></td>
+      <td align="right"><font size="2"> 4.155</font></td>
+      <td align="right"><font size="2"> 4.010</font></td>
+      <td align="right"><font size="2"> 3.858</font></td>
+      <td align="right"><font size="2"> 3.780</font></td>
+      <td align="right"><font size="2"> 3.701</font></td>
+      <td align="right"><font size="2"> 3.619</font></td>
+      <td align="right"><font size="2"> 3.535</font></td>
+      <td align="right"><font size="2"> 3.449</font></td>
+      <td align="right"><font size="2"> 3.361</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">13 </font></th>
+      <td align="right"><font size="2"> 9.074</font></td>
+      <td align="right"><font size="2"> 6.701</font></td>
+      <td align="right"><font size="2"> 5.739</font></td>
+      <td align="right"><font size="2"> 5.205</font></td>
+      <td align="right"><font size="2"> 4.862</font></td>
+      <td align="right"><font size="2"> 4.620</font></td>
+      <td align="right"><font size="2"> 4.441</font></td>
+      <td align="right"><font size="2"> 4.302</font></td>
+      <td align="right"><font size="2"> 4.191</font></td>
+      <td align="right"><font size="2"> 4.100</font></td>
+      <td align="right"><font size="2"> 3.960</font></td>
+      <td align="right"><font size="2"> 3.815</font></td>
+      <td align="right"><font size="2"> 3.665</font></td>
+      <td align="right"><font size="2"> 3.587</font></td>
+      <td align="right"><font size="2"> 3.507</font></td>
+      <td align="right"><font size="2"> 3.425</font></td>
+      <td align="right"><font size="2"> 3.341</font></td>
+      <td align="right"><font size="2"> 3.255</font></td>
+      <td align="right"><font size="2"> 3.165</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">14 </font></th>
+      <td align="right"><font size="2"> 8.862</font></td>
+      <td align="right"><font size="2"> 6.515</font></td>
+      <td align="right"><font size="2"> 5.564</font></td>
+      <td align="right"><font size="2"> 5.035</font></td>
+      <td align="right"><font size="2"> 4.695</font></td>
+      <td align="right"><font size="2"> 4.456</font></td>
+      <td align="right"><font size="2"> 4.278</font></td>
+      <td align="right"><font size="2"> 4.140</font></td>
+      <td align="right"><font size="2"> 4.030</font></td>
+      <td align="right"><font size="2"> 3.939</font></td>
+      <td align="right"><font size="2"> 3.800</font></td>
+      <td align="right"><font size="2"> 3.656</font></td>
+      <td align="right"><font size="2"> 3.505</font></td>
+      <td align="right"><font size="2"> 3.427</font></td>
+      <td align="right"><font size="2"> 3.348</font></td>
+      <td align="right"><font size="2"> 3.266</font></td>
+      <td align="right"><font size="2"> 3.181</font></td>
+      <td align="right"><font size="2"> 3.094</font></td>
+      <td align="right"><font size="2"> 3.004</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">15 </font></th>
+      <td align="right"><font size="2"> 8.683</font></td>
+      <td align="right"><font size="2"> 6.359</font></td>
+      <td align="right"><font size="2"> 5.417</font></td>
+      <td align="right"><font size="2"> 4.893</font></td>
+      <td align="right"><font size="2"> 4.556</font></td>
+      <td align="right"><font size="2"> 4.318</font></td>
+      <td align="right"><font size="2"> 4.142</font></td>
+      <td align="right"><font size="2"> 4.004</font></td>
+      <td align="right"><font size="2"> 3.895</font></td>
+      <td align="right"><font size="2"> 3.805</font></td>
+      <td align="right"><font size="2"> 3.666</font></td>
+      <td align="right"><font size="2"> 3.522</font></td>
+      <td align="right"><font size="2"> 3.372</font></td>
+      <td align="right"><font size="2"> 3.294</font></td>
+      <td align="right"><font size="2"> 3.214</font></td>
+      <td align="right"><font size="2"> 3.132</font></td>
+      <td align="right"><font size="2"> 3.047</font></td>
+      <td align="right"><font size="2"> 2.959</font></td>
+      <td align="right"><font size="2"> 2.868</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">16 </font></th>
+      <td align="right"><font size="2"> 8.531</font></td>
+      <td align="right"><font size="2"> 6.226</font></td>
+      <td align="right"><font size="2"> 5.292</font></td>
+      <td align="right"><font size="2"> 4.773</font></td>
+      <td align="right"><font size="2"> 4.437</font></td>
+      <td align="right"><font size="2"> 4.202</font></td>
+      <td align="right"><font size="2"> 4.026</font></td>
+      <td align="right"><font size="2"> 3.890</font></td>
+      <td align="right"><font size="2"> 3.780</font></td>
+      <td align="right"><font size="2"> 3.691</font></td>
+      <td align="right"><font size="2"> 3.553</font></td>
+      <td align="right"><font size="2"> 3.409</font></td>
+      <td align="right"><font size="2"> 3.259</font></td>
+      <td align="right"><font size="2"> 3.181</font></td>
+      <td align="right"><font size="2"> 3.101</font></td>
+      <td align="right"><font size="2"> 3.018</font></td>
+      <td align="right"><font size="2"> 2.933</font></td>
+      <td align="right"><font size="2"> 2.845</font></td>
+      <td align="right"><font size="2"> 2.753</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">17 </font></th>
+      <td align="right"><font size="2"> 8.400</font></td>
+      <td align="right"><font size="2"> 6.112</font></td>
+      <td align="right"><font size="2"> 5.185</font></td>
+      <td align="right"><font size="2"> 4.669</font></td>
+      <td align="right"><font size="2"> 4.336</font></td>
+      <td align="right"><font size="2"> 4.102</font></td>
+      <td align="right"><font size="2"> 3.927</font></td>
+      <td align="right"><font size="2"> 3.791</font></td>
+      <td align="right"><font size="2"> 3.682</font></td>
+      <td align="right"><font size="2"> 3.593</font></td>
+      <td align="right"><font size="2"> 3.455</font></td>
+      <td align="right"><font size="2"> 3.312</font></td>
+      <td align="right"><font size="2"> 3.162</font></td>
+      <td align="right"><font size="2"> 3.084</font></td>
+      <td align="right"><font size="2"> 3.003</font></td>
+      <td align="right"><font size="2"> 2.920</font></td>
+      <td align="right"><font size="2"> 2.835</font></td>
+      <td align="right"><font size="2"> 2.746</font></td>
+      <td align="right"><font size="2"> 2.653</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">18 </font></th>
+      <td align="right"><font size="2"> 8.285</font></td>
+      <td align="right"><font size="2"> 6.013</font></td>
+      <td align="right"><font size="2"> 5.092</font></td>
+      <td align="right"><font size="2"> 4.579</font></td>
+      <td align="right"><font size="2"> 4.248</font></td>
+      <td align="right"><font size="2"> 4.015</font></td>
+      <td align="right"><font size="2"> 3.841</font></td>
+      <td align="right"><font size="2"> 3.705</font></td>
+      <td align="right"><font size="2"> 3.597</font></td>
+      <td align="right"><font size="2"> 3.508</font></td>
+      <td align="right"><font size="2"> 3.371</font></td>
+      <td align="right"><font size="2"> 3.227</font></td>
+      <td align="right"><font size="2"> 3.077</font></td>
+      <td align="right"><font size="2"> 2.999</font></td>
+      <td align="right"><font size="2"> 2.919</font></td>
+      <td align="right"><font size="2"> 2.835</font></td>
+      <td align="right"><font size="2"> 2.749</font></td>
+      <td align="right"><font size="2"> 2.660</font></td>
+      <td align="right"><font size="2"> 2.566</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">19 </font></th>
+      <td align="right"><font size="2"> 8.185</font></td>
+      <td align="right"><font size="2"> 5.926</font></td>
+      <td align="right"><font size="2"> 5.010</font></td>
+      <td align="right"><font size="2"> 4.500</font></td>
+      <td align="right"><font size="2"> 4.171</font></td>
+      <td align="right"><font size="2"> 3.939</font></td>
+      <td align="right"><font size="2"> 3.765</font></td>
+      <td align="right"><font size="2"> 3.631</font></td>
+      <td align="right"><font size="2"> 3.523</font></td>
+      <td align="right"><font size="2"> 3.434</font></td>
+      <td align="right"><font size="2"> 3.297</font></td>
+      <td align="right"><font size="2"> 3.153</font></td>
+      <td align="right"><font size="2"> 3.003</font></td>
+      <td align="right"><font size="2"> 2.925</font></td>
+      <td align="right"><font size="2"> 2.844</font></td>
+      <td align="right"><font size="2"> 2.761</font></td>
+      <td align="right"><font size="2"> 2.674</font></td>
+      <td align="right"><font size="2"> 2.584</font></td>
+      <td align="right"><font size="2"> 2.489</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">20 </font></th>
+      <td align="right"><font size="2"> 8.096</font></td>
+      <td align="right"><font size="2"> 5.849</font></td>
+      <td align="right"><font size="2"> 4.938</font></td>
+      <td align="right"><font size="2"> 4.431</font></td>
+      <td align="right"><font size="2"> 4.103</font></td>
+      <td align="right"><font size="2"> 3.871</font></td>
+      <td align="right"><font size="2"> 3.699</font></td>
+      <td align="right"><font size="2"> 3.564</font></td>
+      <td align="right"><font size="2"> 3.457</font></td>
+      <td align="right"><font size="2"> 3.368</font></td>
+      <td align="right"><font size="2"> 3.231</font></td>
+      <td align="right"><font size="2"> 3.088</font></td>
+      <td align="right"><font size="2"> 2.938</font></td>
+      <td align="right"><font size="2"> 2.859</font></td>
+      <td align="right"><font size="2"> 2.778</font></td>
+      <td align="right"><font size="2"> 2.695</font></td>
+      <td align="right"><font size="2"> 2.608</font></td>
+      <td align="right"><font size="2"> 2.517</font></td>
+      <td align="right"><font size="2"> 2.421</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">21 </font></th>
+      <td align="right"><font size="2"> 8.017</font></td>
+      <td align="right"><font size="2"> 5.780</font></td>
+      <td align="right"><font size="2"> 4.874</font></td>
+      <td align="right"><font size="2"> 4.369</font></td>
+      <td align="right"><font size="2"> 4.042</font></td>
+      <td align="right"><font size="2"> 3.812</font></td>
+      <td align="right"><font size="2"> 3.640</font></td>
+      <td align="right"><font size="2"> 3.506</font></td>
+      <td align="right"><font size="2"> 3.398</font></td>
+      <td align="right"><font size="2"> 3.310</font></td>
+      <td align="right"><font size="2"> 3.173</font></td>
+      <td align="right"><font size="2"> 3.030</font></td>
+      <td align="right"><font size="2"> 2.880</font></td>
+      <td align="right"><font size="2"> 2.801</font></td>
+      <td align="right"><font size="2"> 2.720</font></td>
+      <td align="right"><font size="2"> 2.636</font></td>
+      <td align="right"><font size="2"> 2.548</font></td>
+      <td align="right"><font size="2"> 2.457</font></td>
+      <td align="right"><font size="2"> 2.360</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">22 </font></th>
+      <td align="right"><font size="2"> 7.945</font></td>
+      <td align="right"><font size="2"> 5.719</font></td>
+      <td align="right"><font size="2"> 4.817</font></td>
+      <td align="right"><font size="2"> 4.313</font></td>
+      <td align="right"><font size="2"> 3.988</font></td>
+      <td align="right"><font size="2"> 3.758</font></td>
+      <td align="right"><font size="2"> 3.587</font></td>
+      <td align="right"><font size="2"> 3.453</font></td>
+      <td align="right"><font size="2"> 3.346</font></td>
+      <td align="right"><font size="2"> 3.258</font></td>
+      <td align="right"><font size="2"> 3.121</font></td>
+      <td align="right"><font size="2"> 2.978</font></td>
+      <td align="right"><font size="2"> 2.827</font></td>
+      <td align="right"><font size="2"> 2.749</font></td>
+      <td align="right"><font size="2"> 2.667</font></td>
+      <td align="right"><font size="2"> 2.583</font></td>
+      <td align="right"><font size="2"> 2.495</font></td>
+      <td align="right"><font size="2"> 2.403</font></td>
+      <td align="right"><font size="2"> 2.305</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">23 </font></th>
+      <td align="right"><font size="2"> 7.881</font></td>
+      <td align="right"><font size="2"> 5.664</font></td>
+      <td align="right"><font size="2"> 4.765</font></td>
+      <td align="right"><font size="2"> 4.264</font></td>
+      <td align="right"><font size="2"> 3.939</font></td>
+      <td align="right"><font size="2"> 3.710</font></td>
+      <td align="right"><font size="2"> 3.539</font></td>
+      <td align="right"><font size="2"> 3.406</font></td>
+      <td align="right"><font size="2"> 3.299</font></td>
+      <td align="right"><font size="2"> 3.211</font></td>
+      <td align="right"><font size="2"> 3.074</font></td>
+      <td align="right"><font size="2"> 2.931</font></td>
+      <td align="right"><font size="2"> 2.781</font></td>
+      <td align="right"><font size="2"> 2.702</font></td>
+      <td align="right"><font size="2"> 2.620</font></td>
+      <td align="right"><font size="2"> 2.535</font></td>
+      <td align="right"><font size="2"> 2.447</font></td>
+      <td align="right"><font size="2"> 2.354</font></td>
+      <td align="right"><font size="2"> 2.256</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">24 </font></th>
+      <td align="right"><font size="2"> 7.823</font></td>
+      <td align="right"><font size="2"> 5.614</font></td>
+      <td align="right"><font size="2"> 4.718</font></td>
+      <td align="right"><font size="2"> 4.218</font></td>
+      <td align="right"><font size="2"> 3.895</font></td>
+      <td align="right"><font size="2"> 3.667</font></td>
+      <td align="right"><font size="2"> 3.496</font></td>
+      <td align="right"><font size="2"> 3.363</font></td>
+      <td align="right"><font size="2"> 3.256</font></td>
+      <td align="right"><font size="2"> 3.168</font></td>
+      <td align="right"><font size="2"> 3.032</font></td>
+      <td align="right"><font size="2"> 2.889</font></td>
+      <td align="right"><font size="2"> 2.738</font></td>
+      <td align="right"><font size="2"> 2.659</font></td>
+      <td align="right"><font size="2"> 2.577</font></td>
+      <td align="right"><font size="2"> 2.492</font></td>
+      <td align="right"><font size="2"> 2.403</font></td>
+      <td align="right"><font size="2"> 2.310</font></td>
+      <td align="right"><font size="2"> 2.211</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">25 </font></th>
+      <td align="right"><font size="2"> 7.770</font></td>
+      <td align="right"><font size="2"> 5.568</font></td>
+      <td align="right"><font size="2"> 4.675</font></td>
+      <td align="right"><font size="2"> 4.177</font></td>
+      <td align="right"><font size="2"> 3.855</font></td>
+      <td align="right"><font size="2"> 3.627</font></td>
+      <td align="right"><font size="2"> 3.457</font></td>
+      <td align="right"><font size="2"> 3.324</font></td>
+      <td align="right"><font size="2"> 3.217</font></td>
+      <td align="right"><font size="2"> 3.129</font></td>
+      <td align="right"><font size="2"> 2.993</font></td>
+      <td align="right"><font size="2"> 2.850</font></td>
+      <td align="right"><font size="2"> 2.699</font></td>
+      <td align="right"><font size="2"> 2.620</font></td>
+      <td align="right"><font size="2"> 2.538</font></td>
+      <td align="right"><font size="2"> 2.453</font></td>
+      <td align="right"><font size="2"> 2.364</font></td>
+      <td align="right"><font size="2"> 2.270</font></td>
+      <td align="right"><font size="2"> 2.169</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">26 </font></th>
+      <td align="right"><font size="2"> 7.721</font></td>
+      <td align="right"><font size="2"> 5.526</font></td>
+      <td align="right"><font size="2"> 4.637</font></td>
+      <td align="right"><font size="2"> 4.140</font></td>
+      <td align="right"><font size="2"> 3.818</font></td>
+      <td align="right"><font size="2"> 3.591</font></td>
+      <td align="right"><font size="2"> 3.421</font></td>
+      <td align="right"><font size="2"> 3.288</font></td>
+      <td align="right"><font size="2"> 3.182</font></td>
+      <td align="right"><font size="2"> 3.094</font></td>
+      <td align="right"><font size="2"> 2.958</font></td>
+      <td align="right"><font size="2"> 2.815</font></td>
+      <td align="right"><font size="2"> 2.664</font></td>
+      <td align="right"><font size="2"> 2.585</font></td>
+      <td align="right"><font size="2"> 2.503</font></td>
+      <td align="right"><font size="2"> 2.417</font></td>
+      <td align="right"><font size="2"> 2.327</font></td>
+      <td align="right"><font size="2"> 2.233</font></td>
+      <td align="right"><font size="2"> 2.131</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">27 </font></th>
+      <td align="right"><font size="2"> 7.677</font></td>
+      <td align="right"><font size="2"> 5.488</font></td>
+      <td align="right"><font size="2"> 4.601</font></td>
+      <td align="right"><font size="2"> 4.106</font></td>
+      <td align="right"><font size="2"> 3.785</font></td>
+      <td align="right"><font size="2"> 3.558</font></td>
+      <td align="right"><font size="2"> 3.388</font></td>
+      <td align="right"><font size="2"> 3.256</font></td>
+      <td align="right"><font size="2"> 3.149</font></td>
+      <td align="right"><font size="2"> 3.062</font></td>
+      <td align="right"><font size="2"> 2.926</font></td>
+      <td align="right"><font size="2"> 2.783</font></td>
+      <td align="right"><font size="2"> 2.632</font></td>
+      <td align="right"><font size="2"> 2.552</font></td>
+      <td align="right"><font size="2"> 2.470</font></td>
+      <td align="right"><font size="2"> 2.384</font></td>
+      <td align="right"><font size="2"> 2.294</font></td>
+      <td align="right"><font size="2"> 2.198</font></td>
+      <td align="right"><font size="2"> 2.097</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">28 </font></th>
+      <td align="right"><font size="2"> 7.636</font></td>
+      <td align="right"><font size="2"> 5.453</font></td>
+      <td align="right"><font size="2"> 4.568</font></td>
+      <td align="right"><font size="2"> 4.074</font></td>
+      <td align="right"><font size="2"> 3.754</font></td>
+      <td align="right"><font size="2"> 3.528</font></td>
+      <td align="right"><font size="2"> 3.358</font></td>
+      <td align="right"><font size="2"> 3.226</font></td>
+      <td align="right"><font size="2"> 3.120</font></td>
+      <td align="right"><font size="2"> 3.032</font></td>
+      <td align="right"><font size="2"> 2.896</font></td>
+      <td align="right"><font size="2"> 2.753</font></td>
+      <td align="right"><font size="2"> 2.602</font></td>
+      <td align="right"><font size="2"> 2.522</font></td>
+      <td align="right"><font size="2"> 2.440</font></td>
+      <td align="right"><font size="2"> 2.354</font></td>
+      <td align="right"><font size="2"> 2.263</font></td>
+      <td align="right"><font size="2"> 2.167</font></td>
+      <td align="right"><font size="2"> 2.064</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">29 </font></th>
+      <td align="right"><font size="2"> 7.598</font></td>
+      <td align="right"><font size="2"> 5.420</font></td>
+      <td align="right"><font size="2"> 4.538</font></td>
+      <td align="right"><font size="2"> 4.045</font></td>
+      <td align="right"><font size="2"> 3.725</font></td>
+      <td align="right"><font size="2"> 3.499</font></td>
+      <td align="right"><font size="2"> 3.330</font></td>
+      <td align="right"><font size="2"> 3.198</font></td>
+      <td align="right"><font size="2"> 3.092</font></td>
+      <td align="right"><font size="2"> 3.005</font></td>
+      <td align="right"><font size="2"> 2.868</font></td>
+      <td align="right"><font size="2"> 2.726</font></td>
+      <td align="right"><font size="2"> 2.574</font></td>
+      <td align="right"><font size="2"> 2.495</font></td>
+      <td align="right"><font size="2"> 2.412</font></td>
+      <td align="right"><font size="2"> 2.325</font></td>
+      <td align="right"><font size="2"> 2.234</font></td>
+      <td align="right"><font size="2"> 2.138</font></td>
+      <td align="right"><font size="2"> 2.034</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">30 </font></th>
+      <td align="right"><font size="2"> 7.562</font></td>
+      <td align="right"><font size="2"> 5.390</font></td>
+      <td align="right"><font size="2"> 4.510</font></td>
+      <td align="right"><font size="2"> 4.018</font></td>
+      <td align="right"><font size="2"> 3.699</font></td>
+      <td align="right"><font size="2"> 3.473</font></td>
+      <td align="right"><font size="2"> 3.304</font></td>
+      <td align="right"><font size="2"> 3.173</font></td>
+      <td align="right"><font size="2"> 3.067</font></td>
+      <td align="right"><font size="2"> 2.979</font></td>
+      <td align="right"><font size="2"> 2.843</font></td>
+      <td align="right"><font size="2"> 2.700</font></td>
+      <td align="right"><font size="2"> 2.549</font></td>
+      <td align="right"><font size="2"> 2.469</font></td>
+      <td align="right"><font size="2"> 2.386</font></td>
+      <td align="right"><font size="2"> 2.299</font></td>
+      <td align="right"><font size="2"> 2.208</font></td>
+      <td align="right"><font size="2"> 2.111</font></td>
+      <td align="right"><font size="2"> 2.006</font></td>
+    </tr>
+    <tr>
+      <td colspan="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <th><font size="2">40 </font></th>
+      <td align="right"><font size="2"> 7.314</font></td>
+      <td align="right"><font size="2"> 5.179</font></td>
+      <td align="right"><font size="2"> 4.313</font></td>
+      <td align="right"><font size="2"> 3.828</font></td>
+      <td align="right"><font size="2"> 3.514</font></td>
+      <td align="right"><font size="2"> 3.291</font></td>
+      <td align="right"><font size="2"> 3.124</font></td>
+      <td align="right"><font size="2"> 2.993</font></td>
+      <td align="right"><font size="2"> 2.888</font></td>
+      <td align="right"><font size="2"> 2.801</font></td>
+      <td align="right"><font size="2"> 2.665</font></td>
+      <td align="right"><font size="2"> 2.522</font></td>
+      <td align="right"><font size="2"> 2.369</font></td>
+      <td align="right"><font size="2"> 2.288</font></td>
+      <td align="right"><font size="2"> 2.203</font></td>
+      <td align="right"><font size="2"> 2.114</font></td>
+      <td align="right"><font size="2"> 2.019</font></td>
+      <td align="right"><font size="2"> 1.917</font></td>
+      <td align="right"><font size="2"> 1.805</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">60 </font></th>
+      <td align="right"><font size="2"> 7.077</font></td>
+      <td align="right"><font size="2"> 4.977</font></td>
+      <td align="right"><font size="2"> 4.126</font></td>
+      <td align="right"><font size="2"> 3.649</font></td>
+      <td align="right"><font size="2"> 3.339</font></td>
+      <td align="right"><font size="2"> 3.119</font></td>
+      <td align="right"><font size="2"> 2.953</font></td>
+      <td align="right"><font size="2"> 2.823</font></td>
+      <td align="right"><font size="2"> 2.718</font></td>
+      <td align="right"><font size="2"> 2.632</font></td>
+      <td align="right"><font size="2"> 2.496</font></td>
+      <td align="right"><font size="2"> 2.352</font></td>
+      <td align="right"><font size="2"> 2.198</font></td>
+      <td align="right"><font size="2"> 2.115</font></td>
+      <td align="right"><font size="2"> 2.028</font></td>
+      <td align="right"><font size="2"> 1.936</font></td>
+      <td align="right"><font size="2"> 1.836</font></td>
+      <td align="right"><font size="2"> 1.726</font></td>
+      <td align="right"><font size="2"> 1.601</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">120</font></th>
+      <td align="right"><font size="2"> 6.851</font></td>
+      <td align="right"><font size="2"> 4.787</font></td>
+      <td align="right"><font size="2"> 3.949</font></td>
+      <td align="right"><font size="2"> 3.480</font></td>
+      <td align="right"><font size="2"> 3.174</font></td>
+      <td align="right"><font size="2"> 2.956</font></td>
+      <td align="right"><font size="2"> 2.792</font></td>
+      <td align="right"><font size="2"> 2.663</font></td>
+      <td align="right"><font size="2"> 2.559</font></td>
+      <td align="right"><font size="2"> 2.472</font></td>
+      <td align="right"><font size="2"> 2.336</font></td>
+      <td align="right"><font size="2"> 2.192</font></td>
+      <td align="right"><font size="2"> 2.035</font></td>
+      <td align="right"><font size="2"> 1.950</font></td>
+      <td align="right"><font size="2"> 1.860</font></td>
+      <td align="right"><font size="2"> 1.763</font></td>
+      <td align="right"><font size="2"> 1.656</font></td>
+      <td align="right"><font size="2"> 1.533</font></td>
+      <td align="right"><font size="2"> 1.381</font></td>
+    </tr>
+    <tr>
+      <th><font size="2">∞</font></th>
+      <td align="right"><font size="2"> 6.635</font></td>
+      <td align="right"><font size="2"> 4.605</font></td>
+      <td align="right"><font size="2"> 3.782</font></td>
+      <td align="right"><font size="2"> 3.319</font></td>
+      <td align="right"><font size="2"> 3.017</font></td>
+      <td align="right"><font size="2"> 2.802</font></td>
+      <td align="right"><font size="2"> 2.639</font></td>
+      <td align="right"><font size="2"> 2.511</font></td>
+      <td align="right"><font size="2"> 2.407</font></td>
+      <td align="right"><font size="2"> 2.321</font></td>
+      <td align="right"><font size="2"> 2.185</font></td>
+      <td align="right"><font size="2"> 2.039</font></td>
+      <td align="right"><font size="2"> 1.878</font></td>
+      <td align="right"><font size="2"> 1.791</font></td>
+      <td align="right"><font size="2"> 1.696</font></td>
+      <td align="right"><font size="2"> 1.592</font></td>
+      <td align="right"><font size="2"> 1.473</font></td>
+      <td align="right"><font size="2"> 1.325</font></td>
+      <td align="right"><font size="2"> 1.000</font></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<!--/span-->
+<!--/row-->
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+<!--/.fluid-container-->
+
+<script src="../js/jquery.js"></script> 	<script src="../js/bootstrap-transition.js"></script> 	<script src="../js/bootstrap-alert.js"></script> 	<script src="../js/bootstrap-modal.js"></script> 	<script src="../js/bootstrap-dropdown.js"></script> 	<script src="../js/bootstrap-scrollspy.js"></script> 	<script src="../js/bootstrap-tab.js"></script> 	<script src="../js/bootstrap-tooltip.js"></script> 	<script src="../js/bootstrap-popover.js"></script> 	<script src="../js/bootstrap-button.js"></script> 	<script src="../js/bootstrap-collapse.js"></script> 	<script src="../js/bootstrap-carousel.js"></script> 	<script src="../js/bootstrap-typeahead.js"></script> 
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+</body>
+</html>

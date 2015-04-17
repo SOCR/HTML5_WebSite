@@ -1,0 +1,28 @@
+Client ID for web applications
+Client ID:	
+265548722085-r0oknje6fp9k2ed28iu6p963eb8q5i8l.apps.googleusercontent.com
+Email address:	
+265548722085-r0oknje6fp9k2ed28iu6p963eb8q5i8l@developer.gserviceaccount.com
+Client secret:	
+fNfPS2SA_eOZH_ASbQMSC8qG
+Redirect URIs:	https://www.socr.umich.edu/oauth2callback
+JavaScript origins:	https://www.socr.umich.edu
+Edit settings...
+Reset client secret...
+Download JSON
+Delete...
+Create another client ID...
+Simple API Access
+Use API keys to identify your project when you do not need to access user data. Learn more
+Key for browser apps (with referers)
+API key:	
+AIzaSyAkmObRmGSwgYrXewt3gWlgnQwleApO69A
+Referers:	
+www.socr.umich.edu
+www.socr.umich.edu/html
+socr.umich.edu
+socr.umich.edu/html
+www.socr.ucla.edu
+socr.ucla.edu
+Activated on:	Aug 9, 2013 4:09 PM
+Activated by:	 iwaterpolo@gmail.com – you

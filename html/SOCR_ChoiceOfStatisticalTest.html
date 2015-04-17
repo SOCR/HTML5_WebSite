@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Choice of Statistical Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+ 		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
+ 
+	<!-- Le styles -->
+  		<link href="css/bootstrap.css" rel="stylesheet">
+  		<style type="text/css">
+		      body {
+		        top: 0px !important; 
+		        padding-top: 60px;
+		        padding-bottom: 40px;
+		      }
+		</style>
+		
+		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+		<style type="text/css">body {position: static !important; top:0px !important;}</style>
+
+<link href="../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="../html/feed.rss">
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/people">SOCR Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1" href="../html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/navigators/Carousel"
+			rel="tooltip" title="Carousel Resource Navigator">Carousel Viewer</a></li>
+	</ul>
+	</li>
+	<li><a href="../html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+		<ul id="menu3" class="dropdown-menu" role="menu"
+			aria-labelledby="drop5">
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+			Calculators</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+			Tables</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+			and Image-Processing Applets</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+			Java Applets</a></li>
+		</ul>
+	</li>
+	<li> <a href="http://nursing.umich.edu" rel="tooltip" 
+		title="University of Michigan School of Nursing">UMSN</a></li>
+	<li><div id="google_translate_element"></div>
+								<script type="text/javascript">
+									function googleTranslateElementInit() {
+								  		new google.translate.TranslateElement({pageLanguage: 'en', 
+									  		layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
+									  		gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
+								}
+								</script>
+								<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+								</script>  
+	</li>			            
+	
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+	<table class="table" style="text-align: center;" align="center">
+		<tbody>
+			<tr>
+				<td colspan="4" rowspan="1"
+					style="text-align: center; vertical-align: middle; color: rgb(51, 0, 51);"><a
+					href="http://en.wikipedia.org/wiki/Study_design"><big><big><big><span
+					style="font-weight: bold;">Study Design</span></big></big></big></a><br>
+				</td>
+				<td colspan="3" rowspan="2"
+					style="text-align: center; vertical-align: middle; font-weight: bold; color: rgb(51, 0, 51);"><big><big><a
+					href="http://en.wikipedia.org/wiki/Hypotheses">Hypotheses </a> <br>
+				<a href="http://en.wikipedia.org/wiki/Parameter">Parameters</a> <br>
+				<a href="http://en.wikipedia.org/wiki/Test_statistics">Test
+				Statistics</a></big><br>
+				</big></td>
+				<td colspan="2" rowspan="2"
+					style="font-weight: bold; color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><a
+					href="http://www.socr.ucla.edu/"><big><big>SOCR</big></big></a><br>
+				<a href="http://www.socr.ucla.edu/"><big><big>Tools</big></big></a></td>
+			</tr>
+			<tr>
+				<td colspan="2" rowspan="1"
+					style="font-weight: bold; text-align: center; vertical-align: middle; color: rgb(51, 0, 51);"><a
+					href="http://en.wikipedia.org/wiki/Dependent_variable"><big><big>Dependent<br>
+				Variables</big></big></a><big><big><br>
+				</big></big></td>
+				<td colspan="2" rowspan="1"
+					style="text-align: center; vertical-align: middle; color: rgb(51, 0, 51);"><a
+					href="http://en.wikipedia.org/wiki/Independent_variable"><big
+					style="font-weight: bold;"><big>Independent<br>
+				Variables</big></big></a></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small><font
+					size="+1"><small>Number</small></font> </small></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small>
+				</small>
+				<center><small><font size="+1"><small>Type
+				&amp;<br>
+				<a href="http://en.wikipedia.org/wiki/Assumptions">Assumptions</a></small></font><a
+					href="http://en.wikipedia.org/wiki/Assumptions"> </a><font
+					size="+1"><small><br>
+				</small></font></small></center>
+				<small> </small></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small>
+				</small>
+				<center><small><font size="+1"><small>Number</small></font>
+				<font size="+1"><small><br>
+				</small></font></small></center>
+				<small> </small></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small>
+				</small>
+				<center><small><font size="+1"><small>Type</small></font>
+				<font size="+1"><small><br>
+				</small></font></small></center>
+				<small> </small></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small><font
+					size="+1"><small>Hypotheses</small></font></small></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small><font
+					size="+1"><small>&nbsp;Parameter</small></font></small></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><small>
+				</small>
+				<center><small><font size="+1"><small>Statistical
+				Tests</small></font></small></center>
+				<small> </small></td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><small><a
+					href="SOCR_Experiments.html"><big><big>Demos</big></big></a><small>
+				</small></small></td>
+				<td style="text-align: center; vertical-align: middle;"><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a><small>
+				</small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="27">
+				<center><font size="+1">1</font></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a>
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</center>
+				</td>
+				<td colspan="1" rowspan="4"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">None<br>
+				(1 <a
+					href="http://en.wikipedia.org/wiki/Population_%28statistics%29">population</a>)</td>
+				<td colspan="1"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="4">
+				<center>N/A</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">μ=0</span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">μ</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;">0</span><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Mean">mean</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/Student_t_Test.html">one-sample
+				T-test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small> </small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous
+				</a><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">m=m</span><sub>o</sub><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">m</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;"></span><span
+					style="font-style: italic;">m</span><sub>o</sub></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a href="http://en.wikipedia.org/wiki/Median">median</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/Sign_Test.html">one-sample
+				median</a>,<br>
+				<a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/Sign_Test.html">Sign-test</a><br>
+				</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" rowspan="2"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">p=p</span><sub>o</sub><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">p</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;"></span><span
+					style="font-style: italic;">p</span><sub>o</sub></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/SampleProportion.html">proportions</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/Chi-SquaredTest.html"><big><big><span
+					style="font-family: symbol;">χ</span></big></big><sup>2</sup></a> <a
+					href="http://mathworld.wolfram.com/Chi-SquaredTest.html">goodness-of-fit</a>,
+				<a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/Binomial_proportions.html">binomial
+				test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><a
+					href="SOCR_Experiments.html"><small><big><big>Binomial</big></big><br>
+				Coin<br>
+				Exper</small></a><small> </small></td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" rowspan="1" style="vertical-align: top;"><a
+					href="http://en.wikipedia.org/wiki/Survival_analysis">Survival
+				Analysis</a><br>
+				</td>
+				<td style="vertical-align: top;"><a
+					href="http://cancerguide.org/scurve_km.html">Kaplan-Meier</a><br>
+				</td>
+				<td style="vertical-align: top;"><br>
+				</td>
+				<td style="vertical-align: top;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td colspan="1" rowspan="3"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">1
+				<br>
+				(<a href="http://en.wikipedia.org/wiki/Independent_variable">2
+				independent </a>populations)</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="3">
+				<center>&nbsp;2 <a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categories</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">μ</span><sub>o</sub><span
+					style="font-style: italic;">=</span><span
+					style="font-style: italic;">μ</span><small><small><small><sub>1</sub></small></small></small><span
+					style="font-style: italic;"></span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">μ</span><sub>o</sub><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;">μ</span><small><small><small><sub>1</sub></small></small></small><span
+					style="font-style: italic;"></span><big><span
+					style="font-weight: bold;"></span></big><span style="font-style: italic;"></span>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Mean">mean</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/2Sample_Student_t_Test.html">2
+				independent sample T-test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small><small>
+				</small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">m=m</span><sub>o</sub><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">m</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;"></span><span
+					style="font-style: italic;">m</span><sub>o</sub></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Median">medians</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://mathworld.wolfram.com/Mann-WhitneyTest.html">Mann
+				Whitney</a>, <br>
+				<a href="http://mathworld.wolfram.com/WilcoxonRankSumTest.html">Wilcoxon
+				rank sum test,</a><br>
+				<a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/Median_Test.html">Two-Sample
+				Median Test</a><br>
+				</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">p=p</span><sub>o</sub><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">p</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;"></span><span
+					style="font-style: italic;">p</span><sub>o</sub></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/SampleProportion.html">proportions</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://mathworld.wolfram.com/Chi-SquaredTest.html"><big><big><span
+					style="font-family: symbol;">χ</span></big></big><sup>2</sup> test</a> <br>
+				<a href="http://mathworld.wolfram.com/FishersExactTest.html">Fisher's
+				Exact test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td colspan="1" rowspan="3"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">None<br>
+				(1 <a
+					href="http://en.wikipedia.org/wiki/Population_%28statistics%29">population</a>
+				measured twice) <br>
+				<b><i>or</i></b> <br>
+				1 <br>
+				(2 paired <a
+					href="http://en.wikipedia.org/wiki/Population_%28statistics%29">populations</a>)</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="3">
+				<center>&nbsp;N/A <br>
+				or <br>
+				<a href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">μ</span><sub>o</sub><span
+					style="font-style: italic;">=</span><span
+					style="font-style: italic;">μ</span><small><small><small><sub>1</sub></small></small></small><span
+					style="font-style: italic;"></span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">μ</span><sub>o</sub><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;">μ</span><small><small><small><sub>1</sub></small></small></small>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Mean">means</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/Pairedt-Test.html">paired
+				T-test</a>&nbsp;</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">m=m</span><sub>o</sub><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">m</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;"></span><span
+					style="font-style: italic;">m</span><sub>o</sub></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a href="http://en.wikipedia.org/wiki/Median">medians</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/WilcoxonSignedRankTest.html">Wilcoxon
+				signed ranks test</a>&nbsp;</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">p=p</span><sub>o</sub><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">p</span><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;"></span><span
+					style="font-style: italic;">p</span><sub>o</sub></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/SampleProportion.html">proportions</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/McNemars_test.html">McNemar</a>,
+				<a href="http://mathworld.wolfram.com/Chi-SquaredTest.html"><big><big><span
+					style="font-family: symbol;">χ</span></big></big><sup>2</sup> test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td colspan="1" rowspan="3"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">1
+				<br>
+				(<big style="font-weight: bold;"><big>≥</big></big>3 <a
+					href="http://en.wikipedia.org/wiki/Population_%28statistics%29">populations</a>)</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="3">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">μ</span><sub>o</sub><span
+					style="font-style: italic;">=...=</span><span
+					style="font-style: italic;">μ</span><small><small><small><sub>k</sub></small></small></small><span
+					style="font-style: italic;"></span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">μ</span><sub>i</sub><big><span
+					style="font-weight: bold;">≠</span></big><big><span
+					style="font-weight: bold;"></span></big><span style="font-style: italic;">μ</span><small><small><small><sub>j</sub></small></small></small>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Mean">means</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://mathworld.wolfram.com/ANOVA.html">one-way
+				ANOVA</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">m</span><sub>o</sub><span
+					style="font-style: italic;">=...=</span><span
+					style="font-style: italic;">m</span><small><small><small><sub>k</sub></small></small></small><span
+					style="font-style: italic;"></span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">m</span><sub>i</sub><big><span
+					style="font-weight: bold;">≠</span></big><big><span
+					style="font-weight: bold;"></span></big><span style="font-style: italic;">m</span><small><small><small><sub>j</sub></small></small></small>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>
+				<center><a href="http://en.wikipedia.org/wiki/Median">medians</a></center>
+				</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/Kruskal-WallisTest.html">Kruskal
+				Wallis</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">p</span><sub>o</sub><span
+					style="font-style: italic;">=...=</span><span
+					style="font-style: italic;">p</span><small><small><small><sub>k</sub></small></small></small><span
+					style="font-style: italic;"></span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">p</span><sub>i</sub><big><span
+					style="font-weight: bold;">≠</span></big><big><span
+					style="font-weight: bold;"></span></big><span style="font-style: italic;">p</span><small><small><small><sub>j</sub></small></small></small>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/SampleProportion.html">proportions</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/Chi-SquaredTest.html"><big><big><span
+					style="font-family: symbol;">χ</span></big></big><sup>2</sup> test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td colspan="1" rowspan="3"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><big
+					style="font-weight: bold;"><big>≥</big></big>2<br>
+				(e.g., 2-way ANOVA)</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="3">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">H<sub>o</sub></a>:<span
+					style="font-style: italic;">a</span><small><sub><small><small><small>o</small></small></small></sub></small><span
+					style="font-style: italic;">μ</span><sub>o<span
+					style="font-style: italic;">+</span></sub><span
+					style="font-style: italic;">...+a</span><small><sub><small><small><small>k</small></small></small></sub></small><span
+					style="font-style: italic;">μ</span><small
+					style="font-style: italic;"><small><small><sub>k</sub></small></small></small><span
+					style="font-style: italic;">=</span><span
+					style="font-style: italic;">0</span><span
+					style="font-style: italic;"></span><br>
+				<a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">H<sub>a</sub></a>:<span
+					style="font-style: italic;">a</span><small><sub><small><small><small>o</small></small></small></sub></small><span
+					style="font-style: italic;">μ</span><sub>o<span
+					style="font-style: italic;">+</span></sub><span
+					style="font-style: italic;">...+a</span><small><sub><small><small><small>k</small></small></small></sub></small><span
+					style="font-style: italic;">μ</span><small
+					style="font-style: italic;"><small><small><sub>k</sub></small></small></small><big><span
+					style="font-weight: bold;">≠</span></big><span
+					style="font-style: italic;">0</span></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Mean">means</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.cas.buffalo.edu/classes/psy/segal/2072001/anova2/ANOVA2.html">Factorial
+				ANOVA</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">TBD<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>
+				<center><a href="http://en.wikipedia.org/wiki/Median">medians</a></center>
+				</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.fon.hum.uva.nl/Service/Statistics/Friedman.html">Friedman
+				test</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><a
+					href="http://en.wikipedia.org/wiki/Null_hypothesis">TBD<br>
+				</a></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://mathworld.wolfram.com/SampleProportion.html">proportions</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://www.gseis.ucla.edu/courses/ed231c/notes3/loglin.html">log-linear</a>,
+				<a href="http://en.wikipedia.org/wiki/Logistic_regression">logistic
+				regression</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">None<br>
+				(1 <a
+					href="http://en.wikipedia.org/wiki/Population_%28statistics%29">population</a>
+				measured&nbsp; <br>
+				<big style="font-weight: bold;"><big>≥</big></big>3 times)</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>N/A</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">TBD<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/Mean">means</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://faculty.vassar.edu/lowry/vsanova.html">Repeated
+				measures ANOVA</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td colspan="1" rowspan="4"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">1<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1" rowspan="2"><a
+					href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a></td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">TBD<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Correlation_coefficient">correlation</a>,<br>
+				<a href="http://en.wikipedia.org/wiki/Simple_linear_regression">simple
+				linear regression</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><small><small><a
+					href="SOCR_Analyses.html"><big><big>Analyses</big></big></a></small></small></td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://www.statsoft.com/textbook/stnonpar.html#correlations">non-parametric
+				correlation</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					rowspan="2">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a>
+				or <a href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Logistic_regression">logistic
+				regression</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Linear_discriminant_analysis">discriminant
+				analysis</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td colspan="1" rowspan="6"
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><big
+					style="font-weight: bold;"><big>≥</big></big>2<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1" rowspan="3">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Multiple_linear_regression">multiple
+				linear regression</a>&nbsp;</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Logistic_regression">logistic
+				regression</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1" rowspan="3">
+				<center>mixed <a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a>
+				&amp;<br>
+				<a href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/ANCOVA">ANCOVA</a>,<br>
+				<a href="http://en.wikipedia.org/wiki/General_linear_model">GML</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>&nbsp;<a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable#Normality_tests">non-normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">&nbsp;</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Logistic_regression">logistic
+				regression</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>2</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><big
+					style="font-weight: bold;"><big>≥</big></big>2</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Categorical_variable">categorical</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a href="http://en.wikipedia.org/wiki/MANOVA">MANOVA</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><big style="font-weight: bold;"><big>≥</big></big>2<br>
+				</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><big
+					style="font-weight: bold;"><big>≥</big></big>2</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Continuous_random_variable">continuous</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Regression_analysis">multivariate
+				multiple linear regression</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center>2 sets of&nbsp; <br>
+				<big style="font-weight: bold;"><big>≥</big></big>2</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">0<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1">
+				<center>N/A</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Canonical_correlation">canonical
+				correlation</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><big style="font-weight: bold;"><big>≥</big></big>2</center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Normal_random_variable">normal</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">0<br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"
+					colspan="1">N/A</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;"><br>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); vertical-align: middle; text-align: center;">
+				<center><a
+					href="http://en.wikipedia.org/wiki/Factor_analysis">factor
+				analysis</a></center>
+				</td>
+				<td
+					style="color: rgb(51, 0, 51); text-align: center; vertical-align: middle;"><br>
+				</td>
+				<td style="text-align: center; vertical-align: middle;"><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" rowspan="1" style="vertical-align: top;"><a
+					href="http://en.wikipedia.org/wiki/Statistical_power">Power
+				Analysis</a><br>
+				</td>
+				<td style="vertical-align: top;"><br>
+				</td>
+				<td style="vertical-align: top;"><br>
+				</td>
+				<td style="vertical-align: top;"><br>
+				</td>
+				<td colspan="2" rowspan="1" style="vertical-align: top;"><a
+					href="http://www.stat.uiowa.edu/%7Erlenth/Power/">Power Applet</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table></div>
+
+<!--/row--> <footer>
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+<!--/.fluid-container-->
+
+<!-- Le javascript ================================================== -->
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+</body>
+</html>

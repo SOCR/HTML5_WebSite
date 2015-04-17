@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Experiments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="http://socr.umich.edu/html/feed.rss">
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="http://socr.umich.edu/html/feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR
+		Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+
+	</ul>
+	</li>
+	<li><a href="http://www.socr.umich.edu/html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+		<ul id="menu3" class="dropdown-menu" role="menu"
+			aria-labelledby="drop5">
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+			Calculators</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+			Tables</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+			and Image-Processing Applets</a></li>
+			<li><a tabindex="-1"
+				href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+			Java Applets</a></li>
+		</ul>
+	</li>
+	<li> <a href="http://nursing.umich.edu" rel="tooltip" 
+			title="University of Michigan School of Nursing">UMSN</a></li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row-fluid"><!--/span-->
+	
+	<p>This list represents the complete collection of experiments
+	provided as part of the SOCR Experiments Java applets (must be synchronized with <a
+		href="http://socr.ucla.edu/htmls/jars/implementedExperiments.txt">implementedExperiments.txt</a>).
+	<a href="http://wiki.stat.ucla.edu/socr/index.php/Help_pages_for_SOCR_Experiments">Help
+	of Experiment Applets</a> and here are some <a
+		href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities"
+		title="SOCR EduMaterials ExperimentsActivities">Experiment Activities</a>.</p>
+	
+	<p><a class="btn" href="SOCR_Experiments.html">Start the SOCR Experiments Applet »</a></p>
+	
+	<table class="table">
+		<tbody>
+			<tr>
+				<td><big> <b>Experiment Activities</b> </big></td>
+				<td><big> <b>Applet</b> </big></td>
+				<td><big> <b>Java Library</b> </big></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Ballot
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Ballot_Experiment.html">Ballot
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BallotExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Ball
+				and Urn Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Ball_and_Urn_Experiment.html">Ball
+				and Urn Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/UrnExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Bertrand
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Bertrand_Experiment.html">Bertrand
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BertrandExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Beta
+				Coin Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Beta_Coin_Experiment.html">Beta
+				Coin Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BetaCoinExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Beta
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Beta_Estimate_Experiment.html">Beta
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BetaEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Binomial
+				Coin Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Binomial_Coin_Experiment.html">Binomial
+				Coin Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BinomialCoinExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Binomial
+				Timeline Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Binomial_Timeline_Experiment.html">Binomial
+				Timeline Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BinomialTimelineExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Birthday
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Birthday_Experiment.html">Birthday
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BirthdayExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Bivariate
+				Normal Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Bivariate_Normal_Experiment.html">Bivariate
+				Normal Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BivariateNormalExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Bivariate
+				Uniform Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Bivariate_Uniform_Experiment.html">Bivariate
+				Uniform Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BivariateUniformExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Buffon's
+				Coin Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Buffon_Coin_Experiment.html">Buffon's
+				Coin Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BuffonCoinExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Buffon's
+				Needle Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Buffon_Needle_Experiment.html">Buffon's
+				Needle Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/BuffonNeedleExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Card
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Card_Experiment.html">Card
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/CardExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Chi
+				Square Dice Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Chi_Square_Dice_Experiment.html">Chi
+				Square Dice Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ChiSquareFitExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Chuck
+				A Luck Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Chuck_A_Luck_Experiment.html">Chuck
+				A Luck Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ChuckALuckExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Coin
+				Die Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Coin_Die_Experiment.html">Coin
+				Die Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/CoinDieExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Coin
+				Sample Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Coin_Sample_Experiment.html">Coin
+				Sample Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/CoinSampleExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Coin
+				Toss LLN Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Coin_Toss_LLN_Experiment.html">Coin
+				Toss LLN Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/CoinTossLawOfLargeNumbersExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Confidence
+				Interval Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Confidence_Interval_Experiment.html">Confidence
+				Interval Experiment Applet</a></td>
+				<td><a href="http://www.socr.ucla.edu/docs/"
+					edu/ucla/stat/socr/experiments/confidenceintervalexperiment.html="">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_Activities_General_CI_Experiment">General
+				CI&nbsp; Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Confidence_Interval_Experiment_General.html">General
+				CI Experiment Applet</a></td>
+				<td><a href="http://www.socr.ucla.edu/docs/">Java API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Coupon
+				Collector Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Coupon_Collector_Experiment.html">Coupon
+				Collector Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/CouponCollectorExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Craps
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Craps_Experiment.html">Craps
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/CrapsExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Dice
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Dice_Experiment.html">Dice
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/DiceExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Dice
+				Sample Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Dice_Sample_Experiment.html">Dice
+				Sample Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/DiceSampleExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Die
+				Coin Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Die_Coin_Experiment.html">Die
+				Coin Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/DieCoinExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Exponential-Times
+				Car Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Exponential-Times_Car_Experiment.html">Exponential-Times
+				Car Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ExponentialTimesCarExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Random
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Random_Experiment.html">Random
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/EstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Random
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Random_Experiment.html">Random
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/Experiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Finite
+				Order Statistic Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Finite_Order_Statistic_Experiment.html">Finite
+				Order Statistic Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/FiniteOrderStatisticExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Fire
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Fire_Experiment.html">Fire
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/FireExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Galton
+				Board Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Galton_Board_Experiment.html">Galton
+				Board Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/GaltonBoardExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Gamma
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Gamma_Estimate_Experiment.html">Gamma
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/GammaEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Gamma
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Gamma_Experiment.html">Gamma
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/GammaExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">LLN
+				Simple Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/LLN_Simple_Experiment.html">LLN
+				Simple Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/LLN_SimpleExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Markov
+				Chain Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Markov_Chain_Experiment.html">Markov
+				Chain Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/MarkovChainExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Match
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Match_Experiment.html">Match
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/MatchExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Mean
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Mean_Estimate_Experiment.html">Mean
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/MeanEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Mean
+				Test Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Mean_Test_Experiment.html">Mean
+				Test Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/MeanTestExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Mixture
+				Model EM Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Mixture_Model_EM_Experiment.html">Mixture
+				Model EM Experiment Applet</a></td>
+				<td><a href="http://www.socr.ucla.edu/docs/"
+					edu/ucla/stat/socr/experiments/mixtureemexperiment.html=""> Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Monty
+				Hall Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Monty_Hall_Experiment.html">Monty
+				Hall Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/MontyHallExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Negative
+				Binomial Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Negative_Binomial_Experiment.html">Negative
+				Binomial Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/NegativeBinomialExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Normal
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Normal_Estimate_Experiment.html">Normal
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/NormalEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Order
+				Statistics Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Order_Statistics_Experiment.html">Order
+				Statistics Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/OrderStatisticExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Pareto
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Pareto_Estimate_Experiment.html">Pareto
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ParetoEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Two-Dimensional
+				Poisson Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Two-Dimensional_Poisson_Experiment.html">Two-Dimensional
+				Poisson Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/Poisson2DExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Poisson
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Poisson_Experiment.html">Poisson
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/PoissonExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Two-Type
+				Poisson Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Two-Type_Poisson_Experiment.html">Two-Type
+				Poisson Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/PoissonSplitExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Poker
+				Dice Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Poker_Dice_Experiment.html">Poker
+				Dice Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/PokerDiceExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Poker
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Poker_Experiment.html">Poker
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/PokerExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Probability
+				Plot Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Probability_Plot_Experiment.html">Probability
+				Plot Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ProbabilityPlotExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Proportion
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Proportion_Estimate_Experiment.html">Proportion
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ProportionEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Proportion
+				Test Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Proportion_Test_Experiment.html">Proportion
+				Test Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/ProportionTestExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Random
+				Variable Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Random_Variable_Experiment.html">Random
+				Variable Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/RandomVariableExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Random
+				Walk Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Randowm_Walk_Experiment.html">Random
+				Walk Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/RandomWalkExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Red
+				and Black Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Red_and_Black_Experiment.html">Red
+				and Black Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/RedBlackExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Roulette
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Roulette_Experiment.html">Roulette
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/RouletteExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Sample
+				Mean Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Sample_Mean_Experiment.html">Sample
+				Mean Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/SampleMeanExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Sampling
+				Distribution (CLT) Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Sampling_Distribution_CLT_Experiment.html">Sampling
+				Distribution (CLT) Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/SamplingDistributionExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Sign
+				Test Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Sign_Test_Experiment.html">Sign
+				Test Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/SignTestExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Spinner
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Spinner_Experiment.html">Spinner
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/SpinnerExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Triangle
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Triangle_Experiment.html">Triangle
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/TriangleExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Uniform
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Uniform_Estimate_Experiment.html">Uniform
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/UniformEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Uniform
+				E-Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Uniform_E-Estimate_Experiment.html">Uniform
+				E-Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/Uniform_E_EstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Variance
+				Estimate Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Variance_Estimate_Experiment.html">Variance
+				Estimate Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/VarianceEstimateExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Variance
+				Test Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Variance_Test_Experiment.html">Variance
+				Test Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/VarianceTestExperiment.html">Java
+				API</a></td>
+			</tr>
+			<tr>
+				<td><a
+					href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials_ExperimentsActivities">Voter
+				Experiment</a></td>
+				<td><a
+					href="http://socr.ucla.edu/htmls/exp/Voter_Experiment.html">Voter
+				Experiment Applet</a></td>
+				<td><a
+					href="http://www.socr.ucla.edu/docs/edu/uah/math/experiments/VoterExperiment.html">Java
+				API</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+<!--/span-->
+</div>
+<!--/row--> <footer>
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+</div>
+<!--/.fluid-container-->
+
+<!-- Le javascript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../js/jquery.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-transition.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-alert.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tab.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-popover.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-button.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="../../js/bootstrap-typeahead.js" type="text/javascript"></script>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+
+</body>
+</html>

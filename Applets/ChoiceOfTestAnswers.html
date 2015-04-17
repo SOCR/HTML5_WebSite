@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Choice of Statistical Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="../html/feed.rss">
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/people">SOCR Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1" href="../html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/navigators/Carousel"
+			rel="tooltip" title="Carousel Resource Navigator">Carousel Viewer</a></li>
+	</ul>
+	</li>
+	<li><a href="../html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+		Calculators</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+		and Image-Processing Applets</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+		Java Applets</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+<!--/span-->
+
+	<p>1.1 Median 0.71, range 0.10 to 1.24, first quartile 0.535, third
+	quartile <img src="ChoiceOfTestAnswers_files/answer-1.gif"
+	 align="middle"> </p>
+	<p><a name="Anchor-2.1"></a>2.1 Mean = 2.41, SD = 1.27.</p>
+	<p><a name="Anchor-2.2"></a>2.2 Mean = <img
+	 src="ChoiceOfTestAnswers_files/answer-2.gif" align="middle"> , SD = <img
+	 src="ChoiceOfTestAnswers_files/answer-3.gif" align="middle"> , range .<img
+	 src="ChoiceOfTestAnswers_files/answer-4.gif" align="middle"> </p>
+	<p><a name="Anchor-2.3"></a>2.3 Points 0.10 and 1.24. 2/40 or 5%.</p>
+	<p><a name="Anchor-3.1"></a>3.1 SE(mean) = <img
+	 src="ChoiceOfTestAnswers_files/answer-5.gif" align="middle"> </p>
+	<p><a name="Anchor-3.2"></a>3
+	.2 A uniform or flat distribution. Population mean 4.5, population SD
+	2.87.</p>
+	<p><a name="Anchor-3.3"></a>3.3 The distribution will be approximately
+	Normal, mean 4.5 and SD 287/<img
+	 src="ChoiceOfTestAnswers_files/answer-6.gif" align="middle"> = 1.28.</p>
+	<p><a name="Anchor-4.1"></a>4.1 The reference range is 12.26 - 57.74,
+	and so the observed value of 52 is included in it.</p>
+	<p><a name="Anchor-4.2"></a>4.2 95% CI 32.73 to 37.27.</p>
+	<p><a name="Anchor-5.1"></a>5.1 0.42 g/dl, z = 3.08 0.001&lt;P&lt;0.01,
+	difference = 1.3 g/dl, 95% CI 0.48 to 2.12 g/dl.</p>
+	<p><a name="Anchor-5.2"></a>5.2 0.23 g/dl, P&lt;0001.</p>
+	<p><a name="Anchor-6.1"></a>6.1 SE (percentage) = 2.1%, SE (difference)
+	= 3.7%, difference = 3.4%. 95% CI -3.9 to 10.7%, z = 0.94, P = 0.35.</p>
+	<p><a name="Anchor-6.2"></a>6.2 Yes, the traditional remedy, z = 2.2, P
+	= 0.028.</p>
+	<p><a name="Anchor-7.1"></a>7.1 37.5 to 40.5 KA units.</p>
+	<p><a name="Anchor-7.2"></a>7.2 t = 2.652, d.f. = 17, 001&lt;P&lt;0.02.</p>
+	<p><a name="Anchor-7.3"></a>7.3 0.56g/dl, t = 1.243, d.f.=20,
+	0.1&lt;P&lt;05, 95% CI -0.38 to 1.50g/dl.</p>
+	<p><a name="Anchor-7.4"></a>7.4 15 days, t = 1.758, d.f. = 9,
+	0.1&lt;P&lt;05, 95% CI -4.30 to 34.30 days.</p>
+	<p><a name="Anchor-8.1"></a>8.1 Standard<em class="superscript"> </em><img
+	 src="ChoiceOfTestAnswers_files/answer-7.gif" align="middle"> <em
+	 class="superscript">= </em>23.295, d.f. = 4, P&gt;0.5. Trend <img
+	 src="ChoiceOfTestAnswers_files/answer-7.gif" align="middle"> = 2.25,
+	d.f. = 1, P = 0.13.</p>
+	<p><a name="Anchor-8.2"></a>8.2 <img
+	 src="ChoiceOfTestAnswers_files/answer-9.gif" align="middle"> = 3.916,
+	d.f. = 1, 0.02&lt;P&lt;0.05, difference in rates 9%, 95% CI 0.3 to
+	17.9%.</p>
+	<p><a name="Anchor-8.3"></a>8.3 <img
+	 src="ChoiceOfTestAnswers_files/answer-9.gif" align="middle"> = 0.931,
+	d.f. = 1, 0.1&lt;P&lt;0.5, difference in rates 15%, 95% CI -7.7 to 38%.</p>
+	<p><a name="Anchor-8.4"></a>8.4 <img
+	 src="ChoiceOfTestAnswers_files/answer-9.gif" align="middle"> = 8.949,
+	d.f. = 3, 0.02&lt;P&lt;0.05. Yes, practice C; if this is omitted the
+	remaining practices give <img
+	 src="ChoiceOfTestAnswers_files/answer-9.gif" align="middle"> = 0.241,
+	d.f. = 2, P&gt;0.5. (Both <img
+	 src="ChoiceOfTestAnswers_files/answer-7.gif" align="middle"> tests by
+	quick method.)</p>
+	<p><a name="Anchor-9.1"></a>9.1
+	Sickness rate in first department 28%, in second department 8%,
+	difference 20% (approximate 95% CI = -6 to 45%, P = 0.24 (Fisher's
+	Exact test mid P)). P is calculated from 2 x (0.5 x 0.173 + 0.031).</p>
+	<p><a name="Anchor-10.1"></a>10.1 Smaller total = -30. No.</p>
+	<p><a name="Anchor-10.2"></a>10.2 Mann-Whitney statistic = 74. The
+	group on the new remedy. No.</p>
+	<p><a name="Anchor-11.1"></a>11.1 r = -0.848.</p>
+	<p><a name="Anchor-11.2"></a>11.2 rs = -0.867.</p>
+	<p><a name="Anchor-11.3"></a>11.3
+	y = 36.1 - 2.34x. This means that, on average, for every 1 mile
+	increase in mean distance the attendance rate drops by 2.34%. This can
+	be safely accepted only within the area measured here.</p>
+	<p><a name="Anchor-11.4"></a>11.4 SE = 0.39, 95% CI = -2.34 - 2.145 x
+	0.39 to -2.34 + 2.145 x 0.39 = -3.1 to -1.5%.</p>
+	<p><a name="Anchor-12.1"></a>12.1 <img
+	 src="ChoiceOfTestAnswers_files/answer-14.gif" align="middle"> = 6, <img
+	 src="ChoiceOfTestAnswers_files/answer-15.gif" align="middle"> = 8.06, <img
+	 src="ChoiceOfTestAnswers_files/answer-16.gif" align="middle"> = 8, <img
+	 src="ChoiceOfTestAnswers_files/answer-17.gif" align="middle"> = 5.94.
+	Log rank <img src="ChoiceOfTestAnswers_files/answer-9.gif"
+	 align="middle"> = 1.24, d.f. = 1, 0.1&lt;P&lt;0.5.</p>
+	<p><a name="Anchor-12.2"></a>12.2 Risk = 0.55, 95% CI 0.19 to 1.60.</p>
+	<p><a name="Anchor-13.1"></a>13.1 Matched case control study.</p>
+	<p><a name="Anchor-13.2"></a>13.2 Cohort study.</p>
+	<p><a name="Anchor-13.3"></a>13.3 Cross sectional study.</p>
+	<p><a name="Anchor-13.4"></a>13.4 Randomised controlled trial.</p>
+	<p><a name="Anchor-13.5"></a>13.5 Quasi experimental design.</p>
+
+</div>
+<!--/span-->
+<!--/row-->
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+<!--/.fluid-container-->
+
+<script src="../js/jquery.js"></script> 	<script src="../js/bootstrap-transition.js"></script> 	<script src="../js/bootstrap-alert.js"></script> 	<script src="../js/bootstrap-modal.js"></script> 	<script src="../js/bootstrap-dropdown.js"></script> 	<script src="../js/bootstrap-scrollspy.js"></script> 	<script src="../js/bootstrap-tab.js"></script> 	<script src="../js/bootstrap-tooltip.js"></script> 	<script src="../js/bootstrap-popover.js"></script> 	<script src="../js/bootstrap-button.js"></script> 	<script src="../js/bootstrap-collapse.js"></script> 	<script src="../js/bootstrap-carousel.js"></script> 	<script src="../js/bootstrap-typeahead.js"></script> 
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<!-- 
+
+/*                    
+ *    The X Toolkit (XTK) is licensed under the MIT License:
+ *      http://www.opensource.org/licenses/mit-license.php
+ *
+ * CREDITS: https://raw.github.com/xtk/X/master/LICENSE
+ *
+ * Thanks to Twitter Bootstrap and JQuery!!
+ *
+ */
+
+ -->
+<html>
+<head>
+<title>Brain Book: Color Paint in 3D</title>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+<link href='css/bootstrap.css' rel='stylesheet' />
+<link href='css/bootstrap-responsive.css' rel='stylesheet' />
+<link type='text/css' rel='stylesheet' href='css/xtheme/jquery.ui.new.css' />
+<link type='text/css' rel='stylesheet' href='css/jquery.miniColors.css' />
+<link type='text/css' rel='stylesheet' href='css/jquery.sidebar.css' />
+<link type='text/css' rel='stylesheet' href='css/frontpage.css' />
+<link type='text/css' rel='stylesheet' href='css/viewer.css' />
+
+<script type='text/javascript' src='X/lib/closure-library/closure/goog/base.js'></script>
+<script type='text/javascript' src='X/xtk-deps.js'></script>
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.ui.new.js'></script>
+<script type='text/javascript' src='js/jquery.ui.slider.js'></script>
+<script type='text/javascript' src='js/jquery.miniColors.js'></script>
+<script type='text/javascript' src='js/jquery.filestyle.js'></script>
+<script type='text/javascript' src='js/jquery.idTabs.js'></script>
+<script type='text/javascript' src='js/jquery.sidebar.js'></script>
+<script type='text/javascript' src='js/jquery.sidebar.volume.js'></script>
+<script type='text/javascript' src='js/jquery.sidebar.mesh.js'></script>
+<script type='text/javascript' src='js/jquery.sidebar.fibers.js'></script>
+<script type='text/javascript' src='js/jquery.viewer.js'></script>
+<script type='text/javascript' src='js/jquery.frontpage.js'></script>
+<script type="text/javascript" src="js/jsend.min.js"></script>
+<script type='text/javascript' src='js/bootstrap-modal.js'></script>
+<script type='text/javascript' src='js/x.controller.js'></script>
+<script type='text/javascript' src='js/x.examples.js'></script>
+<script type='text/javascript' src='js/x.rendering.js'></script>
+<script type='text/javascript' src='js/Queue.compressed.js'></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15474885-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+  if (!is_chrome) {
+  	window.alert("This page requires Google Chrome. \nOther browsers are not tested and may not work properly. ");
+  }
+  
+</script>
+
+</head>
+<body id='body'>
+	
+	<!-- The frontpage -->
+	<div id='frontpage' style=''>
+
+		<div id='content' class='container' style=''>
+
+
+			<div id='pagetitle' class='hero-unit'>
+				<h2>Brain Book: Color Paint in 3D</h2>
+				<p>View and color scientific and medical imaging data in 3D using <a href="https://github.com/xtk/X#readme">XTK</a>.</p>
+			</div>
+
+				<h3 align='center'>Try this example...</h3>
+				<img align='center' id='eglabelmapImage' src='gfx/brainspin.png' style='cursor:pointer;' class="selectexample"/> 
+				<div class="well examples">
+				<div id='eglabelmap'>
+					Volume and a blank label map. <b>Loading time: **</b> <span
+						class='label label-info viewexample' id='eglabelmaplink'>View
+						Example</span>
+				</div>	
+				</div>
+
+			<div class='dropzone'>
+				<span>Drop files here or </span><input id='filebutton' type='file'
+					multiple onchange='selectfiles(this.files)' style='display: none;'></input><a
+					class='btn btn-inverse btn-large' style='vertical-align: super;'
+					onclick='javascript:document.getElementById("filebutton").click();'>Select
+					files</a> <br /> <br />
+				<p>Supported files:</p>
+				<p>Volumes (.nii / .nii.gz / .img&.hdr / .mgh / .mgz / .nrrd)</p>
+			</div>
+
+			<div class='footer'>
+				<div class='row' style='margin: auto'>
+				</div>
+				<div id='footnote' style='margin-left:30px'>Browser requirement: Chrome 16+<br />
+				Based on <a href="https://github.com/xtk/X">XTK</a> and <a href='https://github.com/slicedrop/slicedrop.github.com' target='_blank'>slicedrop</a>.<br />
+				Evan Stanford, Yuta Kai, Jonathan Li, Vineesha Budhrani, Zhizhong Liu
+				</div>
+			</div>
+			
+		</div>
+		<!-- /container -->
+
+	</div>
+
+	<!-- Drop note -->
+	<div id='drop-box-overlay'>
+		<h1>Drop files anywhere...</h1>
+	</div>
+	
+
+	<!-- The viewer -->
+	<div id='viewer'  style='display: none; '>
+
+		<ul class='navigation'>
+			<li id='volume' class='navigationLi'>
+			<div class='menu'>
+					<div class='pin'>
+						<span class='ui-icon ui-icon-pin-s pinicon'></span>
+					</div>
+
+					<div class='tabbox idTabs' id='volumetabs'>
+
+						<a href='#volumeTab' class='selected'>Menu</a> 
+						<div id='volumeTab' class='tabContent'>
+							<div id='modes' style='float: left;'>
+								<div id='volumerendering'>
+									<img src='gfx/3d.png' />
+								</div>
+								<div id='slicing'>
+									<img src='gfx/2d.png' />
+								</div>
+							</div>
+
+							<div id='colors' style='width: 26px; margin-left: 4px; float: left;'>
+
+								<input id='fgColorVolume' type='hidden' class='color-picker black' size='6' value='#ffffff' />
+								<input id='bgColorVolume' type='hidden' class='color-picker black' size='6' value='#000000' /> 
+								
+							</div>
+							
+							
+					
+							<!--<div id='opacity-label' class='menuLabel'
+								style='margin-top: 2px; float: left;'>3D Opacity</div>
+							<div id='opacity-volume' style='margin-left: 10px; margin-top: 4px; float: left;'></div>
+
+							<!-- <div id='windowlevel-label' class='menuLabel'
+								style='margin-top: 4px; float: left;'>Window/Level</div>
+							<div id='windowlevel-volume'
+								style='margin-left: 10px; margin-top: 4px; float: left;'></div>
+
+							<div class='menuLabel' style='margin-top: 4px; float: left;'>Threshold</div>
+							<div id='threshold-volume'
+								style='margin-left: 10px; margin-top: 4px; float: left;'></div> -->
+						    
+						    <!-- <div style='margin-right: 19px; margin-top: 4px; float: right;'><button id="saveFileButton" type="button" onclick="saveFile()">Save...</button></div>
+							 -->
+							<!-- <button type="button" id="undoOption">Undo</button>
+							<button type="button" id="redoOption">Redo</button>
+							&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/> -->
+
+							<div id="pageBackground" style='width: 163px; margin-top: 6px; float: left;'>
+								<span class='menuLabel' style='margin-top: 3px; float: left;'>Background Color</span>
+								<span id='bgCol' style='float: right'>
+									<input id='currentBackground' type='hidden' class='color-picker black' size='6' value='#000000' />
+								</span>
+							</div>
+
+							<div id='visibility-labelmap' style='width: 163px; margin-top: 3px; float: left;'>
+								<span class='menuLabel' style='margin-top: 3px; float: left;'>Labelmap Show/Hide</span>
+								<span id='labelmapvisibility' class='button eye show-icon' style='float: right;'></span>
+							</div>
+
+							<div class='menuLabel' style='margin-top: 6px; float: left;'>Labelmap Opacity</div>
+							<div id='opacity-labelmap' style='margin-left: 10px; margin-top: 4px; float: left;'></div>
+							
+							<div id='brush' style='width: 50px; float: left; margin-top: 10px; height:50px'>
+								<div id='brush-icon' style='margin-left: 6px;' class='clicked-button'></div><br/>
+								<div class='menuLabel' style='margin-left: 5px; margin-top: 2px; float: left;'>Brush</div>
+							</div>
+							
+							<div id='brush-color' style='width: 35px; float: left; margin-top: 10px; height:50px'>
+								<input id='brushColor' type='hidden' class='color-picker black' size='6' value='#0000ff' /><br/>
+								<div class='menuLabel' style='margin-top: 4px; float: left;'>Color</div> 
+							</div>
+					
+							<div id='recentColors' style='width:50px; float:left;margin-top:15px; height:50px'>
+								<select id='favColors' style='width:50px;'>
+									<option value="#000000"></option>
+								</select>
+								<div class='menuLabel' style='margin-top: 4px; margin-left: 3px; float: left;'>Used Colors</div> 
+							</div>
+							
+							<div id='brush-size' style='width: 35px; float: left; margin-top: 15px; height:50px'>
+								<select id="paintBrushSize" style="margin-left: 2px; float:left">
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3" selected="selected">3</option>
+								  <option value="4">4</option>
+								  <option value="5">5</option>
+								</select><br/>
+								<div class='menuLabel' style='margin-left: 6px; margin-top: 4px; float: left; margin-bottom: 12px; '>Size</div>
+							</div>
+							
+							<div id='colorpicker' style='width: 50px; float: left; margin-left:5px; margin-top: 5px;'>
+								<div id='colorpicker-icon' style='margin-left: 1px;'></div><br/>
+								<div class='menuLabel' style='margin-top: 4px; margin-left: 1px; float: left;'>Colorpicker</div>
+							</div>
+							
+							
+							<div id='brush-clobber' style='width: 60px; float: left;  margin-top:15px; margin-left :30px;margin-bottom: 25px'>
+								<span class='menuLabel' style='float: left;margin-top: 3px'>Clobber</span>
+								<input id="clobberOption" type="checkbox" name="clobber" checked="checked" style="float:left; margin-left: 10px;margin-top: 3px"/><br/>
+							</div>
+							
+							<div id='bucket' style='width: 60px; float: left; margin-top: 10px; height:50px'>
+								<div id='bucket-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-top: 4px; margin-left: 12px; float: left;'>Fill</div>
+							</div>
+							
+							<div id='eraser' style='width: 60px; float: left; margin-top: 10px; height:50px'>
+								<div id='eraser-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 5px; margin-top: 4px; float: left;'>Eraser</div>
+							</div>
+
+							<div id='copy' style='width: 50px; float: left; margin-top: 10px; height:50px'>
+								<div id='copy-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 1px; margin-top: 4px; float: left;'>Duplicate</div>
+							</div>
+							<br/>
+							
+							<div id='magic2d' style='width: 60px; float: left; margin-top: 10px; height:50px'>
+								<div id='magic2d-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 1px; margin-top: 4px; float: left;'>Magic2D</div>
+							</div>
+							
+							<div id='magic3d' style='width: 60px; float: left; margin-top: 10px; height:50px'>
+								<div id='magic3d-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 1px; margin-top: 4px; float: left;'>Magic3D</div>
+							</div>
+							
+							<div id='magic-range' style='width: 35px; float: left; margin-top: 15px; height:50px'>
+								<select id="magic-range-field" style="margin-left: 2px; float:left">
+								  <option value="0">0</option>
+								  <option value="5" selected="selected">5</option>
+								  <option value="10">10</option>
+								  <option value="15">15</option>
+								</select><br/>
+								<div class='menuLabel' style='margin-left: 6px; margin-top: 4px; float: left; margin-bottom: 12px; '>Range (+/-)</div>
+							</div>
+							
+
+							
+							<!-- <div id='paste' style='width: 80px; float: left; margin-top: 20px;'>
+								<div id='paste-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 1px; margin-top: 4px; float: left;'>Paste...</div>
+							</div> -->
+							
+							<div id='undo' style='width: 60px; float: left; margin-top: 10px; height:50px'>
+								<div id='undo-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 10px; margin-top: 4px; float: left;'>Undo</div>
+							</div>
+							
+							<div id='redo' style='width: 60px; float: left; margin-top: 10px; height:50px'>
+								<div id='redo-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 10px; margin-top: 4px; float: left;'>Redo</div>
+							</div>
+							
+							<div id='save' style='width: 50px; float: left; margin-top: 10px; height:50px'>
+								<div id='save-icon' style='margin-left: 6px;'></div><br/>
+								<div class='menuLabel' style='margin-left: 10px; margin-top: 4px; float: left;'>Save</div>
+							</div>
+							
+							<div style='margin-left: 8px; margin-top: 12px; float: left;'><span id="saveFileInfo"></span></div>
+							
+							
+<!-- 
+							<br/><br/><br/><br/>
+							<div class="colorBox">
+								<div class='menuLabel' style='margin-top: 4px; float: left;'>Color Id: (0-255)</div>
+								<br/><br/>
+								<input type="text" id="colorId" maxlength="3" size="1" value="0" style="height: 12px;">
+								<i id="labelName"></i>
+							</div>
+							<br/> -->
+							
+							
+							<!-- <div class='menuLabel' style='margin-top: 4px; float: left;'>Eraser:</div>
+							<input id="eraserOption" type="checkbox" style="margin-left: 6px;"/>
+							<br/>
+							
+							<div class='menuLabel' style='margin-top: 4px; float: left;'>2D Fill:</div>
+							<input id="2dBucketOption" type="checkbox" name="2dBucket" style="margin-left: 6px;"/>
+							<br/>
+												
+							<div class='menuLabel' style='margin-top: 4px; float: left;'>3D Fill:</div>
+							<input id="3dBucketOption" type="checkbox" name="3dBucket" style="margin-left: 6px;"/>
+							<br/><br/> -->
+							<!-- 
+							<button type="button" id="copyNext">Copy to Next</button>	
+							<select id="copyPasteOption">
+							  <option value="yellow">Sagittal</option>
+							  <option value="red">Coronal</option>
+							  <option value="green">Axial</option>
+							</select>
+							<br/>
+							<button type="button" id="copyPrev">Copy to Previous</button>
+							
+							<br/>
+							<div class='menuLabel' style='margin-top: 4px; float: left;'>Copy current slice to slice #: </div>
+							<input type="text" id="sliceNum" maxlength="3" size="1" style="height: 12px"> <i>(Hit Enter)</i>
+							
+							
+							<br/><br/> -->
+							
+
+						</div>
+<!-- 						<div id='optionTab' class='tabContent' style='display: none'>
+							
+							<button type="button" id="undoOption">Undo</button> <button type="button" id="redoOption">Redo</button>
+							
+							<br/><i id='functionMessage' style='color: #FF0000'></i><br/>
+							<b>Clobber</b> <input id="clobberOption" type="checkbox" name="clobber" checked="checked"/>
+							<br/>
+							
+							<b>2D Fill</b> <input id="2dBucketOption" type="checkbox" name="2dBucket"/>
+							
+							<b>	3D Fill</b> <input id="3dBucketOption" type="checkbox" name="3dBucket"/>
+							<br/>
+							
+							<button type="button" id="copyNext">Copy to Next</button>	
+							<select id="copyPasteOption">
+							  <option value="yellow">Sagittal</option>
+							  <option value="red">Coronal</option>
+							  <option value="green">Axial</option>
+							</select>
+							<br/>
+							<button type="button" id="copyPrev">Copy to Previous</button>
+							
+							<br/>
+							Copy to slice #: <input type="text" id="sliceNum" maxlength="3" size="1" style="height: 12px"> (Enter)
+							
+						</div> -->
+					</div>
+
+				</div></li>
+
+
+		</ul>
+		
+
+
+		<!--  The renderers. -->
+
+		<div id='3d' class='threeDRenderer'></div>
+		<div class="twoDRenderer" style='top: 0%;'>
+			<button id='switchButtonX' >Switch View</button>
+		</div>
+		<div id='sliceX' class='twoDRenderer' style='top: 5%;width:271px;'></div>	
+		<div id='sliceXNum' class='twoDRenderer' style='top: 28%;'>
+			<div id='yellow_slider'></div>
+			<div id='yellow_ctrl'>
+			<button type="button" id="sliceXPrev" style="height: 20px;">&#8592;</button>
+			<button type="button" id="sliceXNext" style="height: 20px;">&#8594;</button>
+			<i id='sliceXText'></i>
+			</div>
+		</div>
+		<div class="twoDRenderer" style='top: 33.5%;'>
+			<button id='switchButtonY'>Switch View</button>
+		</div>
+		<div id='sliceY' class='twoDRenderer' style='top: 38.333%;'></div>
+		<div id='sliceYNum' class='twoDRenderer' style='top: 61.333%;'>
+			<div id='red_slider'></div>
+			<div id='red_ctrl'>
+			<button type="button" id="sliceYPrev" style="height: 20px;">&#8592;</button>
+			<button type="button" id="sliceYNext" style="height: 20px;">&#8594;</button>
+			<i id='sliceYText'></i>
+			</div>
+		</div>
+		<div class="twoDRenderer" style='top: 66.666%;'>
+			<button id='switchButtonZ'>Switch View</button>
+		</div>
+		<div id='sliceZ' class='twoDRenderer' style='top: 71.666%;'></div>
+		<div id='sliceZNum' class='twoDRenderer' style='top: 94.666%;'>
+			<div id='green_slider'></div>
+			<div id='green_ctrl'>
+			<button type="button" id="sliceZPrev" style="height: 20px;">&#8592;</button>
+			<button type="button" id="sliceZNext" style="height: 20px;">&#8594;</button>
+			<i id='sliceZText'></i>
+			</div>
+		</div>
+
+		<div id='blacklogo'>
+			<a href=''><img src='gfx/back.png' /></a>
+		</div>
+
+	</div>
+	
+	<div id="browser-dialog" style='display: none;' title="Incompatible Browser">
+	<p>This website uses WebGL to render 3D images. Currently only Chrome and Firefox browsers are supported. Using other browsers may slow down or crash your operating system.</p>
+	</div>
+
+
+<div id="copy-dialog" style='display: none;' title="Copy and paste color label">
+	<p>To copy color label from one slice to another, first select a view, then specify original slice number and destination slice number. </p>
+	
+	<p><b>Select view:</b> 
+    <span id="copy-view">
+        <input type="radio" id="copy-view-x" name="radio" checked="checked" /><label for="copy-view-x">&nbsp;Sagittal&nbsp;</label>
+        <input type="radio" id="copy-view-y" name="radio" /><label for="copy-view-y">&nbsp;Coronal&nbsp;</label>
+        <input type="radio" id="copy-view-z" name="radio" /><label for="copy-view-z">&nbsp;Axial&nbsp;</label>
+    </span>
+    </p>
+    
+    <p><b>Copy from slice #:</b>
+    	<input type="text" id="copyFromNum" maxlength="3" size="2">
+    </p>
+    
+    <p><b>Paste to slice #</b><br>or range (e.g. 12-20):
+    	<input type="text" id="copyToNum" maxlength="7" size="5">
+    </p>
+    
+    <p>
+    	<button id="copy-button">Duplicate</button>
+    	<button id="close-button" style="float: right;">Close</button>
+    </p>
+	    
+	<p>
+		<i id='functionMessage' style='color: #525252'></i> &nbsp;
+	</p>
+
+</div>
+
+</body>
+</html>

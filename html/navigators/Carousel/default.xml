@@ -1,0 +1,41 @@
+<slide_show>
+	<options>
+		<debug>false</debug>						<!-- true, false -->
+		<background>FFFFFF</background>				<!-- 0xRRGGBB or 0x000000 -->
+
+		<interaction>
+			<rotation>mouse</rotation>				<!-- auto, mouse, keyboard -->
+			<speed>60</speed>						<!-- [-360,360] -->
+			<view_point>mouse</view_point>			<!-- none, mouse, keyboard -->
+			<console>onClick</console>				<!-- show, hide, onClick -->
+		</interaction>
+
+		<far_photos>
+			<size>25</size>						<!-- [0,100] -->
+			<amount>75</amount>					<!-- [0,100] transparency-->
+			<transparency>true</transparency>			<!-- true, false -->
+		</far_photos>
+
+		<reflection>
+			<amout>100</amout>					<!-- [0,1000] -->
+			<blur>5</blur>						<!-- [0,100] -->
+			<distance>0</distance>					<!-- [-1000,1000] -->
+			<alpha>75</alpha>						<!-- [0,100] -->
+		</reflection>
+
+	</options>
+
+	<photo href="http://www.socr.ucla.edu/htmls/SOCR_Analyses.html" target="http://www.socr.ucla.edu/htmls/SOCR_Analyses.html">images/Analyses.png</photo>
+	<photo href="http://www.socr.ucla.edu/htmls/SOCR_Charts.html" target="http://www.socr.ucla.edu/htmls/SOCR_Charts.html">images/Charts.png</photo>
+	<photo href="http://www.socr.ucla.edu/htmls/SOCR_Distributions.html" target="http://www.socr.ucla.edu/htmls/SOCR_Distributions.html">images/Distributions.png</photo>
+	<photo href="http://wiki.stat.ucla.edu/socr/index.php/EBook" target="http://wiki.stat.ucla.edu/socr/index.php/EBook">images/EBook.png</photo>
+	<photo href="http://www.socr.ucla.edu/htmls/SOCR_Experiments.html" target="http://www.socr.ucla.edu/htmls/SOCR_Experiments.html">images/Experiments.png</photo>
+	<photo href="http://www.socr.ucla.edu/htmls/SOCR_Games.html" target="http://www.socr.ucla.edu/htmls/SOCR_Games.html">images/Games.png</photo>
+	<photo href="http://socr.ucla.edu/SOCR_HW_Viewer.html" target="http://socr.ucla.edu/SOCR_HW_Viewer.html">images/HyberbolicWheel.png</photo>
+	<photo href="http://www.socr.ucla.edu/htmls/SOCR_Modeler.html" target="http://www.socr.ucla.edu/htmls/SOCR_Modeler.html">images/Modeler.png</photo>
+	<photo href="http://socr.ucla.edu/APStats/" target="http://socr.ucla.edu/APStats/">images/APStats.png</photo>
+	<photo href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data" target="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data">images/Data.png</photo>
+	<photo href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials" target="http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials">images/Learning.png</photo>
+	<photo href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_News" target="http://wiki.stat.ucla.edu/socr/index.php/SOCR_News">images/News.png</photo>
+
+</slide_show>

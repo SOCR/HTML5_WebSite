@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR High-precision Normal, Student's T, Chi-Square and F Calculators</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="../html/feed.rss">
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/people">SOCR Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1" href="../html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/navigators/Carousel"
+			rel="tooltip" title="Carousel Resource Navigator">Carousel Viewer</a></li>
+	</ul>
+	</li>
+	<li><a href="../html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+		Calculators</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+		and Image-Processing Applets</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+		Java Applets</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+<!--/span-->
+
+	<form>
+  <hr align="center" noshade="noshade" size="1" width="100%">
+  <h2><font color="Blue">Binomial Distribution</font></h2>
+  <table class="table" style="text-align: center;" align="center">
+    <tbody>
+      <tr>
+        <td>
+        <div align="center"> n </div>
+        </td>
+        <td>
+        <div align="center"> p </div>
+        </td>
+        <td>
+        <div align="center"> a </div>
+        </td>
+        <td>
+        <div align="center"> b </div>
+        </td>
+        <td>
+        P(a&lt;=X&lt;=b), </br> where
+X=#successes</br>(prob=p) in N trials
+        </td>
+      </tr>
+      <tr>
+        <td> <input name="n" size="1" value="0" onfocus="n.select()"
+ type="text"> </td>
+        <td> <input name="p" size="1" value="0" onfocus="p.select()"
+ type="text"> </td>
+        <td> <input name="a" size="1" value="0" onfocus="a.select()"
+ type="text"> </td>
+        <td> <input name="b" size="1" value="0" onfocus="b.select()"
+ type="text"> </td>
+        <td> <input name="pB" size="1" value="0" onfocus="pB.select()"
+ onblur="f.focus()" type="text"> </td>
+      </tr>
+      <tr>
+        <td> <br>
+        </td>
+        <td> <br>
+        </td>
+        <td> <br>
+        </td>
+        <td> <br>
+        </td>
+        <td> <input value="Calc P(a&lt;=X&lt;=b)" onclick="CalcB(this.form)"
+ type="button"> </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr align="center" noshade="noshade" size="1" width="100%">
+  <h2> <font color="Blue">Normal Distribution</font> </h2>
+
+  <table class="table" style="text-align: center;" align="center">
+    <tbody>
+      <tr>
+        <td>
+        <div align="center"> z </div>
+        </td>
+        <td>
+        <div align="center"> % Area on [-z : z] </div>
+        </td>
+      </tr>
+      <tr>
+        <td> <input name="z" size="1" value="0" onfocus="z.select()"
+ type="text"> </td>
+        <td> <input name="arean" size="1" value="0"
+ onfocus="arean.select()" type="text"> </td>
+      </tr>
+      <tr>
+        <td> <input value="Calc z" onclick="CalcNr(this.form)"
+ onblur="z.focus()" type="button"> </td>
+        <td> <input value="Calc Area" onclick="CalcN(this.form)"
+ type="button"> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <hr align="center" noshade="noshade" size="1" width="100%">
+  <h2> <font color="Blue">Student 's T Distribution</font> </h2>
+  <table class="table" style="text-align: center;" align="center">
+    <tbody>
+      <tr>
+        <td>
+        <div align="center"> t </div>
+        </td>
+        <td>
+        <div align="center"> n (d.f.) </div>
+        </td>
+        <td>
+        <div align="center"> % Area on [-t : t] </div>
+        </td>
+      </tr>
+      <tr>
+        <td> <input name="t" size="1" value="0" onfocus="t.select()"
+ type="text"> </td>
+        <td> <input name="nt" size="1" value="0" onfocus="nt.select()"
+ type="text"> </td>
+        <td> <input name="areat" size="1" value="0"
+ onfocus="areat.select()" onblur="t.focus()" type="text"> </td>
+      </tr>
+      <tr>
+        <td> <input value="Calc t" onclick="CalcTr(this.form)"
+ type="button"> </td>
+        <td> <br>
+        </td>
+        <td> <input value="Calc Area" onclick="CalcT(this.form)"
+ type="button"> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <hr align="center" noshade="noshade" size="1" width="100%">
+  <h2> <font color="Blue">Chi Square Distribution</font> </h2>
+  <table class="table" style="text-align: center;" align="center">
+    <tbody>
+      <tr>
+        <td>
+        <div align="center"> ChiSq </div>
+        </td>
+        <td>
+        <div align="center"> n&nbsp; (d.f.) </div>
+        </td>
+        <td>
+        <div align="center"> p (right tail) </div>
+        </td>
+      </tr>
+      <tr>
+        <td> <input name="x" size="1" value="0" onfocus="x.select()"
+ type="text"> </td>
+        <td> <input name="nx" size="1" value="0" onfocus="nx.select()"
+ type="text"> </td>
+        <td> <input name="px" size="1" value="0" onfocus="px.select()"
+ onblur="x.focus()" type="text"> </td>
+      </tr>
+      <tr>
+        <td> <input value="Calc ChiSq" onclick="CalcXr(this.form)"
+ type="button"> </td>
+        <td> <br>
+        </td>
+        <td> <input value="Calc p" onclick="CalcX(this.form)"
+ type="button"> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <hr align="center" noshade="noshade" size="1" width="100%">
+  <h2> <font color="Blue">Fisher's F Distribution</font> </h2>
+  <table class="table" style="text-align: center;" align="center">
+    <tbody>
+      <tr>
+        <td>
+        <div align="center"> F </div>
+        </td>
+        <td>
+        <div align="center"> n<sub>1</sub> (df<sub>1</sub>) </div>
+        </td>
+        <td>
+        <div align="center"> n<sub>2</sub> (df<sub>2</sub>) </div>
+        </td>
+        <td>
+        <div align="center"> p (right tail) </div>
+        </td>
+      </tr>
+      <tr>
+        <td> <input name="f" size="1" value="0" onfocus="f.select()"
+ type="text"> </td>
+        <td> <input name="n1" size="1" value="0" onfocus="n1.select()"
+ type="text"> </td>
+        <td> <input name="n2" size="1" value="0" onfocus="n2.select()"
+ type="text"> </td>
+        <td> <input name="pf" size="1" value="0" onfocus="pf.select()"
+ onblur="f.focus()" type="text"> </td>
+      </tr>
+      <tr>
+        <td> <input value="Calc F" onclick="CalcFr(this.form)"
+ type="button"> </td>
+        <td> <br>
+        </td>
+        <td> <br>
+        </td>
+        <td> <input value="Calc p" onclick="CalcF(this.form)"
+ type="button"> </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+
+</div>
+<!--/span-->
+<!--/row-->
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+<!--/.fluid-container-->
+
+<script src="../js/jquery.js"></script> 	<script src="../js/bootstrap-transition.js"></script> 	<script src="../js/bootstrap-alert.js"></script> 	<script src="../js/bootstrap-modal.js"></script> 	<script src="../js/bootstrap-dropdown.js"></script> 	<script src="../js/bootstrap-scrollspy.js"></script> 	<script src="../js/bootstrap-tab.js"></script> 	<script src="../js/bootstrap-tooltip.js"></script> 	<script src="../js/bootstrap-popover.js"></script> 	<script src="../js/bootstrap-button.js"></script> 	<script src="../js/bootstrap-collapse.js"></script> 	<script src="../js/bootstrap-carousel.js"></script> 	<script src="../js/bootstrap-typeahead.js"></script> 
+<script language="LiveScript">
+<!-- hide this script tag's contents from old browsers
+
+var Pi=Math.PI; var PiD2=Pi/2; var PiD4=Pi/4; var Pi2=2*Pi
+var e=2.718281828459045235; var e10 = 1.105170918075647625
+var Deg=180/Pi
+
+function Norm(z) {
+    z=Math.abs(z)
+    var p=1+ z*(0.04986735+ z*(0.02114101+ z*(0.00327763+ z*(0.0000380036+ z*(0.0000488906+ z*0.000005383)))))
+    p=p*p; p=p*p; p=p*p
+    return 1/(p*p)
+    }
+function normal(z) {
+	return (1 - Norm(z))*100
+}
+function ChiSq(x,n) {
+    var p=Math.exp(-0.5*x); if((n%2)==1) { p=p*Math.sqrt(2*x/Pi) }
+    var k=n; while(k>=2) { p=p*x/k; k=k-2 }
+    var t=p; var a=n; while(t>0.000001*p) { a=a+2; t=t*x/a; p=p+t }
+    return 1-p
+    }
+function StudT(t,n) {
+    t=Math.abs(t); var w=t/Math.sqrt(n); var th=Math.atan(w)
+    if(n==1) { return 1-th/PiD2 }
+    var sth=Math.sin(th); var cth=Math.cos(th)
+    if((n%2)==1)
+        { return 1-(th+sth*cth*StatCom(cth*cth,2,n-3,-1))/PiD2 }
+        else
+        { return 1-sth*StatCom(cth*cth,1,n-3,-1) }
+    }
+function StudentT(t,n) {
+	return (1 - StudT(t,n))*100
+}
+function FishF(f,n1,n2) {
+    var x=n2/(n1*f+n2)
+    if((n1%2)==0) { return StatCom(1-x,n2,n1+n2-4,n2-2)*Math.pow(x,n2/2) }
+    if((n2%2)==0){ return 1-StatCom(x,n1,n1+n2-4,n1-2)*Math.pow(1-x,n1/2) }
+    var th=Math.atan(Math.sqrt(n1*f/n2)); var a=th/PiD2; var sth=Math.sin(th); var cth=Math.cos(th)
+    if(n2>1) { a=a+sth*cth*StatCom(cth*cth,2,n2-3,-1)/PiD2 }
+    if(n1==1) { return 1-a }
+    var c=4*StatCom(sth*sth,n2+1,n1+n2-4,n2-2)*sth*Math.pow(cth,n2)/Pi
+    if(n2==1) { return 1-a+c/2 }
+    var k=2; while(k<=(n2-1)/2) {c=c*k/(k-.5); k=k+1 }
+    return 1-a+c
+    }
+function StatCom(q,i,j,b) {
+    var zz=1; var z=zz; var k=i; while(k<=j) { zz=zz*q*k/(k-b); z=z+zz; k=k+2 }
+    return z
+    }
+function inormal(area) {
+	var pp;
+	pp = 1 - area/100;
+	return ANorm(pp);
+}
+function ANorm(p) { var v=0.5; var dv=0.5; var z=0
+    while(dv>1e-6) { z=1/v-1; dv=dv/2; if(Norm(z)>p) { v=v-dv } else { v=v+dv } }
+    return z
+    }
+function AChiSq(p,n) { var v=0.5; var dv=0.5; var x=0
+    while(dv>1e-6) { x=1/v-1; dv=dv/2; if(ChiSq(x,n)>p) { v=v-dv } else { v=v+dv } }
+    return x
+    }
+function AStudT(p,n) { var v=0.5; var dv=0.5; var t=0
+    while(dv>1e-6) { t=1/v-1; dv=dv/2; if(StudT(t,n)>p) { v=v-dv } else { v=v+dv } }
+    return t
+    }
+function iStudentT(area,n) {
+	var pp;
+	pp = 1 - area/100;
+	return AStudT(pp,n)
+}
+function AFishF(p,n1,n2) { var v=0.5; var dv=0.5; var f=0
+    while(dv>1e-6) { f=1/v-1; dv=dv/2; if(FishF(f,n1,n2)>p) { v=v-dv } else { v=v+dv } }
+    return f
+    }
+
+function CalcN(form) { form.arean.value=Fmt(normal(eval(form.z.value))) }
+function CalcNr(form) { form.z.value=Fmt(inormal(eval(form.arean.value))) }
+function CalcT(form) { form.areat.value=Fmt(StudentT(eval(form.t.value),eval(form.nt.value))) }
+function CalcTr(form) { form.t.value=Fmt(iStudentT(eval(form.areat.value),eval(form.nt.value))) }
+function CalcX(form) { form.px.value=Fmt(ChiSq(eval(form.x.value),eval(form.nx.value))) }
+function CalcXr(form) { form.x.value=Fmt(AChiSq(eval(form.px.value),eval(form.nx.value))) }
+function CalcF(form) { form.pf.value=Fmt(FishF(eval(form.f.value),eval(form.n1.value),eval(form.n2.value))) }
+function CalcFr(form) { form.f.value=Fmt(AFishF(eval(form.pf.value),eval(form.n1.value),eval(form.n2.value))) }
+function CalcB(form) { form.pB.value=Fmt(Binomial(eval(form.n.value),eval(form.p.value),
+		eval(form.a.value),eval(form.b.value))) }
+
+function Fmt(x) { 
+var v
+// This section is if rounding off is needed
+// if(x>=0) { v=''+(x+0.0005) } else { v=''+(x-0.0005) }
+// return v.substring(0,v.indexOf('.')+4)
+  return ''+x
+}
+
+function N_factorial(n) {
+    var n_fac=1; 
+    var i=1;
+	if (n>0)
+	{  while(i<=n) 
+	   { n_fac=n_fac*i;
+	     i=i+1
+	    }
+	}
+    return n_fac
+  }
+function N_choose_K(n,k) {
+    var top=1;
+    var bottom1=1;
+    var bottom2=1;
+    var bottom=1; 
+	if (k>0 && k <n)
+	{  top=N_factorial(n);
+	   bottom1=N_factorial(n-k);
+	   bottom2=N_factorial(k);
+	}
+    bottom=bottom1*bottom2;
+    return top/bottom
+  }
+function Binomial(n,p,a,b) {
+    var p1=0;
+    var k=a; 
+	if (k>=0 && k <=n)
+	{  while(k<=b && k<=n) 
+	   { p1=p1+N_choose_K(n,k)*Math.pow(p,k)*Math.pow(1-p,n-k);
+	     k=k+1
+	    }
+	}
+    return p1
+    }
+
+<!-- done hiding from old browsers -->
+</script>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+</body>
+</html>

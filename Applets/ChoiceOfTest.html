@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>SOCR Choice of Statistical Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../js/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="../html/feed.rss">
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar"
+	data-toggle="collapse" data-target=".nav-collapse"> <span
+	class="icon-bar"></span> <span class="icon-bar"></span> <span
+	class="icon-bar"></span> </a> <a class="brand" href="../index.html"
+	rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><a href="feed.rss"
+	class="btn icon rss"> <i class="icon-bullhorn"></i>RSS</a></p>
+<ul class="nav">
+	<!-- <li class="active"><a href="#">Home</a></li>  -->
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+		and Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/people">SOCR Team</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+		<li><a tabindex="-1" href="../html/SOCR_Contact.html">Contact</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+		<li><a tabindex="-1"
+			href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+		Wiki</a></li>
+		<li><a tabindex="-1"
+			href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+		Servers</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+		<li><a tabindex="-1"
+			href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+		Translation</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+			title="SOCR Resource Graphical Navigator"> SOCR Resource
+		Navigator</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/navigators/Carousel"
+			rel="tooltip" title="Carousel Resource Navigator">Carousel Viewer</a></li>
+	</ul>
+	</li>
+	<li><a href="../html/SOCR_Contact.html" rel="tooltip"
+		title="Contact the SOCR Resource">Contact</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+	Java Applets<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1" href="#" rel="tooltip"
+			title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+		1.6 Applets</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/mod">Modeler</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/ana">Analyses</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/cha">Charts</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/html/gam">Games</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/"
+			rel="tooltip"
+			title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+		Java 1.5 Applets</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="A collection of portable modern HTML5 Webapps">Webapps<b
+		class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/V3">Distributome
+		Navigator</a></li>
+		<li><a tabindex="-1"
+			href="http://www.distributome.org/tools.html">Distributome
+		Webapps</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+		Normal Distribution Calculator</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+		Chart</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+		and Resampling Webapp</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+		SOCR HTML5 Webapps</a></li>
+	</ul>
+	</li>
+	<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+		role="button" data-toggle="dropdown" href="#" rel="tooltip"
+		title="Additional SOCR Resources">More<b class="caret"></b></a>
+	<ul id="menu3" class="dropdown-menu" role="menu"
+		aria-labelledby="drop5">
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+		Calculators</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+		Tables</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+		and Image-Processing Applets</a></li>
+		<li><a tabindex="-1"
+			href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+		Java Applets</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<!--/.nav-collapse --></div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+<!--/span-->
+
+	<p><br>
+	In terms of selecting a statistical test, the most important question
+	is "what is the main study hypothesis?" In some cases there is no
+	hypothesis; the investigator just wants to "see what is there". For
+	example, in a prevalence study there is no hypothesis to test, and the
+	size of the study is determined by how accurately the investigator
+	wants to determine the prevalence. If there is no hypothesis, then
+	there is no statistical test. It is important to decide <em
+	 class="italic">a priori </em>which
+	hypotheses are confirmatory (that is, are testing some presupposed
+	relationship), and which are exploratory (are suggested by the data).
+	No single study can support a whole series of hypotheses.</p>
+	<p>A
+	sensible plan is to limit severely the number of confirmatory
+	hypotheses. Although it is valid to use statistical tests on hypotheses
+	suggested by the data, the P values should be used only as guidelines,
+	and the results treated as very tentative until confirmed by subsequent
+	studies. A useful guide is to use a <em class="italic">Bonferroni</em>
+	correction, which states simply that if one is testing n independent
+	hypotheses, one should use a significance level of 0.05/n. Thus if
+	there were two independent hypotheses a result would be declared
+	significant only if P&lt;0.025. Note that, since tests are rarely
+	independent, this is a very conservative procedure - one unlikely to
+	reject the null hypothesis.</p>
+	<p>The investigator should then ask
+	"are the data independent?" This can be difficult to decide but as a
+	rule of thumb results on the same individual, or from matched
+	individuals, are not independent. Thus results from a crossover trial,
+	or from a case control study in which the controls were matched to the
+	cases by age, sex and social class, are not independent. It is
+	generally true that the analysis should reflect the design, and so a
+	matched design should be followed by a matched analysis. Results
+	measured over time require special care. One of the most common
+	mistakes in statistical analysis is to treat dependent variables as
+	independent. For example, suppose we were looking at treatment of leg
+	ulcers, in which some people had an ulcer on each leg. We might have 20
+	subjects with 30 ulcers but the number of independent pieces of
+	information is 20 because the state of an ulcer on one leg may
+	influence the state of the ulcer on the other leg and an analysis that
+	considered ulcers as independent observations would be incorrect. For a
+	correct analysis of mixed paired and unpaired data consult a
+	statistician.</p>
+	<p>The next question is "what types of data are
+	being measured?" The test used should be determined by the data. The
+	choice of test for matched or paired data is described in and for
+	independent data in .</p></br>	
+
+	<table class="table" style="text-align: center;" align="center">
+	  <tbody>
+	    <tr>
+	      <td colspan="2" align="center" valign="middle"><font
+	 color="#cc0000"><big><b>1. Choice of statistical
+	test from <u>paired or matched observations</u></b> </big></font></center>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td><b>Variable </b></td>
+	      <td><b>Test</b></td>
+	    </tr>
+	    <tr>
+	      <td>Nominal</td>
+	      <td>MeNemar's Test</td>
+	    </tr>
+	    <tr>
+	      <td>Ordinal (Ordered categories)</td>
+	      <td>Wilcoxon</td>
+	    </tr>
+	    <tr>
+	      <td>Quantitative (Discrete or Non-Normal)</td>
+	      <td>Wilcoxon</td>
+	    </tr>
+	    <tr>
+	      <td>Quantitative (Normal*)</td>
+	      <td>Paired <em class="italic">T</em>-test</td>
+	    </tr>
+	    <tr>
+	      <td colspan="2">* It is the difference between the paired
+	observations that should be plausibly Normal.</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<p>It is helpful to decide the <u><font color="#cc33cc"><big><b><em
+	 class="italic">input</em></b></big></font></u> variables and the <font
+	 color="#cc33cc"><u><big><b><em class="italic">outcome</em></b></big></u></font>
+	variables. For example in a clinical trial the input variable is type
+	of treatment - a nominal variable - and the outcome may be some
+	clinical measure perhaps Normally distributed. The required test is
+	then the <i>T-<em class="italic"></em></i>test. However, if the input
+	variable is continuous, say a clinical score, and the outcome is
+	nominal, say cured or not cured, logistic regression is the required
+	analysis. A <em class="italic">t </em>test in this case may help but
+	would not give us what we require, namely the probability of a cure for
+	a given value of the clinical score. As another example, suppose we
+	have a cross sectional study in which we ask a random sample of people
+	whether they think their general practitioner is doing a good job, on a
+	five point scale, and we wish to ascertain whether women have a higher
+	opinion of general practitioners than men have. The input variable is
+	gender, which is nominal. The outcome variable is the five point
+	ordinal scale. Each person's opinion is independent of the others, so
+	we have independent data. From <a href="ChoiceOfTest.html#19120"
+	 class="XRef">here</a> we know we should use a <img
+	 src="ChoiceOfTest_files/13-9.gif" align="middle">
+	test for trend, or a Mann-Whitney U test (with correction for ties).
+	Note, however, if some people share a general practitioner and others
+	do not, then the data are not independent and a more sophisticated
+	analysis is called for.</p>
+	<p>Note that these tables should be considered as guides only, and each
+	case should be considered on its merits. </p></br></br>
+		
+	
+	<table class="table" style="text-align: center;" align="center">
+	  <tbody>
+	    <tr>
+	      <td colspan="8" align="center" valign="middle"><font
+	 color="#cc0000"><big><b>2. Choice of statistical test for <u>independent
+	observations</u></b></big></font></td>
+	    </tr>
+	    <tr>
+	      <th rowspan="2" colspan="2"><br>
+	      </th>
+	      <td colspan="6" align="center" valign="middle"><a
+	 name="pgfId=998525"></a><font color="#cc33cc">Outcome variable</font></td>
+	    </tr>
+	    <tr valign="top">
+	      <td><font size="2">Nominal </font></td>
+	      <td><font size="2">Categorical <br>
+	(&gt;2 Categories)</font></td>
+	      <td><font size="2">Ordinal </font></td>
+	      <td><font size="2">Quantitative Discrete</font></td>
+	      <td><font size="2">Quantitative Non-Normal</font></td>
+	      <td>
+	      <p><font size="2">Quantitative Normal</font></p>
+	      </td>
+	    </tr>
+	    <tr valign="top">
+	      <td rowspan="6" align="center" valign="middle"><font
+	 color="#cc33cc"><big><b><font size="2"><big>Input Variable</big></font></b></big></font></td>
+	      <td><font size="2">Nominal</font></td>
+	      <td><font size="2"><img src="ChoiceOfTest_files/13-10.gif"> or
+	Fisher's</font></td>
+	      <td><img src="ChoiceOfTest_files/13-11.gif">&nbsp;</td>
+	      <td><font size="2"><img src="ChoiceOfTest_files/13-12.gif"> trend
+	or Mann-Whitney</font></td>
+	      <td><font size="2">Mann-Whitney</font></td>
+	      <td><font size="2">Mann-Whitney or log-rank (a)</font></td>
+	      <td><font size="2">Student's t test</font></td>
+	    </tr>
+	    <tr valign="top">
+	      <td><font size="2">Categorical (&gt;2 categories)</font> </td>
+	      <td><img src="ChoiceOfTest_files/13-13.gif"></td>
+	      <td><img src="ChoiceOfTest_files/13-14.gif">&nbsp;&nbsp;</td>
+	      <td><font size="2">Kruskal-Wallis (b)</font></td>
+	      <td><font size="2">Kruskal-Wallis (b)</font></td>
+	      <td><font size="2">Kruskal-Wallis (b) </font></td>
+	      <td><font size="2">Analysis of variance (c)</font></td>
+	    </tr>
+	    <tr valign="top">
+	      <td><font size="2">Ordinal (Ordered categories) </font></td>
+	      <td><font size="2"><img src="ChoiceOfTest_files/13-15.gif"> <em
+	 class="superscript">-</em>trend or Mann- Whitney</font></td>
+	      <td><font size="2">(e)</font></td>
+	      <td><font size="2">Spearman rank </font></td>
+	      <td><font size="2">Spearman rank </font></td>
+	      <td><font size="2">Spearman rank </font></td>
+	      <td><font size="2">Spearman rank or linear regression (d)</font></td>
+	    </tr>
+	    <tr valign="top">
+	      <td><font size="2">Quantitative Discrete</font></td>
+	      <td><font size="2">Logistic regression</font></td>
+	      <td><font size="2">(e)</font></td>
+	      <td><font size="2">(e)</font></td>
+	      <td><font size="2">Spearman rank </font></td>
+	      <td><font size="2">Spearman rank </font></td>
+	      <td><font size="2">Spearman rank or linear regression (d)</font></td>
+	    </tr>
+	    <tr valign="top">
+	      <td><font size="2">Quantitative non-Normal</font></td>
+	      <td><font size="2">Logistic regression</font></td>
+	      <td>
+	      <p><font size="2">(e)</font></p>
+	      <p><br>
+	      </p>
+	      </td>
+	      <td>
+	      <p><font size="2">(e)</font></p>
+	      <p><br>
+	      </p>
+	      </td>
+	      <td>
+	      <p><font size="2">(e)</font></p>
+	      <p>&nbsp;</p>
+	      </td>
+	      <td><font size="2">Plot data and Pearson or Spearman rank </font></td>
+	      <td><font size="2">Plot data and Pearson or Spearman rank and
+	linear regression </font></td>
+	    </tr>
+	    <tr valign="top">
+	      <td><font size="2">Quantitative Normal</font></td>
+	      <td><font size="2">Logistic regression</font></td>
+	      <td>
+	      <p><font size="2">(e)</font></p>
+	      </td>
+	      <td>
+	      <p><font size="2">(e)</font></p>
+	      </td>
+	      <td>
+	      <p><font size="2">(e)</font></p>
+	      </td>
+	      <td><font size="2">Linear regression (d)</font></td>
+	      <td><font size="2">Pearson and linear regression</font></td>
+	    </tr>
+	  </tbody>
+	</table>
+	<p>( a) If data are censored. </p>
+	<p>(b)
+	The Kruskal-Wallis test is used for comparing ordinal or non-Normal
+	variables for more than two groups, and is a generalisation of the
+	Mann-Whitney U test. The technique is beyond the scope of this book,
+	but is described in more advanced books<a href="ChoiceOfTest.html#20280"
+	 class="XRef"> </a>and is available in common software (Epi-Info,
+	Minitab, SPSS).</p>
+	<p>(c)
+	Analysis of variance is a general technique, and one version (one way
+	analysis of variance) is used to compare Normally distributed variables
+	for more than two groups, and is the parametric equivalent of the
+	Kruskal-Wallis test.</p>
+	<p>(d) If the outcome variable is the
+	dependent variable, then provided the residuals (see ) are plausibly
+	Normal, then the distribution of the independent variable is not
+	important.</p>
+	<p>(e) There are a number of more advanced techniques,
+	such as Poisson regression, for dealing with these situations. However,
+	they require certain assumptions and it is often easier to either
+	dichotomise the outcome variable or treat it as continuous.</p>
+	<p><b>References</b></p>
+	<ol>
+	  <li><a name="Anchor-23522"></a><a name="pgfId=998701"></a><a
+	 name="19529"></a>Campbell MJ, Machin D. In: <em class="ref-italic">Medical
+	Statistics: A Common-sense Approach</em> , 2nd edn. Chichester: Wiley,
+	1993:2. </li>
+	  <li><a name="Anchor-21683"></a><a name="pgfId=998703"></a><a
+	 name="14079"></a>Pocock SJ. <em class="ref-italic">Clinical trials: A
+	Practical Approach</em> . Chichester: Wiley, 1982. </li>
+	  <li><a name="Anchor-46919"></a><a name="pgfId=998705"></a><a
+	 name="20530"></a>Senn SJ. <em class="ref-italic">The Design and
+	Analysis of Cross-Over Trials</em> . Chichester: Wiley, 1992. </li>
+	  <li><a name="Anchor-47383"></a><a name="pgfId=998707"></a><a
+	 name="23109"></a>Gardner MJ, Altman DG (eds) In: <em
+	 class="ref-italic">Statistics with Confidence</em> . BMJ Publishing
+	Group, 1989:103-5. </li>
+	  <li><a name="Anchor-49425"></a><a name="pgfId=998709"></a><a
+	 name="35857"></a>Gardner MJ, Machin D, Campbell MJ. The use of
+	checklists in assessing the statistical content of medical studies. <em
+	 class="ref-italic">BMJ</em> 1986;<em class="ref-bold"> 292</em>
+	:810-12. </li>
+	  <li><a name="Anchor-17304"></a><a name="pgfId=998711"></a><a
+	 name="40835"></a>Macbin D, Campbell MJ, Payers P, Pinol A. <em
+	 class="ref-italic">Statistical Tables for the Design of Clinical
+	Studies</em> . Oxford: Blackwell Scientific Publications, 1996. </li>
+	  <li><a name="Anchor-51540"></a><a name="pgfId=998713"></a><a
+	 name="19048"></a>Matthews JNS, Altman DG, Campbell MJ, Royston JP.
+	Analysis of senal measurements in medical research. <em
+	 class="ref-italic">BMJ </em>1990;<em class="ref-bold"> 300</em>
+	:230-5. </li>
+	  <li class="ref-no"><a name="pgfId=998715"></a><a name="20280"></a>Altman
+	DG. <em class="ref-italic">Practical Statistics for Medical Research</em>
+	. London: Chapman &amp; Hall, 1991. </li>
+	  <li class="ref-no"><a name="pgfId=998717"></a><a name="22671"></a>Armitage
+	P, Berry G. In: <em class="ref-italic">Statistical Methods in Medical
+	Research</em> . Oxford: Blackwell Scientific Publications, 1994. </li>
+	</ol>
+	<p> </p>
+	<hr noshade="noshade" size="1">
+	<p align="center"><u><big><big><big><big><b><a name="Exercises"></a><small>Exercises</small></b></big></big></big></big></u></p>
+	<p align="center"><i>State the type of study described in each of the
+	following:</i></p>
+	<p>13.1
+	To investigate the relationship between egg consumption and heart
+	disease, a group of patients admitted to hospital with myocardial
+	infarction were questioned about their egg consumption. A group of age
+	and sex matched patients admitted to a fracture clinic were also
+	questioned about their egg consumption using an identical protocol.</p>
+	<p><a href="ChoiceOfTestAnswers.html#Anchor-13.1">Answer</a></p>
+	<p>13.2
+	To investigate the relationship between certain solvents and cancer,
+	all employees at a factory were questioned about their exposure to an
+	industrial solvent, and the amount and length of exposure measured.
+	These subjects were regularly monitored, and after 10 years a copy of
+	the death certificate for all those who had died was obtained.</p>
+	<p><a href="ChoiceOfTestAnswers.html#Anchor-13.2">Answer</a></p>
+	<p>13.3
+	A survey was conducted of all nurses employed at a particular hospital.
+	Among other questions, the questionnaire asked about the grade of the
+	nurse and whether she was satisfied with her career prospects.</p>
+	<p><a href="ChoiceOfTestAnswers.html#Anchor-13.3">Answer</a></p>
+	<p>13.4
+	To evaluate a new back school, patients with lower back pain were
+	randomly allocated to either the new school or to conventional
+	occupational therapy. After 3 months they were questioned about their
+	back pain, and observed lifting a weight by independent monitors.</p>
+	<p><a href="ChoiceOfTestAnswers.html#Anchor-13.4">Answer</a></p>
+	<p>13.5
+	A new triage system has been set up at the local Accident and Emergency
+	Unit. To evaluate it the waiting times of patients were measured for 6
+	months and compared with the waiting times at a comparable nearby
+	hospital.</p>
+	<p><a href="ChoiceOfTestAnswers.html#Anchor-13.5">Answer</a></p>
+	<nobr></nobr>
+	<hr size="2" width="100%">
+	<div align="center"><u><big><big><big><big><big><big><b><a
+	 name="StudyDesign"></a><small><small><small>Study Design</small></small></small></b></big></big></big></big></big></big></u><br>
+	</div>
+	<p>In many ways the design of a study is more important than the
+	analysis.
+	A badly designed study can never be retrieved, whereas a poorly
+	analysed one can usually be reanalysed. Consideration of design is also
+	important because the design of a study will govern how the data are to
+	be analysed.</p>
+	<p>Most medical studies consider an input, which may
+	be a medical intervention or exposure to a potentially toxic compound,
+	and an output, which is some measure of health that the intervention is
+	supposed to affect. The simplest way to categorise studies is with
+	reference to the time sequence in which the input and output are
+	studied.</p>
+	<p>The most powefful studies are <em class="italic">prospective</em>
+	studies, and the paradigm for these is the <em class="italic">randomised
+	controlled</em>
+	trial. In this subjects with a disease are randomised to one of two (or
+	more) treatments, one of which may be a control treatment. Methods of
+	randomisation have been described in. The importance of randomisation
+	is that we Imow in the long run treatment groups will be balanced in
+	known and <em class="italic">unknown</em> prognostic factors. It is
+	important that the treatments are <em class="italic">concurrent</em> -
+	that the active and control treatments occur in the same period of time.</p>
+	<p>A <em class="italic">parallel group</em>
+	design is one in which treatment and control are allocated to different
+	individuals. To allow for the therapeutic effect of simply being given
+	treatment, the control may consist of a <em class="italic">placebo</em>
+	, an inert substance that is physically identical to the active
+	compound. If possible a study should be<em class="italic"> double
+	blinded</em>
+	- neither the investigator nor the subject being aware of what
+	treatment the subject is undergoing. Sometimes it is impossible to
+	blind the subjects, for example when the treatment is some form of
+	health education, but often it is possible to ensure that the people
+	evaluating the outcome are unaware of the treatment. An example of a
+	parallel group trial is given in, in which different bran preparations
+	have been tested on different individuals.</p>
+	<p>A <em class="italic">matched</em>
+	design comes about when randomisation is between matched pairs, such as
+	in, in which randomisation was between different parts of a patient's
+	body.</p>
+	<p>A <em class="italic">crossover</em> study is one in which
+	two or more treatments are applied sequentially to the same subject.
+	The advantages are that each subject then acts as their own control and
+	so fewer subjects may be required. The main disadvantage is that there
+	may be a carry over effect in that the action of the second treatment
+	is affected by the first treatment. An example of a crossover trial is
+	given in, in which different dosages of bran are compared within the
+	same individual. A number of excellent books are available on clinical
+	trials.</p>
+	<p>One of the major threats to validity of a clinical
+	trial is compliance. Patients are likely to drop out of trials if the
+	treatment is unpleasant, and often fail to take medication as
+	prescribed. It is usual to adopt a pragmatic approach and analyse by <em
+	 class="italic">intention to treat</em>
+	, that is analyse the study by the treatment that the subject was
+	assigned to, not the one they actually took. The alternative is to
+	analyse <em class="italic">per protocol</em> or <em class="italic">on
+	study</em> . Drop outs should of course be reported by treatment group.
+	A checklist for writing reports on clinical trials is available.</p>
+	<p>A <em class="italic">quasi experimental</em>
+	design is one in which treatment allocation is not random. An example
+	of this is given in in which injuries are compared in two dropping
+	zones. This is subject to potential biases in that the reason why a
+	person is allocated to a particular dropping zone may be related to
+	their risk of a sprained ankle.</p>
+	<p>A <em class="italic">cohort </em>study
+	is one in which subjects, initially disease free, are followed up over
+	a period of time. Some will be exposed to some risk factor, for example
+	cigarette smoking. The outcome may be death and we may be interested in
+	relating the risk factor to a particular cause of death. Clearly, these
+	have to be large, long term studies and tend to be costly to carry out.
+	If records have been kept routinely in the past then a historical
+	cohort study may be carried out. Here, the cohort is all cases of
+	appendicitis admitted over a given period and a sample of the records
+	could be inspected retrospectively. A typical example would be to look
+	at birth weight records and relate birth weight to disease in later
+	life.</p>
+	<p>These studies differ in essence from retrospective
+	studies, which start with diseased subjects and then examine possible
+	exposure. Such <em class="italic">case control</em> studies are
+	commonly undertaken as a preliminary investigation, because they are
+	relatively quick and inexpensive. The comparison of the blood pressure
+	in farmers and printers&nbsp;<a href="http://bmj.com/statsbk/3.html"></a>is
+	an example of a case control study. It is retrospective because we
+	argued from the blood pressure to the occupation and did not start out
+	with subjects assigned to occupation. There are many confounding
+	factors in case control studies. For example, does occupational stress
+	cause high blood pressure, or do peop
+	le prone to high blood pressure choose stressful occupations? A
+	particular problem is recall bias, in that the cases, with the disease,
+	are more motivated to recall apparently trivial episodes in the past
+	than controls, who are disease free.</p>
+	<p><em class="italic">Cross sectional</em>
+	studies are common and include surveys, laboratory experiments and
+	studies to examine the prevalence of a disease. Studies validating
+	instruments and questionnaires are also cross sectional studies. The
+	study of urinary concentration of lead in children and the study of the
+	relationship between height and pulmonary anatomical dead space were
+	also cross sectional studies.</p>
+	<hr size="2" width="100%">
+	<div align="center"><big><big><u><big><big><b><a name="SampleSizes"></a><small>Data
+	Sample size</small></b></big></big></u><br>
+	</big></big></div>
+	<p>One of the most common questions asked of a statistician about
+	design
+	is the number of patients to include. It is an important question,
+	because if a study is too small it will not be able to answer the
+	question posed, and would be a waste of time and money. It could also
+	be deemed unethical because patients may be put at risk with no
+	apparent benefit. However, studies should not be too large because
+	resources would be wasted if fewer patients would have sufficed. The
+	sample size depends on four critical quantities: the type I and type II
+	error rates <img src="ChoiceOfTest_files/13-1.gif" align="middle"> and
+	<img src="ChoiceOfTest_files/13-2.gif" align="middle"> , the
+	variability of the data <img src="ChoiceOfTest_files/13-3.gif"
+	 align="middle">
+	, and the effect size d. In a trial the effect size is the amount by
+	which we would expect the two treatments to differ, or is the
+	difference that would be clinically worthwhile.</p>
+	<p class="Body"><a name="pgfId=998436"></a>Usually <img
+	 src="ChoiceOfTest_files/13-4.gif" align="middle"> and <img
+	 src="ChoiceOfTest_files/13-5.gif" align="middle">
+	are fixed at 5% and 20% (or 10%) respectively. A simple formula for a
+	two group parallel trial with a continuous outcome is that the required
+	sample size per group is given by <img
+	 src="ChoiceOfTest_files/13-6.gif" align="middle"> for two sided <img
+	 src="ChoiceOfTest_files/13-7.gif" align="middle"> of 5% and <img
+	 src="ChoiceOfTest_files/13-8.gif" align="middle">
+	of 20%. For example, in a trial to reduce blood pressure, if a
+	clinically worthwhile effect for diastolic blood pressure is 5 mmHg and
+	the between subjects standard deviation is 10 mmHg, we would require n
+	= 16 x 100/25 = 64 patients per group in the study. The sample size
+	goes up as the square of the standard deviation of the data (the
+	variance) and goes down inversely as the square of the effect size.
+	Doubling the effect size reduces the sample size by four - it is much
+	easier to detect large effects! In practice, the sample size is often
+	fixed by other criteria, such as finance or resources, and the formula
+	is used to determine a realistic effect size. If this is too large,
+	then the study will have to be abandoned or increased in size. Machin <em
+	 class="italic">et al.</em> give advice on a sample size calculations
+	for a wide variety of study designs.</p>
+
+</div>
+<!--/span-->
+<!--/row-->
+<center><a href="http://www.socr.umich.edu/">SOCR Resource</a>
+Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+	align="middle" border="0" height="20" hspace="4" vspace="2" width="60"
+	alt=""> <script type="text/javascript"> var d=new Date(); 
+				document.write(" | "+d.getFullYear()+" | "); </script> <a
+	href="../img/SOCR_Email.png"><img alt="SOCR Email"
+	title="SOCR Email" src="../img/SOCR_Email.png"
+	style="border: 0px solid;"></a></center>
+
+<!--/.fluid-container-->
+
+<script src="../js/jquery.js"></script> 	<script src="../js/bootstrap-transition.js"></script> 	<script src="../js/bootstrap-alert.js"></script> 	<script src="../js/bootstrap-modal.js"></script> 	<script src="../js/bootstrap-dropdown.js"></script> 	<script src="../js/bootstrap-scrollspy.js"></script> 	<script src="../js/bootstrap-tab.js"></script> 	<script src="../js/bootstrap-tooltip.js"></script> 	<script src="../js/bootstrap-popover.js"></script> 	<script src="../js/bootstrap-button.js"></script> 	<script src="../js/bootstrap-collapse.js"></script> 	<script src="../js/bootstrap-carousel.js"></script> 	<script src="../js/bootstrap-typeahead.js"></script> 
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+			var sc_project=5714596; 
+			var sc_invisible=1; 
+			var sc_partition=71; 
+			var sc_click_stat=1; 
+			var sc_security="038e9ac4"; 
+		</script>
+
+<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
+</body>
+</html>
