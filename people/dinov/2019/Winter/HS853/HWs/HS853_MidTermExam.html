@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" content="">
+<title>Scientific Methods for Health Sciences: HS 853: Mid-Term
+	Exam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Statistics Online Computational Resource">
+<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+<meta name="keywords"
+	content="Statistics Online Computational Resources">
+
+<!-- Le styles -->
+<link href="../../../../../../css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="../../../../../../js/bootstrap-responsive.css"
+	rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      		<script src="js/html5.js"></script>
+    	<![endif]-->
+
+<link rel="shortcut icon" href="../../../../../../img/SOCR_Web_Icon.ico">
+<link rel="alternate" type="application/rss+xml" rel="tooltip"
+	title="SOCR News" href="../../../../../../html/feed.rss">
+</head>
+
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="../../../../../../index.html" rel="tooltip"
+					title="Statistics Online Computational Resource">SOCR</a>
+				<div class="nav-collapse collapse">
+					<p class="navbar-text pull-right">
+						<a href="feed.rss" class="btn icon rss"> <i
+							class="icon-bullhorn"></i>RSS
+						</a>
+					</p>
+					<ul class="nav">
+						<!-- <li class="active"><a href="#">Home</a></li>  -->
+						<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+							role="button" data-toggle="dropdown" href="#" rel="tooltip"
+							title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+							<ul id="menu3" class="dropdown-menu" role="menu"
+								aria-labelledby="drop5">
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_About.html">About
+										SOCR</a></li>
+								<li><a tabindex="-1"
+									href="http://wiki.socr.umich.edu/index.php/SOCR_News">News
+										and Events</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR
+										Team</a></li>
+								<li><a tabindex="-1"
+									href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+								<li><a tabindex="-1"
+									href="../../../../../html/SOCR_Contact.html">Contact</a></li>
+								<li><a tabindex="-1"
+									href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+								<li><a tabindex="-1"
+									href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+								<li><a tabindex="-1"
+									href="http://www.SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR
+										Wiki</a></li>
+								<li><a tabindex="-1"
+									href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR
+										Servers</a></li>
+								<li><a tabindex="-1"
+									href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+								<li><a tabindex="-1"
+									href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language
+										Translation</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/Navigators.html" rel="tooltip"
+									title="SOCR Resource Graphical Navigator"> SOCR Resource
+										Navigator</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/navigators/Carousel"
+									rel="tooltip" title="Carousel Resource Navigator">Carousel
+										Viewer</a></li>
+							</ul></li>
+						<li><a href="../../../../../html/SOCR_Contact.html"
+							rel="tooltip" title="Contact the SOCR Resource">Contact</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+							role="button" data-toggle="dropdown" href="#" rel="tooltip"
+							title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+								Java Applets<b class="caret"></b>
+						</a>
+							<ul id="menu3" class="dropdown-menu" role="menu"
+								aria-labelledby="drop5">
+								<li><a tabindex="-1" href="#" rel="tooltip"
+									title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java
+										1.6 Applets</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1"
+									href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip"
+									title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy
+										Java 1.5 Applets</a></li>
+							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+							role="button" data-toggle="dropdown" href="#" rel="tooltip"
+							title="A collection of portable modern HTML5 Webapps">Webapps<b
+								class="caret"></b></a>
+							<ul id="menu3" class="dropdown-menu" role="menu"
+								aria-labelledby="drop5">
+								<li><a tabindex="-1" href="http://www.distributome.org/V3">Distributome
+										Navigator</a></li>
+								<li><a tabindex="-1"
+									href="http://www.distributome.org/tools.html">Distributome
+										Webapps</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate
+										Normal Distribution Calculator</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin
+										Chart</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization
+										and Resampling Webapp</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+										Tables</a></li>
+								<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other
+										SOCR HTML5 Webapps</a></li>
+							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle" id="drop5"
+							role="button" data-toggle="dropdown" href="#" rel="tooltip"
+							title="Additional SOCR Resources">More<b class="caret"></b></a>
+							<ul id="menu3" class="dropdown-menu" role="menu"
+								aria-labelledby="drop5">
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision
+										Calculators</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/Applets/index.html#Tables">Probability
+										Tables</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function
+										and Image-Processing Applets</a></li>
+								<li><a tabindex="-1"
+									href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other
+										Java Applets</a></li>
+							</ul></li>
+					</ul>
+				</div>
+
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="well sidebar-nav">
+					<ul class="nav nav-list">
+						<li class="nav-header">Get Started</li>
+						<!-- to make an item highlighted:  <li class="active">  -->
+						<li><a
+							href="http://wiki.socr.umich.edu/index.php/SOCR_Videos">Videos</a></li>
+						<li><a
+							href="http://wiki.socr.umich.edu/index.php/SOCR_Help_Pages">Help
+								Pages</a></li>
+						<li><a
+							href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials">Activities</a></li>
+						<li><a
+							href="http://wiki.socr.umich.edu/index.php/SOCR_Courses">Courses</a></li>
+						<li class="nav-header">Webapps and Resources</li>
+						<li><a href="http://socr.umich.edu/Applets/index.html#Tables"
+							title="Probaiblity Distribution Tables">Tables</a></li>
+						<li><a href="http://socr.umich.edu/HTML5/"
+							title="Modern browser embedded web-applications">New Webapps</a></li>
+						<li><a
+							href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators"
+							title="High-Precision Distribution Calculators">Precision
+								Calculators</a></li>
+						<li class="nav-header">Java Applets</li>
+						<li><a href="http://socr.umich.edu/html/dist/"
+							title="Probability Distribution Calculators">Distributions</a></li>
+						<li><a href="http://socr.umich.edu/html/exp"
+							title="Virtual Computer Experiments and Simulations">Experiments</a></li>
+						<li><a href="http://socr.umich.edu/html/ana/">Analyses</a></li>
+						<li><a href="http://socr.umich.edu/html/mod">Data Modeler</a></li>
+						<li><a href="http://socr.umich.edu/html/cha">Charts and
+								Graphs</a></li>
+						<li><a href="http://socr.umich.edu/html/gam">Games</a></li>
+						<li class="nav-header">Learning Materials</li>
+						<li><a href="http://wiki.socr.umich.edu/index.php/EBook">EBook</a></li>
+						<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Data">Datasets</a></li>
+						<li><a
+							href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials"
+							title="Learning Modules and Hands-on Activities">Activities</a></li>
+						<li class="nav-header">Contribute to SOCR</li>
+						<li><a
+							href="http://www.SOCR.umich.edu/html/SOCR_Support.html"
+							title="Consider making donations of any size to support SOCR student stipends and instructors training">Donations</a></li>
+						<li><a
+							href="http://wiki.socr.umich.edu/index.php/Available_SOCR_Development_Projects">
+								SOCR Projects</a></li>
+						<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_News">Events</a></li>
+						<li><a href="http://forums.stat.ucla.edu/socr">Forum</a></li>
+						<li><a
+							href="http://www.socr.umich.edu/html/SOCR_Feedback.html">Survey</a></li>
+					</ul>
+				</div>
+				<div class="span10">
+					<a href="../../../../../../img/SOCR_3D_Logo_UM.png"><img
+						alt="SOCR Logo" title="SOCR UMichigan Logo"
+						src="../../../../../../img/SOCR_3D_Logo_UM.png"
+						style="width: 75%;" align="left" hspace="1" vspace="1"></a> <a
+						href="../../../../../../img/SOCR_QRcode.png"><img
+						title="SOCR QR Code" src="../../../../../../img/SOCR_QRcode.png"
+						alt="SOCR QR Code" style="width: 40%;" align="left" hspace="1"
+						vspace="1"></a>
+				</div>
+				<!--/.well -->
+			</div>
+
+			<!--/span-->
+			<div class="span9">
+				<div class="hero-unit">
+					<h2>Winter 2018: HS 853</h2>
+					<h4>
+						<a href="../">Scientific Methods for Health Sciences: Special
+							Topics</a>
+					</h4>
+				</div>
+
+				<div class="row-fluid">
+					<h4>(Take-home) Mid-Term Exam</h4>
+				</div>
+
+				<div class="row-fluid">
+					<ul>
+						<li>Due Fri, Mar 16, 2018</li>
+						<li><a href="../HWs.html">Homeworks, projects and
+								assignments</a></li>
+						<li><a href="../HW_header.html">Headers</a></li>
+					</ul>
+					<hr>
+				</div>
+				<!--/row-->
+
+				Review the <a
+					href="https://umich.instructure.com/courses/90136/files/folder/Case_Studies">
+					case-studies</a>, focusing on <a
+					href="https://umich.instructure.com/files/399150/download?download_frd=1">
+					case-study 6: Computer Assisted Quality of Life and Symptom
+					Assessment for Patients with Chronic Illness</a> using survey data.
+				Read the <a href="http://doi.org/10.3886/ICPSR34543.v1">study
+					docs</a> and address the following 3 items: <br> <br>
+
+				<ul>
+					<li><b>Reproduce and explain the following graphs</b>:</li>
+					<table align="center">
+						<tr>
+							<td align="center"><img src="images/MidTerm_HS853_Fig1.png"
+								alt="Histogram" style="width: 75%;"> <br>Histogram of
+								CHRONICDISEASESCORE for patients with disease score exceeding
+								one.</td>
+						</tr>
+						<tr>
+							<td align="center"><img src="images/MidTerm_HS853_Fig2.png"
+								alt="Histogram" style="width: 75%;"> <br>AGE vs.
+								CHRONICDISEASESCORE</td>
+						</tr>
+						<tr>
+							<td align="center"><img src="images/MidTerm_HS853_Fig3.png"
+								alt="Histogram" style="width: 75%;"> <br>AGE vs.
+								CHRONICDISEASESCORE by QOL_Q_01 level</td>
+						</tr>
+					</table>
+					<br>
+
+					<li><b>Among patients with chronic illness
+							(CHRONICDISEASESCORE &ge; 1), are QoL scores (PROMIS-QOL scale)
+							strongly correlated with comorbidity indices (provider-reported)</b>?</li>
+					<br>
+					<li><b>Is the Charlson Comorbidity Index strongly
+							correlated with patient-reported symptom burden (MSAS-SF)</b>?</li>
+				</ul>
+				<br> Remember to include the <a href="../HW_header.html">HW
+					header</a> identifying you on top of your report. Also include an
+				appendix with your complete R-code and other technical content. The
+				table below summarizes some of the important variables you need to
+				work with and the code snippet loades in the data directly into
+				Rstudio.<br> <br> <small>
+				
+					ChronicDisease_QoL_data <-
+					read.csv('https://umich.instructure.com/files/481332/download?download_frd=1',
+					header=T); attach(ChronicDisease_QoL_data);
+					head(ChronicDisease_QoL_data) </small> <br> <br> <br>
+
+				<table align="center">
+					<tr>
+						<td>Variable Class</td>
+						<td>Values</td>
+						<td>Data Elements</td>
+					</tr>
+					<tr>
+						<td>PROMIS-QOL (global quality of life)</td>
+						<td>1 Excellent<br> 2 Very good<br> 3 Good<br>
+							4 Fair<br> 5 Poor<br> 6 No answer (Patient refused)
+						</td>
+						<td>QOL_Q_01 Health rating <br> QOL_Q_02 Quality of life
+							rating <br> QOL_Q_03 Physical health rating <br>
+							QOL_Q_04 Mental health rating<br> QOL_Q_05 Satisfaction with
+							social activities and relationships rating<br> QOL_Q_06
+							Extent able to carry out everyday physical activities<br>
+							QOL_Q_07 Pain rating in the past seven days
+						</td>
+					</tr>
+					<tr>
+						<td>(provider-reported) Charlson Comorbidity Index</td>
+						<td>Numeric 0-10 (-9 indicates missing score)</td>
+						<td>CHARLSON_SCORE [calculated using ICD9 codes from EMR for
+							prior 3 months]</td>
+					</tr>
+					<tr>
+						<td>MSAS-SF (Memorial Symptom Assessment- Short Form)</td>
+						<td>1 No, not at all <br> 2 Yes, a little bit<br> 3
+							Yes, somewhat <br> 4 Yes, quite a bit <br> 5 Yes, very
+							much <br> 6 No answer (Patient refused)
+						</td>
+						<td>MSA_Q_01 Lack of energy in the past week <br>
+							MSA_Q_02 Pain in the past week <br> MSA_Q_03 Cough in the
+							past week <br> MSA_Q_04 Dry mouth in the past week <br>
+							MSA_Q_05 Nausea in the past week <br> MSA_Q_06 Feel drowsy
+							in the past week <br> MSA_Q_07 Feel bloated in the past week
+							<br> MSA_Q_08 Vomiting in the past week <br> MSA_Q_09
+							Shortness of breath in the past
+						</td>
+					</tr>
+					<tr>
+						<td>Chronic Disease Score</td>
+						<td>Numeric 0-19 (-9 indicates missing score)</td>
+						<td>CHRONIC_DISEASE_SCORE [calculated using medication orders
+							from EMR for prior 6 months]</td>
+					</tr>
+					<tr>
+						<td colspan="3">See the complete <a
+							href="http://www.icpsr.umich.edu/icpsrweb/AHRQMCC/ssvd/studies/34543/variables">
+								variable definitions here</a>.
+						</td>
+					</tr>
+				</table>
+				<hr>
+				<!--/row-->
+			</div>
+			<!--/row-->
+			<center>
+				<a href="http://www.socr.umich.edu/">SOCR Resource</a> Visitor
+				number <img src="http://counter.digits.net/?counter=SOCR"
+					align="middle" border="0" height="20" hspace="4" vspace="2"
+					width="60" alt="">
+				<script type="text/javascript">
+					var d = new Date();
+					document.write(" | " + d.getFullYear() + " | ");
+				</script>
+				<a href="../../../../../../img/Dinov_Email.png"><img
+					alt="Dinov Email" title="Dinov Email"
+					src="../../../../../../img/Dinov_Email.png"
+					style="border: 0px solid;"></a>
+			</center>
+		</div>
+		<!--/.fluid-container-->
+
+		<!-- Le javascript ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="../../../../../../js/jquery.js" type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-transition.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-alert.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-modal.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-dropdown.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-scrollspy.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-tab.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-tooltip.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-popover.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-button.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-collapse.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-carousel.js"
+			type="text/javascript"></script>
+		<script src="../../../../../../js/bootstrap-typeahead.js"
+			type="text/javascript"></script>
+
+		<!-- Start of StatCounter Code -->
+		<script type="text/javascript">
+			var sc_project = 5714596;
+			var sc_invisible = 1;
+			var sc_partition = 71;
+			var sc_click_stat = 1;
+			var sc_security = "038e9ac4";
+		</script>
+		<script type="text/javascript"
+			src="http://www.statcounter.com/counter/counter.js">
+			
+		</script>
+		<!-- End of StatCounter Code -->
+
+		<!-- GoogleAnalytics -->
+		<script src="http://www.google-analytics.com/urchin.js"
+			type="text/javascript">
+			
+		</script>
+		<script type="text/javascript">
+			_uacct = "UA-676559-1";
+			urchinTracker();
+		</script>
+
+		<script type="text/javascript">
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-69710121-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- End of GoogleAnalytics Code -->
+	</div>
+</body>
+</html>
+
