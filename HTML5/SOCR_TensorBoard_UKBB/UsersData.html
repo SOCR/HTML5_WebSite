@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SOCR Visualization of extremely high-dimensional
+	neuroimaging data</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+a {
+	color: red;
+}
+</style>
+
+</head>
+<body>
+	<ul class="topnav">
+		<li class="right"><a class="active"
+			href="http://www.socr.umich.edu/"">SOCR Home</a></li>
+		<li><a href="">This Article <span>&#8594;</span></a></li>
+		<li><a href="./index.html#main">Motivation</a></li>
+		<li><a href="./index.html#Intro">Introduction</a></li>
+		<li><a href="./index.html#Pipeline">Project Pipeline</a></li>
+		<li><a href="./index.html#Machine_learning">Unsupervised
+				Learning</a></li>
+		<li><a href="./index.html#TensorBoard">TensorBoard</a></li>
+		<li><a href="./index.html#code">Code</a></li>
+		<li><a href="./index.html#Results">Results</a></li>
+		<li><a href="./index.html#Try">Try-it-Now!</a></li>
+	</ul>
+
+
+	<section id="showcase">
+		<div class="container"></div>
+	</section>
+	<div class="bottom-left">
+		<h1>User-data driven visual analytics of extremely high-dimensional studies using TensorBoard
+		</h1>
+		<p>
+			<a href="http://www.socr.umich.edu/people" target="_blank"> SOCR Team</a>
+		</p>
+	</div>
+	<div></div>
+
+	<div class="container">
+		<section id="main">
+
+			<blockquote>
+				This <a href="http://socr.umich.edu/HTML5">SOCR HTML5 resource</a> demonstrates:
+				<ol>
+					<li><a
+						href="http://www.socr.umich.edu/people/dinov/courses/DSPA_notes/05_DimensionalityReduction.html#9_t-sne_(t-distributed_stochastic_neighbor_embedding)">
+						t-distributed stochastic neighbor embedding (t-SNE) 
+						statistical method for manifold dimension reduction</a>,</li>
+					<li>The	<a href="https://github.com/tensorflow/tensorboard">TensorBoard
+						machine learning platform</a>, and</li>
+					<li>Hands-on Big Data Analytics using the
+						<a href="http://www.ukbiobank.ac.uk">UK Biobank data</a>,</li>
+					<li>Interactive Visual Analytics using <a href="./UsersData.html">user-provided data</a>.</li>
+				</ol>
+			</blockquote>
+		</section>
+		
+		<section id="UsersData">
+		
+			Before you begin, review the 
+			<a href="./index.html">SOCR hands-on high-deimensional t-SNE Data Analytics Learning Module</a>
+			and the <a href="http://www.socr.umich.edu/people/dinov/courses/DSPA_notes/05_DimensionalityReduction.html">
+			DSPA Dimensionality Reduction Chapter</a>.<br/> <br/>
+			
+			Similarly to the <a href="./index.html">analysis of the UK Biobank study</a>, you can use your own dataset.<br/>
+			
+			This will require you to provide a pair of ASCII text files that can be loaded from your computer.<br/>
+			<br/>
+			The first file contains tab-delimitted (TSV) data including the predictor vectors (row=case * column=features).<br/>
+			The second file is an optional TSV file including metadata like labels for each case (row), if any. <br/>
+			
+			Examples of the two data formats that can be loaded from your computer are included below.
+			<ul> 
+					<ol><i>Load the data</i> as a TSV file of vectors, e.g., 4 cases in 5D:<br/>
+					0.1	0.2	0.3	0.4	0.5<br/>
+					0.2	0.3	0.4	0.5	0.6<br/>
+					0.2	0.3	0.4	0.5	0.6<br/>
+					0.2	0.3	0.4	0.5	0.6<br/>
+					</ol>
+					<br/> <br/>
+					<ol><i>Optionally</i>, load a TSV file of labels/metadata, e.g., 4 cases in 2D (metadata). 
+						If there is more than one column, the first row must include column names.<br/>
+					<b>Class</b>	<b>Phenotype</b><br/>
+					A	Patient<br/>
+					A	Control<br/>
+					B	Control<br/>
+					C	Patient<br/>
+					</ol>
+			</ul>
+			Once the data is loaded in the app, you can run the analysis on your own data much like
+			we did in the <a href="./index.html">similar dimensionality reduction activity using UK Biobank</a>. <br/> <br/>
+		</section>
+	</div>
+	
+	<div class="TensorBoard">
+		<section id="Try">
+			<embed src="https://projector.tensorflow.org/?config=http://socr.umich.edu/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_CountryRanking_projector_config.json" style="height:900px; width:100%;"></embed>
+		</section>
+	</div>
+	<hr>
+	
+	<div>
+		<footer>
+			<center>
+				<a href="http://www.socr.umich.edu/">SOCR Resource</a> Visitor
+				number <img src="http://counter.digits.net/?counter=SOCR"
+					align="middle" border="0" height="20" hspace="4" vspace="2"
+					width="60" alt="">
+				<script type="text/javascript">
+					var d = new Date();
+					document.write(" | " + d.getFullYear() + " | ");
+				</script>
+				<a href="http://socr.umich.edu/img/SOCR_Email.png"><img
+					alt="SOCR Email" title="SOCR Email"
+					src="http://socr.umich.edu/img/SOCR_Email.png"
+					style="border: 0px solid;"></a>
+			</center>
+		</footer>
+
+		<!-- Start of StatCounter Code -->
+		<script type="text/javascript">
+			var sc_project = 5714596;
+			var sc_invisible = 1;
+			var sc_partition = 71;
+			var sc_click_stat = 1;
+			var sc_security = "038e9ac4";
+		</script>
+
+		<script type="text/javascript"
+			src="https://www.statcounter.com/counter/counter.js"></script>
+		<!-- End of StatCounter Code -->
+
+		<!-- GoogleAnalytics -->
+		<script src="https://www.google-analytics.com/urchin.js"
+			type="text/javascript">
+			
+		</script>
+		<script type="text/javascript">
+			_uacct = "UA-676559-1";
+			urchinTracker();
+		</script>
+		<!-- End of GoogleAnalytics Code -->
+	</div>
+</body>
+</html>
