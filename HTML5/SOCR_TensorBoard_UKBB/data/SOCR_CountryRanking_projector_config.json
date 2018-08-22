@@ -10,7 +10,7 @@
       "metadataPath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_Top30Country_RankIndicatorLabel.tsv"
       "sprite": {
         "imagePath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_Logo_April_2018.png",
-        "singleImageDim": [28, 28]
+        "singleImageDim": [478, 444]
        }
     }
   ]
