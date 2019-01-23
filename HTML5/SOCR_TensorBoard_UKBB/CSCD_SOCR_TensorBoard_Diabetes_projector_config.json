@@ -6,8 +6,8 @@
         24084, 
         45
       ],      
-      "tensorPath": "http://socr.umich.edu/CSCD/html/Cores/Macore2/CSCD_SOCR_Diabetes_CaseStudy/Diabetes_features_wo_headers.tsv",
-      "metadataPath": "http://socr.umich.edu/CSCD/html/Cores/Macore2/CSCD_SOCR_Diabetes_CaseStudy/Diabetes_Readmissions_wo_header.tsv"
+      "tensorPath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/Diabetes_features_wo_headers.tsv",
+      "metadataPath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/Diabetes_Readmissions_wo_header.tsv"
     }
   ]
 }
