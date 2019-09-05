@@ -1,7 +1,7 @@
 {
   "embeddings": [
     {
-      "tensorName": "SOCR Country Ranking Data",
+      "tensorName": "SOCR UKBB Tensor Data",
       "tensorShape": [
         100, 
         6
