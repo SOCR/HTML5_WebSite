@@ -7,7 +7,14 @@
         6
       ],      
       "tensorPath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_UKBB_tensor.tsv",
-      "metadataPath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_UKBB_Labels.tsv"
+      "metadataPath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_UKBB_Labels.tsv",
+	"sprite": {
+        "imagePath": "https://raw.githubusercontent.com/SOCR/HTML5_WebSite/master/HTML5/SOCR_TensorBoard_UKBB/data/SOCR_UKBB_Labels_Sprite_image.png",
+        "singleImageDim": [
+          28,
+          28
+        ]
+      }
     }
   ]
 }
