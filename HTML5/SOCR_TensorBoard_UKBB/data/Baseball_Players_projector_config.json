@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Baseball Players",
+        "tensorShape": [
+          1034, 
+          3
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Baseball_Players_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Baseball_Players_metadata.tsv"
+      }
+    ]
+  }

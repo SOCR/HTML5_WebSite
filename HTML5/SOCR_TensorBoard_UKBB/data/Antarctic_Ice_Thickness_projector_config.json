@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Antarctic Ice Thickness",
+        "tensorShape": [
+          1636, 
+          4
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Antarctic_Ice_Thickness_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Antarctic_Ice_Thickness_metadata.tsv"
+      }
+    ]
+  }

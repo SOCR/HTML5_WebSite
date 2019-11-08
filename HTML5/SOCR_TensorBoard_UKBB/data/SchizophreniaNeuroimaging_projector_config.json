@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Normal and Schizophrenia Neuroimaging Study of Children",
+        "tensorShape": [
+          63, 
+          66
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/SchizophreniaNeuroimaging_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/SchizophreniaNeuroimaging_metadata.tsv"
+      }
+    ]
+  }

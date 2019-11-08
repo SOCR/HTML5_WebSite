@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Alzheimer Disease (AD) Case Study Data",
+        "tensorShape": [
+          1560, 
+          24
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/AlzheimerNeuroimagingData_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/AlzheimerNeuroimagingData_metadata.tsv"
+      }
+    ]
+  }

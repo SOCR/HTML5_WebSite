@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Simulated SOCR Knee Pain Centroid Location Data",
+        "tensorShape": [
+          8666, 
+          2
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/knee_pain_data_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/knee_pain_data_metadata.tsv"
+      }
+    ]
+  }

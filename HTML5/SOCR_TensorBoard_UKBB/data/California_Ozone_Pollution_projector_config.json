@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "California Ozone Pollution",
+        "tensorShape": [
+          175, 
+          6
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/California_Ozone_Pollution_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/California_Ozone_Pollution_metadata.tsv"
+      }
+    ]
+  }

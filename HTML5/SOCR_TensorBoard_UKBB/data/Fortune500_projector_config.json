@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Ranking, Revenues and Profits of the Top Fortune500 Companies (1955-2008)",
+        "tensorShape": [
+          18000, 
+          4
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Fortune500_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Fortune500_metadata.tsv"
+      }
+    ]
+  }

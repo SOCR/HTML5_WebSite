@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "California Ozone",
+        "tensorShape": [
+          540, 
+          22
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/California_Ozone_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/California_Ozone_metadata.tsv"
+      }
+    ]
+  }

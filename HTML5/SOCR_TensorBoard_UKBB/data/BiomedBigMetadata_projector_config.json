@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Predictive Big Data Analytics, Modeling, Analysis and Visualization of Clinical, Genetic and Imaging Data for Parkinson’s Disease",
+        "tensorShape": [
+          1128, 
+          32
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/BiomedBigMetadata_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/BiomedBigMetadata_metadata.tsv"
+      }
+    ]
+  }

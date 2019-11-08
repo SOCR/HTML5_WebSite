@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "US Ozone Pollution",
+        "tensorShape": [
+          175, 
+          3
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/US_Ozone_Pollution_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/US_Ozone_Pollution_metadata.tsv"
+      }
+    ]
+  }

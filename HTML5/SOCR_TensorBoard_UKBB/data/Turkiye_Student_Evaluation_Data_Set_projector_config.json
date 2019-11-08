@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Turkiye Student Evaluation Data Set",
+        "tensorShape": [
+          5820, 
+          33
+        ],      
+        "tensorPath": "https://github.com/ljx0320/SOCRAT_DATA/blob/master/processed_data/Turkiye_Student_Evaluation_Data_Set_tensor.tsv",
+        "metadataPath": "https://github.com/ljx0320/SOCRAT_DATA/blob/master/processed_data/Turkiye_Student_Evaluation_Data_Set_metadata.tsv"
+      }
+    ]
+  }

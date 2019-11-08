@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Iris Flower Dataset",
+        "tensorShape": [
+          150, 
+          4
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/iris_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/iris_metadata.tsv"
+      }
+    ]
+  }

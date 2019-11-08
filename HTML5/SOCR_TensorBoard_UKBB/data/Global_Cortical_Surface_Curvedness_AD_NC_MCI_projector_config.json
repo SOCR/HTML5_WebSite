@@ -1,0 +1,13 @@
+{
+    "embeddings": [
+      {
+        "tensorName": "Neuroimaging study of 27 of Global Cortical Surface Curvedness (27 AD, 35 NC and 42 MCI)",
+        "tensorShape": [
+          104, 
+          9
+        ],      
+        "tensorPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Global_Cortical_Surface_Curvedness_AD_NC_MCI_tensor.tsv",
+        "metadataPath": "https://raw.githubusercontent.com/ljx0320/SOCRAT_DATA/master/processed_data/Global_Cortical_Surface_Curvedness_AD_NC_MCI_metadata.tsv"
+      }
+    ]
+  }
