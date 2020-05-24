@@ -1,0 +1,18 @@
+SOCR Longitudinal data - human electrocardiogram (ECG) signals
+
+This ECG data structure represents a 2D array [1:162, 1:65536]. 
+Each row [1:162, ] is an ECG recording representing 65536 temproral measurements over a period of 512 seconds, sampled at 128 Hz.
+
+The 162 ECG recordings come from PhysioNet databases MIT-BIH Arrhythmia Database [https://www.physionet.org/physiobank/database/mitdb/], MIT-BIH Normal Sinus Rhythm Database [https://www.physionet.org/physiobank/database/nsrdb/],and BIDMC Congestive Heart Failure Database [https://www.physionet.org/physiobank/database/chfdb/].
+
+The Labels file represents a vector of 162 diagnostic labels, one for each row of Data. The three diagnostic categories are: 'ARR', 'CHF', and 'NSR'. 
+
+Labels:
+ARR: 96 recordings from persons with arrhythmia.
+CHF: 30 recordings from persons with congestive heart failure.
+NSR 36 recordings from persons with normal sinus rhythms. 
+
+Research Goal: Train a classifier to distinguish between the 3 clinical phenotypes: ARR, CHF, and NSR.
+
+ECGDataTensor_T3500.tsv includes only 3500 timepoints
+ECGDataTensor.tsv includes the complete 65536 temproral data
